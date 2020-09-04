@@ -1,0 +1,225 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+
+}
+
+header{
+	height: 100px
+
+}
+
+nav{
+	position: relative;
+}
+
+section{
+	background-color:black;
+	height: 350px
+}
+
+
+footer{
+	padding: 50px;
+}
+
+
+
+img{
+	cursor: pointer;
+}
+
+
+.section{
+	background-color:white;
+	height: 650px;
+}
+
+.section1{
+	background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../img/kanto.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+	height: 100vh		;
+
+}
+
+.sectionlateral{
+	position: relative;
+	overflow: auto;
+}
+
+
+.img{
+	position:fixed;
+}
+
+.img2{
+	background-image: url(../img/bgazul.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 200%;
+	border-radius: 50px;
+}
+
+.img3{
+	background-image: url(../img/texturabranco.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 200%;
+	border-radius: 50px;
+}
+
+.gradiente{
+	 background: linear-gradient(143deg, crimson 50%, transparent 50%);
+}
+
+.background_1{
+	background-image:url(../img/fundoVermelho.jpg); 
+}
+
+.background_2{
+	background-color: gray;
+}
+
+
+.pulse {
+  animation: pulse 0.7s infinite;
+  margin: 0 auto;
+  margin-top: 50px;
+  animation-direction: alternate;
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    -webkit-filter: brightness(100%);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+    -webkit-filter: brightness(200%);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    filter: brightness(100%);
+  }
+  100% {
+    transform: scale(1);
+    filter: brightness(200%);
+  }
+}
+
+
+.pulse2 {
+  animation: pulse 0.7s infinite;
+  margin: 0 auto;
+  margin-top: 50px;
+  animation-direction: alternate;
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+
+@-webkit-keyframes pulse2 {
+  0% {
+    -webkit-transform: scale(1);
+    -webkit-filter: brightness(100%);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+    -webkit-filter: brightness(200%);
+  }
+}
+
+@keyframes pulse2 {
+  0% {
+    transform: scale(1);
+    filter: brightness(100%);
+  }
+  100% {
+    transform: scale(1.1);
+    filter: brightness(200%);
+  }
+}
+
+
+#slide {
+    position: absolute;
+    right: -100px;
+    width: 100px;
+    height: 100px;
+    transition: 1s;
+}
+
+.wrapper:hover #slide {
+    transition: 1s;
+    right: 0;
+}
+
+
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  right: 0;
+  top: 0;
+  background-color: crimson; /* Black fallback color */
+  background-image: url(../img/capa.jpg); /* Black w/opacity */
+  background-size: cover;
+  background-repeat: 
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the conteudo inside the overlay */
+.overlay-conteudo{
+  width: 100%; 
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: left;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
