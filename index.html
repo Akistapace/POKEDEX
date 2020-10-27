@@ -1,292 +1,522 @@
 <!DOCTYPE html>
 <html>
 <head id="secao_1">
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<!----Folha de estilo Própria---->
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 	<!----Folha Bootstrap---->
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">	
 	<!----Font Awesome---->	
 	<link rel="stylesheet" type="text/css" href="css/all.css">
+	<!-- Animate.CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 	<!----Favicon Icon---->	
 	<link  href="" rel="shortcut icon">
+
+	
 </head>
 <body class="background_1">
 
 <header id="secao1">
 
 <!-- Capa -->
+<nav class="navbar py-0 px-0 fixed-top">
 	<div id="myNav" class="overlay">
-	  <!-- Botão para abrir seta amarela -->
-	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img class="pulse img-fluid" src="img/setaAmarela.png" style="height: 100%"></a>
+		<!-- Botão para abrir seta amarela -->
+		<a href="javascript:void(0)" class="seta" onclick="closeNav()"><img class="img-fluid animated pulse infinite" id="seta" src="img/setaAmarela.png" style="height: 100%">
+			<div class="container-fluid animated fadeOutRight infinite">
+				<i class="fas fa-angle-double-right"></i>
+				<i class="fas fa-angle-double-right"></i>
+				<i class="fas fa-angle-double-right"></i>
+			</div>
+		</a>		
 	</div>
-
-
-<nav class="navbar navbar-dark py-0 px-0 fixed-top">
-	<div class="container-fluid pl-0 pr-0 bg-danger">
-		<div class="row">
-			<table class="table table-borderless ml-4">
-			<tbody>
-			<tr>	
-				<th class="pl-0 pr-0" scope="col-2" rowspan="3" style="width:100px">
-
-				<img class="navbar-brand img-fluid mt-0 pb-0 img pulse2" onclick="openNav()" src="img/BolaAzul3.png" ><!---Botão de fechar a capa--->
-
-				</th>
-				<td class="pb-1" scope="col-2" style="width:50px">
-					<img class="img-fluid " src="img/BolaVermelha.png">
-				</td>
-				<td class="pb-1" scope="col-2" style="width:50px">
-					<img class="img-fluid" src="img/BolaAmarela1.png">
-				</td>
-				<td class="pb-1" scope="col-2" style="width:50px">
-					<img class="img-fluid" src="img/BolaVerde.png">
-				</td>
-				<td class="pb-1" scope="col-4" style="width:50px">
-
-				</td>
-			</tr>
-			</tbody>
-			</table>
-		</div>	
+	<div class="container-fluid pl-0 pr-0 red">
+		<div class="d-flex w-100">
+			<div class="col-sm-8 col-md-8 col-lg-1 col-xl-1 w-100">
+					<img class="brand mt-0 pb-0 img" onclick="openNav()" src="img/BolaAzul3.png" ><!---Botão de fechar a capa--->
+			</div>
+			<div class="col-sm-4 col-md-4 col-lg-11 col-xl-11 w-100">	
+					<a href="#" class="bolinhas">
+						<img class="img-fluid " src="img/BolaVermelha.png">					
+					</a>
+					<a href="#" class="bolinhas">
+						<img class="img-fluid" src="img/BolaAmarela1.png">
+					</a>
+					<a href="" class="bolinhas">
+						<img class="img-fluid" src="img/BolaVerde.png">
+					</a>
+			</div>	
+		</div>
 	</div>	
-<div class="container-fluid pl-0 pr-0" style="height: 65px">
-		
+<div class="container-fluid pl-0 pr-0" style="height: 5px">
 			<table class="table table-borderless my-0 mx-0" style="height: 65px">
 			<tbody>	
 			<tr>	
-				<td class="pb-1 bg-danger " scope="col-1 " style="width: 15%"></td>
-				<td class="pb-1 gradiente dropdown ml-5" scope="col-2"  style="width: 30%">
-					<button class=" navbar-toggler-icon dropleft ml-2" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	
-				    </button>
-				  
-				  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-				    <button class="dropdown-item" type="button">Sobre</button>
-				    <button class="dropdown-item" type="button">Insígnias</button>
-				    <button class="dropdown-item" type="button">Portfólio</button>
-				    <button class="dropdown-item" type="button">Contato</button>
-				  </div>
-			
-					
+				<td class="pb-1 red " scope="col-1 " style="width: 15%"></td>
+				<td class="pb-1 gradiente dropdown ml-5" scope="col-2"  style="width: 30%">			
 				</td>
-				<td class="pb-1" scope="col-5">
-						
-				</td>
+				<td class="pb-1" scope="col-5"></td>
 				<td class="pb-1" scope="col-4">
-					
+								
+				<!-- <div class="container-fluid pt-5">
+					<button class="btn btn-warning">Boão1</button>
+					<button class="btn btn-succes">Boã21</button>
+					<button class="btn btn-primary">Boão3</button>
+					<button class="btn btn-dark">Boão4</button>
+				</div> -->
 				</td>
 			</tr>
 			</tbody>
 			</table>
-
 	</div>	
 </nav>
-	
+
 </header>
 
 <div class="container-fluid" id="topo"><!-- Abertura Div que envolve as sections para por o fundo vermelho atras--->
+	
 	<div class="container-fluid background_2 px-0"><!-- Abertura Div que envolve as sections para por o Cinza--->
 
-	<section class="section1">
-	<div class="container-fluid text-center text-light mt-5">
-		<h1 class="display-3 lead pt-5 mt-5" style="font-family: impact;margin-top: 50px">Front-End</h1>
-		<h5 class="lead mb-0" style="font-family: impact;">** Em Evolução! **</h5>
+<section class="section1">
+	<div class="container-fluid text-center text-light">
+		<div class="container-fluid text-right pr-0" >
+			<audio id="pokemon" src="Tema_Pokemon.mp3" type="audio/mpeg" preload="auto"></audio>
+			<div class="btn-group" role="group" aria-label="Basic example">
+	
+				<!-- Botão Play e Pause -->
+				<button type="button" class="btn btn-primary fas fa-play" onclick="mostrar(this)"></button>
+				<button class="btn btn-danger pd" type="button" data-toggle="collapse" data-target="#btncolapse" aria-expanded="false" aria-controls="btncolapse">
+					<img class="sound" src="img/sound.png" alt="Expandir som">
+				</button>
+				<div class="collapse btn-group" id="btncolapse">
+					<button class="btn btn-primary" onclick="document.getElementById('pokemon').volume+=0.1">
+						<i class="fas fa-volume-up"></i>
+					</button>
+					<button class="btn btn-primary" onclick="document.getElementById('pokemon').volume-=0.1">
+						<i class="fas fa-volume-down"></i>
+					</button>
+				</div>
+			</div> 
+		</div>
+
+		<h1 class="display-3 lead animated zoomIn">Front-End</h1>
+		<h5 class="lead animated zoomIn">** Em Evolução! **</h5>
 	</div>
-
-
-	</section>
-
-
+</section>
 
 <!--SEÇÃO 1--->
-<section class="section mt-5 img3">
-
-<dir class="container-fluid bg-danger" style="width: 100% auto">
-	<dir class="row fixed-center">
-		<div class="col-12">
-			<div class="container text-center text-light">
-				<h1>Insígnias</h1>
+<section class="img3">
+<div class="container-fluid red" >
+	<!-- modal Insignias -->
+	<div class="text-center sc-2">
+		<button type="button" class="btn btn-primary buttonblue animated pulse rad-30 mt-4" data-toggle="modal" data-target="#Insignias">
+		Insignias Tech
+		</button>
+	</div>
+	<div class="modal fade bg-primary" id="Insignias" tabindex="-1" role="dialog" aria-labelledby="Insignias" aria-hidden="true">
+		<div class="modal-dialog ml-2 modal-lg" role="document">
+		  <div class="modal-content text-centers rad-30">
+			<div class="modal-header border-0">
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			  </button>
 			</div>
+			<div class="container-fluid">
+				<h5 class="text-center">Insígnias Tech</h5>
+			</div>
+			<div class="modal-body">
+				<div class="container-fluid ">
+					<p class="lead text-center">Conhecimento adquirido em cada Insignia Tech</p>
+				</div>
+				<div class="container-fluid d-flex justify-content-center pb-5">
+					<button class="btn btn-success" aling="center" >Resumo</button>
+				</div>
+				<div class="container-fluid bg-dark px-0">
+					<div class="row no-gutters">
+						<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
+							<div class="card ">
+								<figure class="container-selo pt-1">
+									<img class="card-selo" src="img/selo.png"> 
+								</figure>
+								<img class="card-img" src="img/Insígnias/HTML.png" alt="HTML">
+								<p class="">HTML</p>
+								<div class="card-img-overlay laranja">
+									<h4 class="mt-4">Evolução</h4>
+									<div class="progress mt-5">
+										<div class="progress-bar bg-success pbar-1" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
+							<div class="card">
+								<figure class="container-selo pt-1">
+									<img class="card-selo" src="img/selo.png"> 
+								</figure>
+								<img class="card-img" src="img/Insígnias/css.png" alt="CSS-Cascading">
+								<p class="mt-2">CSS</p>
+								<div class="card-img-overlay azulcss">
+									<h4 class="mt-4">Evolução</h4>
+									<div class="progress mt-5">
+										<div class="progress-bar bg-success pbar-1" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+									</div>
+								</div>
+							</div>	
+						</div>	
+						<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
+							<div class="card">
+								<figure class="container-selo pt-1">
+									<!-- <img class="card-selo" src="img/selo.png">  -->
+								</figure>
+									<img class="card-img" src="img/Insígnias/Javascript.png" alt="Javascript">
+									<p class="mt-4">JAVASCRIPT</p>
+								<div class="card-img-overlay yellow">
+									<h4 class="mt-4">Evolução</h4>
+									<div class="progress mt-5">
+										<div class="progress-bar bg-success pbar-1" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+									</div>
+								</div>
+							</div>			
+						</div>
+						<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
+							<div class="card">
+								<figure class="container-selo pt-1">
+									<img class="card-selo" src="img/selo.png"> 
+								</figure>
+									<img src="img/Insígnias/bootstrap.png" alt="Bootstrap----">
+									<p class="mt-4">BOOTSTRAP</p>	
+								<div class="card-img-overlay roxo">
+									<h4 class="mt-4">Evolução</h4>
+									<div class="progress mt-5">
+										<div class="progress-bar bg-success pbar-1" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+									</div>
+								</div>
+							</div>	
+						</div>
+						<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
+							<div class="card">
+								<figure class="container-selo pt-1">
+									<!-- <img class="card-selo" src="img/selo.png">  -->
+								</figure>
+									<img src="img/Insígnias/nodejs.png" alt="nodejs">
+									<p class="mt-4">NODE JS</p>
+								<div class="card-img-overlay verdeescuro">							
+									<h4 class="mt-4">Evolução</h4>
+									<div class="progress mt-5">
+										<div class="progress-bar bg-success pbar-1" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+									</div>
+								</div>
+							</div>  
+						</div>
+						<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
+							<div class="card">
+								<figure class="container-selo pt-1">
+									<!-- <img class="card-selo" src="img/selo.png">  -->
+								</figure>
+									<img src="img/Insígnias/react.png" alt="React">
+									<p class="mt-4">REACT</p>
+								<div class="card-img-overlay azulclaro">								 
+									<h4 class="mt-4">Evolução</h4>
+									<div class="progress mt-5">
+										<div class="progress-bar bg-success pbar-1" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+									</div>
+								</div>
+							</div>	 
+						</div>
+					</div><!---FINAL ROW--->
+					<div class="row no-gutters">
+						<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
+							<div class="card">
+								<figure class="container-selo pt-1">
+									<!-- <img class="card-selo" src="img/selo.png">  -->
+								</figure>
+									<img src="img/Insígnias/PHP.png" alt="PHP">
+									<p class="mt-2">PHP</p>
+								<div class="card-img-overlay azulPHP">								
+									<h4 class="mt-4">Evolução</h4>
+									<div class="progress mt-5">
+										<div class="progress-bar bg-success pbar-1" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+									</div>
+								 
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
+							<div class="card">
+								<figure class="container-selo pt-1">
+									<!-- <img class="card-selo" src="img/selo.png">  -->
+								</figure>
+									<img src="img/Insígnias/SQL.png" alt="SQL">
+									<p class="mt-4">SQL</p>
+								<div class="card-img-overlay branco">							
+									<h4 class="mt-4">Evolução</h4>
+									<div class="progress mt-5">
+										<div class="progress-bar bg-success pbar-1" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
+							<div class="card">
+								<figure class="container-selo pt-1">
+									<!-- <img class="card-selo" src="img/selo.png">  -->
+								</figure>
+									<img src="img/Insígnias/Vue.png" alt="Vue">
+									<p class="mt-4">VUE JS</p>
+								<div class="card-img-overlay verdeescuro2">								 
+									<h4 class="mt-4">Evolução</h4>
+									<div class="progress mt-5">
+										<div class="progress-bar bg-success pbar-1" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+									</div>
+								</div>
+							</div>	
+						</div>
+						<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
+							<div class="card">
+								<figure class="container-selo pt-1">
+									<!-- <img class="card-selo" src="img/selo.png">  -->
+								</figure>
+									<img src="img/Insígnias/jquery.png" alt="jquery">
+									<p class="mt-4">JQUERY</p>
+								<div class="card-img-overlay azul2">								
+									<h4 class="mt-4">Evolução</h4>
+									<div class="progress mt-5">
+										<div class="progress-bar bg-success pbar-1" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+									</div>
+								</div>
+							</div>	  
+						</div>
+						<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
+							<div class="card">
+								<figure class="container-selo pt-1">
+									<!-- <img class="card-selo" src="img/selo.png">  -->
+								</figure>
+									<img src="img/Insígnias/angularjs.png" alt="angularjs">
+									<p class="mt-4">ANGULAR JS</p>
+								<div class="card-img-overlay red2">								
+									<h4 class="mt-4">Evolução</h4>
+									<div class="progress mt-5">
+										<div class="progress-bar bg-success pbar-1" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+									</div>
+								</div>
+							</div>	
+						</div>
+						<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
+							<div class="card">
+								<figure class="container-selo pt-1">
+									<!-- <img class="card-selo" src="img/selo.png">  -->
+								</figure>
+									<img src="img/Insígnias/git.png" alt="Git">
+									<p class="mt-4">GIT</p>
+								<div class="card-img-overlay laranjavermillion">							
+									<h4 class="mt-4">Evolução</h4>
+									<div class="progress mt-5">
+										<div class="progress-bar bg-success pbar-1" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div><!---FINAL ROW--->
+					<div class="row no-gutters">
+						<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
+							<div class="card">
+								<figure class="container-selo pt-1">
+									<!-- <img class="card-selo" src="img/selo.png">  -->
+								</figure>
+									<img src="img/Insígnias/github.png" alt="github">
+									<p class="mt-4">GITHUB</p>
+								<div class="card-img-overlay black">								 
+									<h4 class="mt-4">Evolução</h4>
+									<div class="progress mt-5">
+										<div class="progress-bar bg-success pbar-1" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+									</div>
+								</div>
+							</div>	 
+						</div>
+						<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
+							<div class="card">
+								<figure class="container-selo pt-1">
+									<!-- <img class="card-selo" src="img/selo.png">  -->
+								</figure>
+									<img src="img/Insígnias/java.png" alt="Java">
+									<p class="mt-4">JAVA</p>
+								<div class="card-img-overlay azulclaro2">								  
+									<h4 class="mt-4">Evolução</h4>
+									<div class="progress mt-5">
+										<div class="progress-bar bg-success pbar-1" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+									</div>
+								</div>
+							</div>	
+						</div>
+						<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
+							<div class="card">
+								<figure class="container-selo pt-1">
+									<!-- <img class="card-selo" src="img/selo.png">  -->
+								</figure>
+									<img src="img/Insígnias/wordpress.png" alt="wordpress">
+									<p class="mt-4">WORDPRESS</p>
+								<div class="card-img-overlay azul2 ">								
+									<h4 class="mt-4">Evolução</h4>
+									<div class="progress mt-5">
+										<div class="progress-bar bg-success pbar-1" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+									</div>
+								</div>
+							</div>	 
+						</div>
+						<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
+							<div class="card">
+								<figure class="container-selo pt-1">
+									<!-- <img class="card-selo" src="img/selo.png">  -->
+								</figure>
+									<img src="img/Insígnias/ruby.png" alt="Ruby">
+									<p class="mt-4">RUBY</p>
+								<div class="card-img-overlay red">								 
+									<h4 class="mt-4">Evolução</h4>
+									<div class="progress mt-5">
+										<div class="progress-bar bg-success pbar-1" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+									</div>
+								</div>
+							</div>	
+						</div>
+						<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
+							<div class="card">
+								<figure class="container-selo pt-1">
+									<!-- <img class="card-selo" src="img/selo.png">  -->
+								</figure>
+									<img src="img/Insígnias/python.png" alt="python">
+									<p class="mt-4">PYTHON</p>
+								<div class="card-img-overlay yellow">								 
+									<h4 class="mt-4">Evolução</h4>
+									<div class="progress mt-5">
+										<div class="progress-bar bg-success pbar-1" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+									</div>
+								</div>
+							</div>	
+						</div>
+						<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
+							<div class="card">
+								<figure class="container-selo pt-1">
+									<!-- <img class="card-selo" src="img/selo.png">  -->
+								</figure>
+									<img src="img/Insígnias/django.png" alt="django">
+									<p class="mt-4">DJANGO</p>
+								<div class="card-img-overlay verdeescuro2">								 
+									<h4 class="mt-4">Evolução</h4>
+									<div class="progress mt-5">
+										<div class="progress-bar bg-success pbar-1" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+									</div>
+								</div>
+							</div>	 
+						</div>
+					</div><!---FINAL ROW--->
+					<div class="row no-gutters">
+						<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
+							<div class="card">
+								<figure class="container-selo pt-1">
+									<!-- <img class="card-selo" src="img/selo.png">  -->
+								</figure>
+									<img src="img/Insígnias/CDEV.png" alt="C">
+									<p class="mt-4">C</p>
+								<div class="card-img-overlay azulgelo">								  
+									<h4 class="mt-4">Evolução</h4>
+									<div class="progress mt-5">
+										<div class="progress-bar bg-success pbar-1" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+									</div>
+								</div>
+							</div>	 
+						</div>
+						<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
+							<div class="card">
+								<figure class="container-selo pt-1">
+									<!-- <img class="card-selo" src="img/selo.png">  -->
+								</figure>
+									<img src="img/Insígnias/CS.png" alt="C#">
+									<p class="mt-4">C#</p>
+								<div class="card-img-overlay roxo">								 
+									<h4 class="mt-4">Evolução</h4>
+									<div class="progress mt-5">
+										<div class="progress-bar bg-success pbar-1" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+									</div>
+								</div>
+							</div>	
+						</div>
+						<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
+							<div class="card">
+								<figure class="container-selo pt-1">
+									<!-- <img class="card-selo" src="img/selo.png">  -->
+								</figure>
+									<img src="img/Insígnias/golang.png" alt="Golang">
+									<p class="mt-4">GOLANG</p>
+								<div class="card-img-overlay azulclaro2">								  
+									<h4 class="mt-4">Evolução</h4>
+									<div class="progress mt-5">
+										<div class="progress-bar bg-success pbar-1" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+									</div>
+								</div>
+							</div>	 
+						</div>
+						<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
+							<div class="card">
+								<figure class="container-selo pt-1">
+									<!-- <img class="card-selo" src="img/selo.png">  -->
+								</figure>
+									<img src="img/Insígnias/laravel.png" alt="Laravel">
+									<p class="mt-4">LARAVEL</p>
+								<div class="card-img-overlay red2">								  
+									<h4 class="mt-4">Evolução</h4>
+									<div class="progress mt-5">
+										<div class="progress-bar bg-success pbar-1" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+									</div>
+								</div>
+							</div>	 
+						</div>
+						<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
+							<div class="card">
+								<figure class="container-selo pt-1">
+									<!-- <img class="card-selo" src="img/selo.png">  -->
+								</figure>
+									<img src="img/Insígnias/R.png" alt="R">
+									<p class="mt-4">R</p>
+								<div class="card-img-overlay azulgelo">								 
+									<h4 class="mt-4">Evolução</h4>
+									<div class="progress mt-5">
+										<div class="progress-bar bg-success pbar-1" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+									</div>
+								</div>		
+							</div>		 
+						</div>
+						<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
+  							<div class="card">
+								<figure class="container-selo pt-1">
+									<!-- <img class="card-selo" src="img/selo.png">  -->
+								</figure>
+									<img src="img/Insígnias/C++.png" alt="C++">
+									<p class="mt-4">C++</p>
+								<div class="card-img-overlay bg-primary">								  
+									<h4 class="mt-4">Evolução</h4>
+									<div class="progress mt-5">
+										<div class="progress-bar bg-success pbar-1" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
+									</div>
+								</div>
+							</div>	
+						</div>
+					</div><!---FINAL ROW--->
+				</div>	  
+			</div>
+			<div class="container-fluid text-center">
+			  <button type="button" class="btn btn-primary rad-30 mb-2 buttonblue" data-dismiss="modal">Sair</button>
+			</div>
+		  </div>
 		</div>
-	</dir>
-</dir>
+	<!-- modal Insignias -->
+</div>
 
-<div class="row sectionlateral">
-	<div class="container-fluid">
-		<div class="col-6">
-		  			<table class="table">
-						
-								<tr>
-									<th scope="col-1" class="text-center">
-										<img class="img-fluid" src="img/Insígnias/HTML.png">
-										<p class="mt-3">HTML</p>
-									</th>
-									<th scope="col-1">
-										<img class="img-fluid" src="img/Insígnias/css.png">
-										<p class="mt-3">CSS</p>
-									</th>
-									<th scope="col-1">
-										<img class="img-fluid" src="img/Insígnias/javascript.png">
-										<p class="mt-3">Javascript</p>
-									</th>
-									<th scope="col-1">
-										<img class="img-fluid" src="img/Insígnias/react.png">
-										<p class="mt-3">React</p>
-									</th>
-									<th scope="col-1">
-										<img class="img-fluid" src="img/Insígnias/bootstrap.png">
-										<p class="mt-3">Bootstrap</p>
-									</th>
-									<th scope="col-1">
-										<img class="img-fluid" src="img/Insígnias/SQL.png">
-										<p>MySQL</p>
-									</th>
-								</tr>
-								<tr>
-									<th scope="col-1" class="text-center">
-										<img class="img-fluid" src="img/Insígnias/C.png">
-										<p class="mt-3">C</p>
-									</th>
-									<th scope="col-1">
-										<img class="img-fluid" src="img/Insígnias/ruby.png">
-										<p class="mt-4">Ruby</p>
-									</th>
-									<th scope="col-1">
-										<img class="img-fluid" src="img/Insígnias/golang.png">
-										<p class="mt-3">Golang</p>
-									</th>
-									<th scope="col-1">
-										<img class="img-fluid" src="img/Insígnias/python.png">
-										<p class="mt-3">Python</p>
-									</th>
-									<th scope="col-1">
-										<img class="img-fluid" src="img/Insígnias/swift.png">
-										<p class="mt-3">Swift</p>
-									</th>
-									<th scope="col-1">
-										<img class="img-fluid" src="img/Insígnias/PHP.png">
-										<p class="mt-1">PHP</p>
-									</th>
-								</tr>
-								<tr>
-									<th scope="col-1" class="text-center">
-										<img class="img-fluid" src="img/Insígnias/VS.png">
-										<p class="mt-4">Visual Studio</p>
-									</th>
-									<th scope="col-1">
-										<img class="img-fluid" src="img/Insígnias/Vue.png">
-										<p class="mt-2">Vue.js</p>
-									</th>
-									<th scope="col-1">
-										<img class="img-fluid" src="img/Insígnias/java.png">
-										<p>Java</p>
-									</th>
-									<th scope="col-1">
-										<img class="img-fluid" src="img/Insígnias/C++.png">
-										<p class="mt-1">C++</p>
-									</th>
-									<th scope="col-1">
-										<img class="img-fluid" src="img/Insígnias/rails.png">
-										<p class="mt-2">Ruby on Rails</p>
-									</th>
-									<th scope="col-1">
-										<img class="img-fluid" src="img/Insígnias/nodejs.png">
-										<p class="mt-1">Node.js</p>
-									</th>
-								</tr>	
-						</table>	
-		</div>
-		<div class="col-6">
-		  			<table class="table">
-						
-								<tr>
-									<th scope="col-1" class="text-center">
-										<img class="img-fluid" src="img/Insígnias/HTML.png">
-										<p class="mt-3">HTML</p>
-									</th>
-									<th scope="col-1">
-										<img class="img-fluid" src="img/Insígnias/css.png">
-										<p class="mt-3">CSS</p>
-									</th>
-									<th scope="col-1">
-										<img class="img-fluid" src="img/Insígnias/javascript.png">
-										<p class="mt-3">Javascript</p>
-									</th>
-									<th scope="col-1">
-										<img class="img-fluid" src="img/Insígnias/react.png">
-										<p class="mt-3">React</p>
-									</th>
-									<th scope="col-1">
-										<img class="img-fluid" src="img/Insígnias/bootstrap.png">
-										<p class="mt-3">Bootstrap</p>
-									</th>
-									<th scope="col-1">
-										<img class="img-fluid" src="img/Insígnias/SQL.png">
-										<p>MySQL</p>
-									</th>
-								</tr>
-								<tr>
-									<th scope="col-1" class="text-center">
-										<img class="img-fluid" src="img/Insígnias/C.png">
-										<p class="mt-3">C</p>
-									</th>
-									<th scope="col-1">
-										<img class="img-fluid" src="img/Insígnias/ruby.png">
-										<p class="mt-4">Ruby</p>
-									</th>
-									<th scope="col-1">
-										<img class="img-fluid" src="img/Insígnias/golang.png">
-										<p class="mt-3">Golang</p>
-									</th>
-									<th scope="col-1">
-										<img class="img-fluid" src="img/Insígnias/python.png">
-										<p class="mt-3">Python</p>
-									</th>
-									<th scope="col-1">
-										<img class="img-fluid" src="img/Insígnias/swift.png">
-										<p class="mt-3">Swift</p>
-									</th>
-									<th scope="col-1">
-										<img class="img-fluid" src="img/Insígnias/PHP.png">
-										<p class="mt-1">PHP</p>
-									</th>
-								</tr>
-								<tr>
-									<th scope="col-1" class="text-center">
-										<img class="img-fluid" src="img/Insígnias/VS.png">
-										<p class="mt-4">Visual Studio</p>
-									</th>
-									<th scope="col-1">
-										<img class="img-fluid" src="img/Insígnias/Vue.png">
-										<p class="mt-2">Vue.js</p>
-									</th>
-									<th scope="col-1">
-										<img class="img-fluid" src="img/Insígnias/java.png">
-										<p>Java</p>
-									</th>
-									<th scope="col-1">
-										<img class="img-fluid" src="img/Insígnias/C++.png">
-										<p class="mt-1">C++</p>
-									</th>
-									<th scope="col-1">
-										<img class="img-fluid" src="img/Insígnias/rails.png">
-										<p class="mt-2">Ruby on Rails</p>
-									</th>
-									<th scope="col-1">
-										<img class="img-fluid" src="img/Insígnias/nodejs.png">
-										<p class="mt-1">Node.js</p>
-									</th>
-								</tr>	
-						</table>	
-				</div>		
-		</div>	  	  
-</div><!---Row--->
 </section>
 <!--Fim SEÇÃO 1--->
-
 
 <section class="background_gray text-light text-center mt-5" style="font-family: impact;">
 	<i class="fas fa-medal display-3"></i>
@@ -306,34 +536,29 @@
 
 <footer>
 
-	<div class="container-fluid">
+	<div class="container">
 		<div class="row">
-			<div class="col-lg-6 col-sm-12 col-md-6 col-xl-3 text-left text-light">
+			<div class="col-lg-6 col-sm-12 col-md-6 col-xl-6 text-left text-light">
 				
-				<div class="container-fluid pl-0 mt-3" style="width: 500px">
+				<div class="container-fluid pl-0 mt-3">
 					<h1 class="text-left">Inspiração</h1>
 <!---Criar caixas de Popover---->					
 					<p class="lead">
-						Este site foi realizado tendo como inspiração uma Pokedéx, do anime anime japonês - Pokemon.
+						Este site/portfólio foi realizado tendo como inspiração uma Pokedéx, do anime japonês - Pokemon.
 					</p>
-					<p>
-						 A Pokedéx é uma enciclopédia que contém diversas informações sobre os pokemons, como por exemplo: força de ataque, defesa, tipo(fogo, agua, venenoso, etc) entre outras informações.
+					<p class="lead">A Pokedéx é uma enciclopédia que contém diversas informações sobre os pokemons, como por exemplo: força de ataque, defesa, tipo(fogo, agua, venenoso, etc) entre outras informações.
 					</p>
 				</div>	
-
 			</div>
 
 			<div class="col-lg-6 col-sm-12 col-md-6 col-xl-4 text-left text-light ">
-				<div class="container-fluid" style="height: 250px; width: 500px" >
-					<img src="img/pokedex.png" style="height: 500px; width: 500px">
-				</div>
+				
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-lg-6 col-sm-12 col-md-6 col-xl-3 text-light ">
+			<div class="col-lg-11 col-sm-11 col-md-11 col-xl-11 text-light ">
 				<div class="container pl-0">
-					<h1 class="ml-0">Contato</h1>
-<!---Criar caixas de Popover---->					
+					<h1>Contato</h1>			
 					<h6>Linkedin</h6>
 					<h6>Facebook</h6>
 					<h6>Git HuB</h6>
@@ -341,9 +566,10 @@
 					<h6>Celular</h6>
 				</div>							
 			</div>
-
-			<div class="col-lg-6 col-sm-12 col-md-6 col-xl-2 text-light">
-				<h6 class="mt-5"><a href="#topo">Voltar ao Topo >></a></h6>
+			<div class="col-lg-1 col-sm-1 col-md-1 col-xl-1 text-light">
+				<a href="#topo" id="top">
+					<img src="img/iconTOP.png" class="shadow h-25 w-25">
+				</a>
 			</div>
 		</div>
 	</div>
@@ -356,20 +582,34 @@
 
 
 <script type="text/javascript">
-
-	/* Open when someone clicks on the span element */
-		function openNav() {
+/* Open when someone clicks on the span element */
+	function openNav() {
 		  document.getElementById("myNav").style.width = "100%";
 		}
+	window.onload=document.getElementById("myNav").style.width = "100%"	
 
-	/* Ativa o botão de fechar - seta */
-		function closeNav() {
+/* Ativa o botão de fechar - seta */
+	function closeNav() {
 		  document.getElementById("myNav").style.width = "0%";
 		}
 
+// Modal AJUSTE DE ALTURA
 
-/*Scrollspy*/
-$('#caixaLivro').scrollspy({ target: '#livro'})
+// Pause
+
+function mostrar(e) {
+
+    if (e.classList.contains("fa-pause")) { //se tem olho aberto
+      e.classList.remove("fa-pause"); //remove classe olho aberto
+      e.classList.add("fa-play"); //coloca classe olho fechado
+	  document.getElementById("pokemon").pause()
+    } else { //senão
+      e.classList.remove("fa-play"); //remove classe olho fechado
+      e.classList.add("fa-pause"); //coloca classe olho aberto
+	  document.getElementById("pokemon").play()
+    }
+
+  }
 
 </script>
 

@@ -6,3 +6,30 @@
 [0902/145922.029:ERROR:crash_report_database_win.cc(469)] failed to stat report
 [0903/121201.924:ERROR:crash_report_database_win.cc(469)] failed to stat report
 [0904/103940.760:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0908/185644.263:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0908/195620.307:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0908/200620.318:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0908/200620.320:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0908/201120.317:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0908/202620.319:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0908/204120.321:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0908/205620.322:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0908/211120.584:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0908/212620.587:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0908/214120.588:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1022/152405.679:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1022/204436.332:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1022/215339.821:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
+[1023/153155.053:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1023/221449.311:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1023/225338.338:ERROR:process_reader_win.cc(188)] ResumeThread: Parâmetro incorreto. (0x57)
+[1023/225338.339:ERROR:process_reader_win.cc(151)] SuspendThread: Acesso negado. (0x5)
+[1023/225338.339:ERROR:process_reader_win.cc(151)] SuspendThread: Acesso negado. (0x5)
+[1023/225338.339:ERROR:process_reader_win.cc(151)] SuspendThread: Acesso negado. (0x5)
+[1023/225338.339:ERROR:process_reader_win.cc(151)] SuspendThread: Acesso negado. (0x5)
+[1023/225338.339:ERROR:process_reader_win.cc(151)] SuspendThread: Acesso negado. (0x5)
+[1023/225338.339:ERROR:process_reader_win.cc(151)] SuspendThread: Acesso negado. (0x5)
+[1023/225338.339:ERROR:process_reader_win.cc(151)] SuspendThread: Acesso negado. (0x5)
+[1023/225338.340:ERROR:process_reader_win.cc(151)] SuspendThread: Acesso negado. (0x5)
+[1026/004607.919:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1026/135157.311:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
