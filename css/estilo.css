@@ -3,7 +3,6 @@
 header{height: 100px}
 
 section{
-	background-color:black;
 	height: 350px
 }
 
@@ -103,6 +102,7 @@ img{cursor: pointer;}
 .laranjavermillion{background-color: #E5390A;}
 .azulclaro2{background-color: #09E6E2;}
 .azulgelo{background-color: #77AAD1;}
+.preto{ background-color: #161616;}
 /* Final Paleta de Cores */
 
 .alinharcentro{
@@ -112,7 +112,7 @@ img{cursor: pointer;}
 /* Ajuste do modal */
 .modal-lg{
   width: 100% !important;
-  max-width: 100% !important;
+  max-width: 90% !important;
 }
 .modal-header{
   justify-content: space-evenly !important;
@@ -123,42 +123,58 @@ img{cursor: pointer;}
 }
   
 .overflow{
-  overflow-y: scroll;
+  overflow-y: scroll; overflow-x: hidden;
 }
 
+
+/*bola azul  */
+
+.brilho {
+  animation: pulse 0.5s infinite;
+  margin: 0 auto;
+  margin-top: 50px;
+  animation-direction: alternate;
+  -webkit-animation-name: brilho;
+  animation-name: brilho;
+}
+
+@-webkit-keyframes brilho{
+  0% {
+    -webkit-filter: brightness(80%);
+  }
+  100% {
+    -webkit-filter: brightness(150%);
+  }
+}
+
+@keyframes brilho{
+  0% {
+    filter: brightness(80%);
+  }
+  100% {
+    filter: brightness(150%);
+  }
+}
+/* bola azul */
 /* Ajuste do modal */
 
 
 /* Inicio Cards */
-.card img{height:40% !important;width:35% !important;display: block;position: static;;}
- .container-selo{
+.modal-content img{height:40% !important;width:35% !important;max-width:35% !important;display: block;position: static;;}
+
+.container-selo{
   width: 100% !important;
 }
- figure .card-selo{
+
+  figure .card-selo{
   float: right;
   right: 0;
   position: absolute;
   height:30px !important ;
   width: 30px !important;
-  /* transform-style: preserve-3d; */
-  /* -webkit-transform-style: preserve-3d; */
-  /* animation-name: spin; */
-  /* animation-duration:5000ms; */
-  /* animation-iteration-count: infinite; */
-  /* animation-timing-function: linear; */
-}
-
-/* @keyframes spin{
-  from{
-    transform: rotateX(-1deg) rotateY(0deg);
   }
 
-  to{
-    transform: rotateX(-1deg) rotateY(360deg);
-  }
-}
- */
-.card{
+  .modal-content .card{
   position: relative;
   height: 10em; 
   width: 100%;
@@ -168,7 +184,7 @@ img{cursor: pointer;}
   border: none !important;
 }
 
-.card-img-overlay{
+.modal-content  .card-img-overlay{
   position: absolute;
   color:white;
   height: 100%;
@@ -177,15 +193,13 @@ img{cursor: pointer;}
   transition: 0.5s ease;
 }
 
-.card:hover .card-img-overlay {
+.modal-content  .card:hover .card-img-overlay {
   background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
   opacity: 1;
 }
-
-.card-img-overlay h4{margin-top: 50px;text-align: center;}
-
-.progress{height: 10%;border-radius: 50px !important;}
-.progress-bar{border-radius: 30px;}
+.modal-content h4{margin-top: 50px;text-align: center;}
+.modal-content  .progress{height: 10%;border-radius: 50px !important;}
+.modal-content  .progress-bar{border-radius: 30px;}
 
 .pbar-1{width: 45%;} .pbar-5{width: 45%;}
 .pbar-2{width: 45%;} .pbar-6{width: 45%;}
@@ -196,10 +210,41 @@ img{cursor: pointer;}
 /*Final Cards
 
 /* EU */
-
 .sobreRow{
   height: 60pc;
 }
+
+.sobreRow .card{
+  width: 100%;
+}
+.sobreRow .card-ash{
+  height:200px;
+  max-height: 200px;
+  width: 200px;
+  max-width:100%;
+}
+
+.card-tela{
+  height: 25rem;
+  background-color: #87cefa;
+  background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1));
+}
+
+.hr{border-top: 2px solid white;}
+
+.card-footer tr{
+  background-image: linear-gradient(43deg,transparent 50px,white 50px);
+  height: 67px;
+ }
+
+.card-footer th{
+  border-bottom-right-radius: 10px !important;
+}
+.rounded-topo{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
 .Eu{
   height: 100px;
   width: 200px;
@@ -245,20 +290,14 @@ img{cursor: pointer;}
   height:20pc ;
   width:100%;
   border-radius: 30px;
-  
 }
 
 .sc-4{
-  height: 400px;
-}
-
-.InspRow{
-  padding-top: 60px;
-  align-content: center;
+  height: 100vh;
+  width: 100%;
 }
 
 /* Inspiração */
-
 
 /*Posição do botão para fechar - seta amarela*/
 .overlay .seta {
@@ -306,7 +345,6 @@ animation-duration: 2s !important;
 
 footer i{
   font-size: max(16px, 3.2vw);
-
 }
 
 footer a{
@@ -334,3 +372,7 @@ footer .btn-success:hover,.whats:hover{
 
 
 /* Footer  */
+
+
+
+
