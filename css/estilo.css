@@ -7,7 +7,7 @@ section{
 	height: 350px
 }
 
-footer{padding: 50px;}
+footer{padding: 40px;}
 
 /* Audio Pokemon */
   audio{
@@ -112,7 +112,7 @@ img{cursor: pointer;}
 /* Ajuste do modal */
 .modal-lg{
   width: 100% !important;
-  max-width: 100vw !important;
+  max-width: 100% !important;
 }
 .modal-header{
   justify-content: space-evenly !important;
@@ -240,6 +240,26 @@ img{cursor: pointer;}
   transition: 0.5s; /*tempo de fade in e fade out da imagem */
 }
 
+/* Inspiração */
+.pokedex{
+  height:20pc ;
+  width:100%;
+  border-radius: 30px;
+  
+}
+
+.sc-4{
+  height: 400px;
+}
+
+.InspRow{
+  padding-top: 60px;
+  align-content: center;
+}
+
+/* Inspiração */
+
+
 /*Posição do botão para fechar - seta amarela*/
 .overlay .seta {
   position: absolute;
@@ -248,9 +268,9 @@ img{cursor: pointer;}
   text-align: left;
 }
 
-.overlay i{
+.fadeOutRight i{
   font-size: 70px;
-  color: white;
+  color: yellow;
   animation-name: fade;
 }
 
@@ -273,3 +293,44 @@ animation-duration: 2s !important;
   border-width: 7pc;
 }
 /* Final Sobreposição de imagem capa pokedex*/
+
+/* Footer  */
+
+.voltartopo{
+  height:55px ;
+  width: 50px;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
+footer i{
+  font-size: max(16px, 3.2vw);
+
+}
+
+footer a{
+  text-decoration: none;
+  color: white;
+}
+
+
+footer .btn-primary:hover,.linkedin:hover{
+  color: #0e76a8;
+  background-color: white !important  ;
+}
+footer .btn-dark:hover,.github:hover{
+  color: black;
+  background-color: white !important  ;
+}
+footer .btn-danger:hover,.email:hover{
+  color: #ea4335;
+  background-color: white !important  ;
+}
+footer .btn-success:hover,.whats:hover{
+  color:#25d366;
+  background-color: white !important  ;
+}
+
+
+/* Footer  */

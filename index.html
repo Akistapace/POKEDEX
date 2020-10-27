@@ -26,13 +26,13 @@
 	<div id="myNav" class="overlay">
 		<!-- Botão para abrir seta amarela -->
 		<a href="javascript:void(0)" class="seta" onclick="closeNav()">
-			<!-- <img class="img-fluid animated pulse infinite" id="seta" src="img/SetaAmarela.png" style="height: 100%"> -->
-		
 			<div id="triangulo-para-direita"></div>
 			<div class="container-fluid animated fadeOutRight infinite">
+				<img src="img/setas.png">
+
+				<!-- <i class="fas fa-angle-double-right"></i>
 				<i class="fas fa-angle-double-right"></i>
-				<i class="fas fa-angle-double-right"></i>
-				<i class="fas fa-angle-double-right"></i>
+				<i class="fas fa-angle-double-right"></i> -->
 			</div>
 		</a>		
 	</div>
@@ -103,13 +103,29 @@
 </section>
 
 <!--SEÇÃO 1--->
-<section class="img3">
+<section class="sc-4 mt-5 rad-30">
+	<div class="row InspRow">
+		<div class="col-lg-6 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-left text-light">
+			<div class="container-fluid px-0 mt-3 text-center">
+				<h4 class="">Inspiração</h1>
+<!---Criar caixas de Popover---->					
+				<p class="lead">
+					Este site/portfólio foi realizado tendo como inspiração uma Pokedéx, do anime japonês - Pokemon.
+				</p>
+				<p class="lead">A Pokedéx é uma enciclopédia que contém diversas informações sobre os pokemons, como por exemplo: força de ataque, defesa, tipo(fogo, agua, venenoso, etc) entre outras informações.
+				</p>
+			</div>	
+		</div>
 
+		<div class="col-lg-6 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-light ">
+			<img src="img/pokedex.png" class="pokedex">
+		</div>
+	</div>
 
 </section>
 <!--Fim SEÇÃO 1--->
 
-<section class="sc-3 background_gray text-light text-center mt-5">
+<section class="sc-3 background_gray text-light text-center mt-5 rad-30">
 	<p><h1 class="lead display-3">Sobre</h1></p>
 
 	<div class="container-fluid">
@@ -148,7 +164,7 @@
 		</div>
 		<div class="modal fade bg-primary" id="Insignias" tabindex="-1" role="dialog" aria-labelledby="Insignias" aria-hidden="true">
 			<div class="modal-dialog modal-lg" role="document">
-			  <div class="modal-content text-centers rad-30">
+			  <div class="modal-content text-center rad-30">
 				<div class="modal-header border-0">
 				  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
@@ -555,39 +571,21 @@
 
 <footer>
 
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-6 col-sm-12 col-md-6 col-xl-6 text-left text-light">
-				
-				<div class="container-fluid pl-0 mt-3">
-					<h1 class="text-left">Inspiração</h1>
-<!---Criar caixas de Popover---->					
-					<p class="lead">
-						Este site/portfólio foi realizado tendo como inspiração uma Pokedéx, do anime japonês - Pokemon.
-					</p>
-					<p class="lead">A Pokedéx é uma enciclopédia que contém diversas informações sobre os pokemons, como por exemplo: força de ataque, defesa, tipo(fogo, agua, venenoso, etc) entre outras informações.
-					</p>
-				</div>	
-			</div>
-
-			<div class="col-lg-6 col-sm-12 col-md-6 col-xl-4 text-left text-light ">
-				
-			</div>
-		</div>
+	<div class="container-fluid px-0">
 		<div class="row">
 			<div class="col-lg-11 col-sm-11 col-md-11 col-xl-11 text-light ">
 				<div class="container pl-0">
-					<h1>Contato</h1>			
-					<h6>Linkedin</h6>
-					<h6>Facebook</h6>
-					<h6>Git HuB</h6>
-					<h6>Email</h6>
-					<h6>Celular</h6>
+					<h4>Contato</h4>			
+					<a class="btn btn-primary" href="#"><i class="fab fa-linkedin linkedin"></i></a>
+					<a class="btn btn-dark" href="#"><i class="fab fa-github github"></i></a>
+					<a class="btn btn-danger" href="#"><i class="fas fa-envelope email"></i></a>
+					<a class="btn btn-success" href="#"><i class="fab fa-whatsapp whats"></i></a>
+
 				</div>							
 			</div>
 			<div class="col-lg-1 col-sm-1 col-md-1 col-xl-1 text-light">
 				<a href="#topo" id="top">
-					<img src="img/iconTOP.png" class="shadow h-25 w-25">
+					<img src="img/iconTOP.png" class="shadow voltartopo">
 				</a>
 			</div>
 		</div>
