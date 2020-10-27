@@ -195,6 +195,19 @@ img{cursor: pointer;}
 .pbar-6{width: 45%;} .pbar-10{width: 45%;}
 /*Final Cards
 
+/* EU */
+
+.sobreRow{
+  height: 60pc;
+}
+.Eu{
+  height: 100px;
+  width: 200px;
+}
+
+.sc-3{height: 100vh;}
+/* EU */
+
 /*Inicio Efeitos para o botão azul e seta amarela */
 
 #slide {
@@ -251,5 +264,12 @@ z-index: -1;
 animation-duration: 2s !important;
 }
 
-
+#triangulo-para-direita {
+  width: 0; 
+  height: 0; 
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 25px solid yellow;
+  border-width: 7pc;
+}
 /* Final Sobreposição de imagem capa pokedex*/
