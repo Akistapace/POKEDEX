@@ -1,4 +1,4 @@
-*{padding: 0;	margin: 0;}
+*{padding: 0;	margin: 0;   font-family: "Special Elite", monospace;}
 
 header{height: 100px}
 
@@ -12,6 +12,10 @@ footer{padding: 40px;}
   audio{
     height: 20px;
     /* width: 100%; */
+  }
+
+  .font{
+   font-family: "Special Elite", monospace;
   }
 
 .play,.pause{
@@ -30,16 +34,13 @@ footer{padding: 40px;}
 
 /* Audio Pokemon */
 
-.sc-1{height: 650px;}
-.sc-2{height: 45px;}
-
-/* CAPA TELA */
-.section1{
+.sc-1{
   background-color: #161616;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
-	height: 60vw;
+	height: 50vh;
 }
+.sc-2{height: 45px;}
 
 .brand{
   position: fixed;
@@ -81,7 +82,7 @@ img{cursor: pointer;}
 .rad-100{border-radius:100px !important;}
 /*Final radius  */
 
-.background_1{background-image:url(../img/fundoVermelho.jpg);}
+.background_1{background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8))}
 
 
 /*inicio Paleta de Cores */
@@ -105,30 +106,10 @@ img{cursor: pointer;}
 .preto{ background-color: #161616;}
 /* Final Paleta de Cores */
 
-.alinharcentro{
-  justify-self: center;
-}
-
 /* Ajuste do modal */
-.modal-lg{
-  width: 100% !important;
-  max-width: 90% !important;
-}
-.modal-header{
-  justify-content: space-evenly !important;
-}
-
-.buttonblue{
-  width: 15rem;
-}
-  
-.overflow{
-  overflow-y: scroll; overflow-x: hidden;
-}
-
-
+.modal-lg{width:95vw !important;max-width: 100% !important;}
+ 
 /*bola azul  */
-
 .brilho {
   animation: pulse 0.5s infinite;
   margin: 0 auto;
@@ -137,7 +118,6 @@ img{cursor: pointer;}
   -webkit-animation-name: brilho;
   animation-name: brilho;
 }
-
 @-webkit-keyframes brilho{
   0% {
     -webkit-filter: brightness(80%);
@@ -146,7 +126,6 @@ img{cursor: pointer;}
     -webkit-filter: brightness(150%);
   }
 }
-
 @keyframes brilho{
   0% {
     filter: brightness(80%);
@@ -156,38 +135,35 @@ img{cursor: pointer;}
   }
 }
 /* bola azul */
-/* Ajuste do modal */
 
+/* Ajuste do modal */
 .sc-0{
   height: 60vh;
 }
 
-
-/* Inicio Cards */
-.modal-content img{height:40% !important;width:35% !important;max-width:35% !important;display: block;position: static;;}
-
-.container-selo{
-  width: 100% !important;
+/* Inicio modal */
+.modal-content img{height:40% !important;width:35% !important;max-width:35% !important;display: block;position: static;}
+.card-header h2{
+  font-family: "Special Elite", monospace;
+ color:black;
 }
-
-  figure .card-selo{
+.container-selo{width: 100% !important;}
+figure .card-selo{
   float: right;
   right: 0;
   position: absolute;
   height:30px !important ;
   width: 30px !important;
-  }
-
-  .modal-content .card{
+}
+.modal-content .card{
   position: relative;
   height: 10em; 
   width: 100%;
   align-items: center;
-  background-color:white;
-  color: black;
+  background-color:white !important;
+  color: black ;
   border: none !important;
-  }
-
+}
 .modal-content  .card-img-overlay{
   position: absolute;
   color:white;
@@ -196,7 +172,6 @@ img{cursor: pointer;}
   opacity: 0;
   transition: 0.5s ease;
 }
-
 .modal-content  .card:hover .card-img-overlay {
   background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
   opacity: 1;
@@ -213,67 +188,139 @@ img{cursor: pointer;}
 .pbar-6{width: 45%;} .pbar-10{width: 45%;}
 /*Final Cards
 
-
-
-
-/* EU */
-.sobreRow{
-  height: 60pc;
-}
-
+/* Sobre */
 .card-tela{
-  height: 25rem;
   background-color: #87cefa;
   background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1));
-  overflow-y: scroll; overflow-x: hidden;
 }
-
 .card-tela .card{
   width: 100%;
+  max-width: 100%;
   background-color: #161616;
 }
 .card-tela .card-ash{
-  height:200px;
-  max-height: 400px;
   width: 200px;
   max-width:100%;
   margin: auto;
 }
 
-#cards .card{
-  height:5pc ;
-  width: 5pc;
- }
-
 #cards img{
-  height:max(50px, 6vw);
-  width:max(50px, 6vw);
-  margin: 4px;
+  height:min(45px, 5vw);
+  width:min(45px, 5vw);
+  margin-bottom: 10px;
 }
-
 #cards img:hover{
+  border-left:4px solid black ;
   -webkit-transform: scale(1.3);
   -ms-transform: scale(1.3);
   transform: scale(1.3);
+  transition-delay: 0s;
+  transition-duration: 0s;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-
 .hr{border-top: 2px solid white;}
-
 .card-footer tr{
   background-image: linear-gradient(43deg,transparent 50px,white 50px);
   height: 67px;
  }
-
-.card-footer th{
-  border-bottom-right-radius: 10px !important;
-}
+.card-footer th{border-bottom-right-radius: 10px !important;}
 .rounded-topo{
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
-.sc-3{height: 100vh;}
-/* EU */
+#card-1, #card-2, #card-3{
+  width: 110px !important;
+}
+
+/* Card 1*/
+#card-1{margin-top: 20% !important;background-color: transparent;}
+#card-1 a{
+  color: white;
+  background-color: tomato;
+  background-image: linear-gradient(to bottom,rgb(255, 81, 13) 50%,rgb(136, 106, 106)), url(../img/transparente.png);
+  border-radius: 10px !important;
+}
+#card-1 a:hover{
+  background-color: tomato;
+  background-image: linear-gradient(to bottom,rgb(136, 106, 106) 50%,rgb(255, 81, 13)), url(../img/transparente.png);
+ 
+}
+
+/* Card 2*/
+#card-2{margin-top: 20% !important;background-color: transparent}
+#card-2 a{
+  color: white;
+  background-color: tomato;
+  background-image: linear-gradient(to bottom,rgb(255, 81, 13) 50%,rgb(136, 106, 106)), url(../img/transparente.png);
+  border-radius: 10px !important;
+}
+#card-2 a:hover{
+  background-color: tomato;
+  background-image: linear-gradient(to bottom,rgb(136, 106, 106) 50%,rgb(255, 81, 13)), url(../img/transparente.png); 
+}
+
+/* Card 3*/
+#card-3{margin-top: 20% !important;background-color: transparent;border: none;}
+#card-3 a{
+  color: white;
+  background-color: tomato;
+  background-image: linear-gradient(to bottom,rgb(255, 81, 13) 50%,rgb(136, 106, 106)), url(../img/transparente.png);
+  border-radius: 10px !important;
+}
+#card-3 a:hover{
+  background-color: tomato;
+  background-image: linear-gradient(to bottom,rgb(136, 106, 106) 50%,rgb(255, 81, 13)), url(../img/transparente.png);
+
+}
+
+.sc-3{height:140vh}
+
+/* Telefones em paisagem e abaixo */
+@media (max-width: 480px) { 
+  .sc-3{height:170vh}
+}
+
+/* Telefones em paisagem a tablet em retrato */
+@media (max-width: 767px) {
+  /* estilos aqui */
+}
+
+/* Tablet em retrato a paisagem e desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  /* estilos aqui */
+}
+
+/* Desktop grande */
+@media (min-width: 1200px) {
+ /* estilos aqui */
+}
+
+.sc-5{height:100vh}
+/* pokebola */
+.pokebola{
+  background-image: url(../img/pokebolagray.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 10pc 10pc;
+  height: 10px;
+}
+
+.pokebolainvert{
+  background-image:url(../img/pokebolagray.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 17pc 17pc;
+}
+
+.listra{
+  background-image: url(../img/listra.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 200px;
+}
+
+/* pokebola */
 
 /*Inicio Efeitos para o botão azul e seta amarela */
 
@@ -400,10 +447,45 @@ footer .btn-success:hover,.whats:hover{
   border: none;
   background-color: white !important  ;
 }
+.line {
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.75);
+  font-family: "Special Elite", monospace;
+  font-size: min(25px, 5vw);
+  text-align: center;
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.typing-animation {
+  animation-delay: 4s;
+  animation: blinkCursor 500ms steps(30) infinite normal,
+    typing 4s steps(30) 1s normal both;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 7em;
+  }
+}
+
+@keyframes blinkCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+
+  to {
+    border-right-color: transparent;
+  }
+}
 
 
 /* Footer  */
-
 
 
 
