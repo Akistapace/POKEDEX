@@ -90,17 +90,17 @@ img{cursor: pointer;}
 .branco{background-color: white;}
 .black{background-color: black;}
 .red{background-color: crimson;}
-.laranja{background-color: #FBAE1F;}
+.laranja{background-color: #FBAE1F !important;}
 .azulcss{background-color: darkblue;}
 .yellow{background-color: yellow;}
-.roxo{background-color: #571396;}
+.roxo{background-color: #571396 !important;}
 .verdeescuro{background-color:#0C8504;}
 .azulclaro{background-color: #09D6D2;}
 .azulPHP{background-color: #333385}
 .verdeescuro2{background-color: #338848;}
-.azul2{background-color: #5388CC;}
+.azul2{background-color: #5388CC !important;}
 .red2{background-color: red;}
-.laranjavermillion{background-color: #E5390A;}
+.laranjavermillion{background-color: #E5390A !important;}
 .azulclaro2{background-color: #09E6E2;}
 .azulgelo{background-color: #77AAD1;}
 .preto{ background-color: #161616;}
@@ -197,6 +197,7 @@ figure .card-selo{
   width: 100%;
   max-width: 100%;
   background-color: #161616;
+  border-radius: 10px;
 }
 .card-tela .card-ash{
   width: 200px;
@@ -204,20 +205,6 @@ figure .card-selo{
   margin: auto;
 }
 
-#cards img{
-  height:min(45px, 5vw);
-  width:min(45px, 5vw);
-  margin-bottom: 10px;
-}
-#cards img:hover{
-  border-left:4px solid black ;
-  -webkit-transform: scale(1.3);
-  -ms-transform: scale(1.3);
-  transform: scale(1.3);
-  transition-delay: 0s;
-  transition-duration: 0s;
-  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-}
 .hr{border-top: 2px solid white;}
 .card-footer tr{
   background-image: linear-gradient(43deg,transparent 50px,white 50px);
@@ -229,66 +216,63 @@ figure .card-selo{
   border-top-right-radius: 10px;
 }
 
+.popkebolatransp{
+  background-image: url(../img/pokebolatransp.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
 #card-1, #card-2, #card-3{
-  width: 110px !important;
+  margin-top: 15px;
+  margin-bottom: 35px;
+}
+
+#card-1 a, #card-2 a, #card-3 a{
+  width: max(80px, 9vw);
+  font-size: min(14px, 10vw);
 }
 
 /* Card 1*/
-#card-1{margin-top: 20% !important;background-color: transparent;}
 #card-1 a{
   color: white;
   background-color: tomato;
-  background-image: linear-gradient(to bottom,rgb(255, 81, 13) 50%,rgb(136, 106, 106)), url(../img/transparente.png);
+  background-image: linear-gradient(to bottom,rgb(13, 29, 255) 50%,rgb(136, 106, 106)), url(../img/transparente.png);
   border-radius: 10px !important;
 }
-#card-1 a:hover{
-  background-color: tomato;
-  background-image: linear-gradient(to bottom,rgb(136, 106, 106) 50%,rgb(255, 81, 13)), url(../img/transparente.png);
- 
-}
-
 /* Card 2*/
-#card-2{margin-top: 20% !important;background-color: transparent}
 #card-2 a{
   color: white;
   background-color: tomato;
   background-image: linear-gradient(to bottom,rgb(255, 81, 13) 50%,rgb(136, 106, 106)), url(../img/transparente.png);
   border-radius: 10px !important;
 }
-#card-2 a:hover{
-  background-color: tomato;
-  background-image: linear-gradient(to bottom,rgb(136, 106, 106) 50%,rgb(255, 81, 13)), url(../img/transparente.png); 
-}
-
 /* Card 3*/
-#card-3{margin-top: 20% !important;background-color: transparent;border: none;}
 #card-3 a{
   color: white;
   background-color: tomato;
-  background-image: linear-gradient(to bottom,rgb(255, 81, 13) 50%,rgb(136, 106, 106)), url(../img/transparente.png);
+  background-image: linear-gradient(to bottom,rgb(255, 13, 13) 50%,rgb(136, 106, 106)), url(../img/transparente.png);
   border-radius: 10px !important;
 }
-#card-3 a:hover{
-  background-color: tomato;
-  background-image: linear-gradient(to bottom,rgb(136, 106, 106) 50%,rgb(255, 81, 13)), url(../img/transparente.png);
 
-}
-
-.sc-3{height:140vh}
+.sc-3{height:42pc}
 
 /* Telefones em paisagem e abaixo */
 @media (max-width: 480px) { 
-  .sc-3{height:170vh}
+  .sc-3{height:50%}
 }
 
 /* Telefones em paisagem a tablet em retrato */
+@media (max-width: 600px) {
+  .sc-3{height:40pc}
+}
+
 @media (max-width: 767px) {
-  /* estilos aqui */
+  .sc-3{height:40%}
 }
 
 /* Tablet em retrato a paisagem e desktop */
 @media (min-width: 768px) and (max-width: 979px) {
-  /* estilos aqui */
+  .sc-3{height:90pc}
 }
 
 /* Desktop grande */
@@ -302,8 +286,6 @@ figure .card-selo{
   background-image: url(../img/pokebolagray.png);
   background-repeat: no-repeat;
   background-position: bottom right;
-  background-size: 10pc 10pc;
-  height: 10px;
 }
 
 .pokebolainvert{
@@ -313,17 +295,9 @@ figure .card-selo{
   background-size: 17pc 17pc;
 }
 
-.listra{
-  background-image: url(../img/listra.png);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  height: 200px;
-}
-
 /* pokebola */
 
 /*Inicio Efeitos para o botão azul e seta amarela */
-
 #slide {
     position: absolute;
     right: -100px;
@@ -485,7 +459,31 @@ footer .btn-success:hover,.whats:hover{
 }
 
 
+
 /* Footer  */
+.footer{height:10pc}
 
+/* Telefones em paisagem e abaixo */
+@media (max-width: 480px) { 
+  .footer{height:10pc}
+}
 
+/* Telefones em paisagem a tablet em retrato */
+@media (max-width: 600px) {
+  .footer{height:10pc}
+}
+
+@media (max-width: 767px) {
+  .footer{height:10pc}
+}
+
+/* Tablet em retrato a paisagem e desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  .footer{height:10pc}
+}
+
+/* Desktop grande */
+@media (min-width: 1200px) {
+ /* estilos aqui */
+}
 
