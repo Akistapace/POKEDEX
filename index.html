@@ -21,7 +21,7 @@
 </head>
 
 <body class="background_1" id="topo">
-	<header id="secao1">
+	<header>
 		<nav class="navbar py-0 px-0 fixed-top">
 			<div id="myNav" class="overlay">
 				<!-- Botão para abrir seta amarela -->
@@ -53,46 +53,58 @@
 			</div>
 			<div class="container-fluid pl-0 pr-0" style="height: 5px">
 				<table class="table table-borderless my-0 mx-0" style="height: 65px">
-						<tr>
-							<td class="pb-1 red " scope="col-1 " style="width: 15%"></td>
-							<td class="pb-1 gradiente dropdown ml-5" scope="col-2" style="width: 30%"></td>
-							<td class="pb-1" scope="col-5"></td>
-							<td class="pb-1" scope="col-4"></td>
-						</tr>
+					<tr>
+						<td class="pb-1 red " scope="col-1 " style="width: 15%"></td>
+						<td class="pb-1 gradiente dropdown ml-5" scope="col-2" style="width: 30%"></td>
+						<td class="pb-1" scope="col-5"></td>
+						<td class="pb-1" scope="col-4">
+							<!--Inicio Audio Pokemon -->
+							<div class="container-fluid text-right pt-2 bg-light-primary">
+								<audio id="pokemon" src="Tema_Pokemon.mp3" type="audio/mpeg" preload="auto"></audio>
+								<div class="btn-group" role="group" aria-label="Basic example">
+
+									<!-- Botão Play e Pause -->
+									<button type="button" class="btn btn-primary fas fa-play"
+										onclick="mostrar(this)"></button>
+									<button class="btn btn-danger ajusteButton" type="button" data-toggle="collapse"
+										data-target="#btncolapse" aria-expanded="false" aria-controls="btncolapse">
+										<img class="sound" src="img/sound.png" alt="Expandir som">
+									</button>
+									<div class="collapse btn-group" id="btncolapse">
+										<button class="btn btn-primary"
+											onclick="document.getElementById('pokemon').volume+=0.1">
+											<i class="fas fa-volume-up"></i>
+										</button>
+										<button class="btn btn-primary"
+											onclick="document.getElementById('pokemon').volume-=0.1">
+											<i class="fas fa-volume-down"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+							<!-- Final Audio Pokemon -->
+
+						</td>
+					</tr>
 				</table>
 			</div>
 		</nav>
 	</header>
 	<!--SEÇÃO 1--->
-	<section class="sc-1 rad-30 pokebolainvert">
-		<div class="container-fluid text-center text-light">
-			<!--Inicio Audio Pokemon -->
-			<div class="container-fluid text-right pt-2 bg-light-primary">
-				<audio id="pokemon" src="Tema_Pokemon.mp3" type="audio/mpeg" preload="auto"></audio>
-				<div class="btn-group" role="group" aria-label="Basic example">
-
-					<!-- Botão Play e Pause -->
-					<button type="button" class="btn btn-primary fas fa-play" onclick="mostrar(this)"></button>
-					<button class="btn btn-danger pd" type="button" data-toggle="collapse" data-target="#btncolapse"
-						aria-expanded="false" aria-controls="btncolapse">
-						<img class="sound" src="img/sound.png" alt="Expandir som">
-					</button>
-					<div class="collapse btn-group" id="btncolapse">
-						<button class="btn btn-primary" onclick="document.getElementById('pokemon').volume+=0.1">
-							<i class="fas fa-volume-up"></i>
-						</button>
-						<button class="btn btn-primary" onclick="document.getElementById('pokemon').volume-=0.1">
-							<i class="fas fa-volume-down"></i>
-						</button>
-					</div>
+	<section class="sc-1">
+		<div class="row w-100 h-100">	
+				<div class="container-fluid ">
+					<img class=" img-fluid pokemonLogoGira" src="img/poketeste.png">
 				</div>
-			</div>
-			<!-- Final Audio Pokemon -->
-			<h1>Front-End</h1>
-			<div>
-				<h2 class="line typing-animation">Em Evolução!</h2>
-			</div>
-		</div>
+	
+				<div class="centralizar container-fluid text-center position-absolute text-light">
+					<h1 class="">
+						<img class="img-fluid" src="https://fontmeme.com/permalink/201102/88e93e3c264041c514a76fefae5153bd.png" alt="fonte-de-pokemon" border="0">
+					</h1>
+					<h2 class="line typing-animation">Em Evolução!</h2>
+				</div>
+			
+		</div>	
 	</section>
 
 	<!--SEÇÃO 2--->
@@ -106,7 +118,7 @@
 				<div class="container card-tela rad-20">
 					<div class="row">
 						<div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
-							<div class="card rad-10 my-4 shadow-lg " data-aos-easing="ease-in-back" data-aos-delay="0"
+							<div class="card rad-10 my-4 shadow-lg " data-aos-easing="ease-in-back"
 								data-aos-offset="200">
 								<img class="card-ash popkebolatransp" src="img/Ash.png" alt="Card image cap">
 								<div class="card-body">
@@ -188,18 +200,22 @@
 									</div>
 									<div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
 										<div class="card bg-primary " role="button" aria-pressed="true">Front-End</div>
-										<div class="card bg-danger mt-2" role="button" aria-pressed="true">Ágilidade</div>
+										<div class="card laranjavermillion mt-2" role="button" aria-pressed="true">Agil
+										</div>
 									</div>
 								</div>
 							</div>
 							<!-- Habilidades -->
 						</div>
 						<div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 bg-dark text-center" id="cardinsignia">
-							<h4 class="mt-4">InsÍgnias<br>Tech</h4>
-							<a class="shadow-lg btn rounded-circle insignia" href="#Insignias" type="button" role="button"
-								data-toggle="modal">
-								<img class="mt-1 mr-5" src="img/pokeinsignia.png">
-							</a>
+							<h4 class="mt-4">InsÍgnias Tech</h4>
+							<div class="container-fluid mt-4">
+								<a class="shadow-lg btn rounded-circle insignia" href="#Insignias" type="button"
+									role="button" data-toggle="modal">
+									<img src="img/pokeinsignia.png">
+								</a>
+							</div>
+							<!-- modal -->
 							<div class="modal fade bg-primary" id="Insignias" tabindex="-1" role="dialog"
 								aria-labelledby="Insignias" aria-hidden="true">
 								<div class="modal-dialog modal-dialog-centered modal-lg text-dark" role="document">
@@ -214,493 +230,15 @@
 										</div>
 										<div class="modal-body">
 											<!-- Título do modal -->
-											<div class="container-fluid ">
-												<p class="lead text-center">Conhecimento adquirido em cada
-													Insignia Tech</p>
-											</div>
-											<div class="container-fluid px-0">
-												<div class="row no-gutters">
-													<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
-														<div class="card ">
-															<figure class="container-selo pt-1">
-																<img class="card-selo" src="img/selo.png">
-															</figure>
-															<img class="card-img" src="img/Insígnias/HTML.png"
-																alt="HTML">
-															<p class="">HTML</p>
-															<div class="card-img-overlay laranja">
-																<h4 class="mt-4">Evolução</h4>
-																<div class="progress mt-5">
-																	<div class="progress-bar bg-success pbar-1"
-																		role="progressbar" aria-valuenow="45"
-																		aria-valuemin="0" aria-valuemax="100">
-																		45%
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
-														<div class="card">
-															<figure class="container-selo pt-1">
-																<img class="card-selo" src="img/selo.png">
-															</figure>
-															<img class="card-img" src="img/Insígnias/css.png"
-																alt="CSS-Cascading">
-															<p class="mt-2">CSS</p>
-															<div class="card-img-overlay azulcss">
-																<h4 class="mt-4">Evolução</h4>
-																<div class="progress mt-5">
-																	<div class="progress-bar bg-success pbar-1"
-																		role="progressbar" aria-valuenow="45"
-																		aria-valuemin="0" aria-valuemax="100">
-																		45%
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
-														<div class="card">
-															<figure class="container-selo pt-1">
-																<!-- <img class="card-selo" src="img/selo.png">  -->
-															</figure>
-															<img class="card-img" src="img/Insígnias/Javascript.png"
-																alt="Javascript">
-															<p class="mt-4">JAVASCRIPT</p>
-															<div class="card-img-overlay yellow">
-																<h4 class="mt-4">Evolução</h4>
-																<div class="progress mt-5">
-																	<div class="progress-bar bg-success pbar-1"
-																		role="progressbar" aria-valuenow="45"
-																		aria-valuemin="0" aria-valuemax="100">
-																		45%
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
-														<div class="card">
-															<figure class="container-selo pt-1">
-																<img class="card-selo" src="img/selo.png">
-															</figure>
-															<img src="img/Insígnias/bootstrap.png" alt="Bootstrap----">
-															<p class="mt-4">BOOTSTRAP</p>
-															<div class="card-img-overlay roxo">
-																<h4 class="mt-4">Evolução</h4>
-																<div class="progress mt-5">
-																	<div class="progress-bar bg-success pbar-1"
-																		role="progressbar" aria-valuenow="45"
-																		aria-valuemin="0" aria-valuemax="100">
-																		45%
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
-														<div class="card">
-															<figure class="container-selo pt-1">
-																<!-- <img class="card-selo" src="img/selo.png">  -->
-															</figure>
-															<img src="img/Insígnias/nodejs.png" alt="nodejs">
-															<p class="mt-4">NODE JS</p>
-															<div class="card-img-overlay verdeescuro">
-																<h4 class="mt-4">Evolução</h4>
-																<div class="progress mt-5">
-																	<div class="progress-bar bg-success pbar-1"
-																		role="progressbar" aria-valuenow="45"
-																		aria-valuemin="0" aria-valuemax="100">
-																		45%
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
-														<div class="card">
-															<figure class="container-selo pt-1">
-																<!-- <img class="card-selo" src="img/selo.png">  -->
-															</figure>
-															<img src="img/Insígnias/react.png" alt="React">
-															<p class="mt-4">REACT</p>
-															<div class="card-img-overlay azulclaro">
-																<h4 class="mt-4">Evolução</h4>
-																<div class="progress mt-5">
-																	<div class="progress-bar bg-success pbar-1"
-																		role="progressbar" aria-valuenow="45"
-																		aria-valuemin="0" aria-valuemax="100">
-																		45%
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<!---FINAL ROW--->
-												<div class="row no-gutters">
-													<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
-														<div class="card">
-															<figure class="container-selo pt-1">
-																<!-- <img class="card-selo" src="img/selo.png">  -->
-															</figure>
-															<img src="img/Insígnias/PHP.png" alt="PHP">
-															<p class="mt-2">PHP</p>
-															<div class="card-img-overlay azulPHP">
-																<h4 class="mt-4">Evolução</h4>
-																<div class="progress mt-5">
-																	<div class="progress-bar bg-success pbar-1"
-																		role="progressbar" aria-valuenow="45"
-																		aria-valuemin="0" aria-valuemax="100">
-																		45%
-																	</div>
-																</div>
-
-															</div>
-														</div>
-													</div>
-													<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
-														<div class="card">
-															<figure class="container-selo pt-1">
-																<!-- <img class="card-selo" src="img/selo.png">  -->
-															</figure>
-															<img src="img/Insígnias/SQL.png" alt="SQL">
-															<p class="mt-4">SQL</p>
-															<div class="card-img-overlay branco">
-																<h4 class="mt-4">Evolução</h4>
-																<div class="progress mt-5">
-																	<div class="progress-bar bg-success pbar-1"
-																		role="progressbar" aria-valuenow="45"
-																		aria-valuemin="0" aria-valuemax="100">
-																		45%
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
-														<div class="card">
-															<figure class="container-selo pt-1">
-																<!-- <img class="card-selo" src="img/selo.png">  -->
-															</figure>
-															<img src="img/Insígnias/Vue.png" alt="Vue">
-															<p class="mt-4">VUE JS</p>
-															<div class="card-img-overlay verdeescuro2">
-																<h4 class="mt-4">Evolução</h4>
-																<div class="progress mt-5">
-																	<div class="progress-bar bg-success pbar-1"
-																		role="progressbar" aria-valuenow="45"
-																		aria-valuemin="0" aria-valuemax="100">
-																		45%
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
-														<div class="card">
-															<figure class="container-selo pt-1">
-																<!-- <img class="card-selo" src="img/selo.png">  -->
-															</figure>
-															<img src="img/Insígnias/jquery.png" alt="jquery">
-															<p class="mt-4">JQUERY</p>
-															<div class="card-img-overlay azul2">
-																<h4 class="mt-4">Evolução</h4>
-																<div class="progress mt-5">
-																	<div class="progress-bar bg-success pbar-1"
-																		role="progressbar" aria-valuenow="45"
-																		aria-valuemin="0" aria-valuemax="100">
-																		45%
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
-														<div class="card">
-															<figure class="container-selo pt-1">
-																<!-- <img class="card-selo" src="img/selo.png">  -->
-															</figure>
-															<img src="img/Insígnias/angularjs.png" alt="angularjs">
-															<p class="mt-4">ANGULAR JS</p>
-															<div class="card-img-overlay red2">
-																<h4 class="mt-4">Evolução</h4>
-																<div class="progress mt-5">
-																	<div class="progress-bar bg-success pbar-1"
-																		role="progressbar" aria-valuenow="45"
-																		aria-valuemin="0" aria-valuemax="100">
-																		45%
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
-														<div class="card">
-															<figure class="container-selo pt-1">
-																<!-- <img class="card-selo" src="img/selo.png">  -->
-															</figure>
-															<img src="img/Insígnias/git.png" alt="Git">
-															<p class="mt-4">GIT</p>
-															<div class="card-img-overlay laranjavermillion">
-																<h4 class="mt-4">Evolução</h4>
-																<div class="progress mt-5">
-																	<div class="progress-bar bg-success pbar-1"
-																		role="progressbar" aria-valuenow="45"
-																		aria-valuemin="0" aria-valuemax="100">
-																		45%
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<!---FINAL ROW--->
-												<div class="row no-gutters">
-													<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
-														<div class="card">
-															<figure class="container-selo pt-1">
-																<img class="card-selo" src="img/selo.png">
-															</figure>
-															<img src="img/Insígnias/github.png" alt="github">
-															<p class="mt-4">GITHUB</p>
-															<div class="card-img-overlay black">
-																<h4 class="mt-4">Evolução</h4>
-																<div class="progress mt-5">
-																	<div class="progress-bar bg-success pbar-1"
-																		role="progressbar" aria-valuenow="45"
-																		aria-valuemin="0" aria-valuemax="100">
-																		45%
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
-														<div class="card">
-															<figure class="container-selo pt-1">
-																<!-- <img class="card-selo" src="img/selo.png">  -->
-															</figure>
-															<img src="img/Insígnias/java.png" alt="Java">
-															<p class="mt-4">JAVA</p>
-															<div class="card-img-overlay azulclaro2">
-																<h4 class="mt-4">Evolução</h4>
-																<div class="progress mt-5">
-																	<div class="progress-bar bg-success pbar-1"
-																		role="progressbar" aria-valuenow="45"
-																		aria-valuemin="0" aria-valuemax="100">
-																		45%
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
-														<div class="card">
-															<figure class="container-selo pt-1">
-																<img class="card-selo" src="img/selo.png">
-															</figure>
-															<img src="img/Insígnias/wordpress.png" alt="wordpress">
-															<p class="mt-4">WORDPRESS</p>
-															<div class="card-img-overlay azul2 ">
-																<h4 class="mt-4">Evolução</h4>
-																<div class="progress mt-5">
-																	<div class="progress-bar bg-success pbar-1"
-																		role="progressbar" aria-valuenow="45"
-																		aria-valuemin="0" aria-valuemax="100">
-																		45%
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
-														<div class="card">
-															<figure class="container-selo pt-1">
-																<!-- <img class="card-selo" src="img/selo.png">  -->
-															</figure>
-															<img src="img/Insígnias/ruby.png" alt="Ruby">
-															<p class="mt-4">RUBY</p>
-															<div class="card-img-overlay red">
-																<h4 class="mt-4">Evolução</h4>
-																<div class="progress mt-5">
-																	<div class="progress-bar bg-success pbar-1"
-																		role="progressbar" aria-valuenow="45"
-																		aria-valuemin="0" aria-valuemax="100">
-																		45%
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
-														<div class="card">
-															<figure class="container-selo pt-1">
-																<!-- <img class="card-selo" src="img/selo.png">  -->
-															</figure>
-															<img src="img/Insígnias/python.png" alt="python">
-															<p class="mt-4">PYTHON</p>
-															<div class="card-img-overlay yellow">
-																<h4 class="mt-4">Evolução</h4>
-																<div class="progress mt-5">
-																	<div class="progress-bar bg-success pbar-1"
-																		role="progressbar" aria-valuenow="45"
-																		aria-valuemin="0" aria-valuemax="100">
-																		45%
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
-														<div class="card">
-															<figure class="container-selo pt-1">
-																<!-- <img class="card-selo" src="img/selo.png">  -->
-															</figure>
-															<img src="img/Insígnias/django.png" alt="django">
-															<p class="mt-4">DJANGO</p>
-															<div class="card-img-overlay verdeescuro2">
-																<h4 class="mt-4">Evolução</h4>
-																<div class="progress mt-5">
-																	<div class="progress-bar bg-success pbar-1"
-																		role="progressbar" aria-valuenow="45"
-																		aria-valuemin="0" aria-valuemax="100">
-																		45%
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<!---FINAL ROW--->
-												<div class="row no-gutters">
-													<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
-														<div class="card">
-															<figure class="container-selo pt-1">
-																<!-- <img class="card-selo" src="img/selo.png">  -->
-															</figure>
-															<img src="img/Insígnias/CDEV.png" alt="C">
-															<p class="mt-4">C</p>
-															<div class="card-img-overlay azulgelo">
-																<h4 class="mt-4">Evolução</h4>
-																<div class="progress mt-5">
-																	<div class="progress-bar bg-success pbar-1"
-																		role="progressbar" aria-valuenow="45"
-																		aria-valuemin="0" aria-valuemax="100">
-																		45%
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
-														<div class="card">
-															<figure class="container-selo pt-1">
-																<!-- <img class="card-selo" src="img/selo.png">  -->
-															</figure>
-															<img src="img/Insígnias/CS.png" alt="C#">
-															<p class="mt-4">C#</p>
-															<div class="card-img-overlay roxo">
-																<h4 class="mt-4">Evolução</h4>
-																<div class="progress mt-5">
-																	<div class="progress-bar bg-success pbar-1"
-																		role="progressbar" aria-valuenow="45"
-																		aria-valuemin="0" aria-valuemax="100">
-																		45%
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
-														<div class="card">
-															<figure class="container-selo pt-1">
-																<!-- <img class="card-selo" src="img/selo.png">  -->
-															</figure>
-															<img src="img/Insígnias/golang.png" alt="Golang">
-															<p class="mt-4">GOLANG</p>
-															<div class="card-img-overlay azulclaro2">
-																<h4 class="mt-4">Evolução</h4>
-																<div class="progress mt-5">
-																	<div class="progress-bar bg-success pbar-1"
-																		role="progressbar" aria-valuenow="45"
-																		aria-valuemin="0" aria-valuemax="100">
-																		45%
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
-														<div class="card">
-															<figure class="container-selo pt-1">
-																<!-- <img class="card-selo" src="img/selo.png">  -->
-															</figure>
-															<img src="img/Insígnias/laravel.png" alt="Laravel">
-															<p class="mt-4">LARAVEL</p>
-															<div class="card-img-overlay red2">
-																<h4 class="mt-4">Evolução</h4>
-																<div class="progress mt-5">
-																	<div class="progress-bar bg-success pbar-1"
-																		role="progressbar" aria-valuenow="45"
-																		aria-valuemin="0" aria-valuemax="100">
-																		45%
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
-														<div class="card">
-															<figure class="container-selo pt-1">
-																<!-- <img class="card-selo" src="img/selo.png">  -->
-															</figure>
-															<img src="img/Insígnias/R.png" alt="R">
-															<p class="mt-4">R</p>
-															<div class="card-img-overlay azulgelo">
-																<h4 class="mt-4">Evolução</h4>
-																<div class="progress mt-5">
-																	<div class="progress-bar bg-success pbar-1"
-																		role="progressbar" aria-valuenow="45"
-																		aria-valuemin="0" aria-valuemax="100">
-																		45%
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2">
-														<div class="card">
-															<figure class="container-selo pt-1">
-																<!-- <img class="card-selo" src="img/selo.png">  -->
-															</figure>
-															<img src="img/Insígnias/C++.png" alt="C++">
-															<p class="mt-4">C++</p>
-															<div class="card-img-overlay bg-primary">
-																<h4 class="mt-4">Evolução</h4>
-																<div class="progress mt-5">
-																	<div class="progress-bar bg-success pbar-1"
-																		role="progressbar" aria-valuenow="45"
-																		aria-valuemin="0" aria-valuemax="100">
-																		45%
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<!---FINAL ROW--->
-											</div>
-										</div>
-										<div class="container-fluid text-center">
-											<button type="button" class="btn btn-primary rad-30 mb-2 buttonblue"
+										</div>	
+									</div>
+									<div class="container-fluid text-center">
+										<button type="button" class="btn btn-primary rad-30 mb-2 buttonblue"
 												data-dismiss="modal"> Voltar</button>
-										</div>
 									</div>
 								</div>
+							</div>
 								<!-- modal Insignias -->
-
 							</div>
 						</div>
 					</div>
@@ -719,19 +257,24 @@
 	</section>
 
 	<!--SEÇÃO 2--->
-	<section class="sc-5">
+	<section class="sc-5 text-center text-light pb-4">
+		<h1>Inspiração</h1>
 		<div class="row">
-			<div class="lead col-sm-12 col-sm-6 col-lg-6 col-xl-6 text-center text-light rad-10 mt-3" data-aos="flip-left">
-				<h3>Inspiração</h3>
+			<div class="lead col-sm-12 col-sm-6 col-lg-6 col-xl-6 text-center text-light rad-10 mt-3"
+				data-aos="flip-left">
 				<!---Criar caixas de Popover---->
-				<p>Este site/portfólio foi realizado tendo como inspiração a primeira Pokedéx, do anime japonês - Pokemon.</p>
-				<p>A primeira Pokedex é a da cidade de Kanto, da qual o protagonista do anime inicia sua jornada em busca de se tornar o melhor mestre Pokemon </p>
-				<p>A Pokedéx é uma enciclopédia que contém diversas informações sobre os pokemons,como por exemplo: força de ataque, defesa, tipo(fogo, agua, venenoso, etc) entre outras
-				informações.</p>
+				<p>Este site/portfólio foi realizado tendo como inspiração a primeira Pokedéx, do anime japonês -
+					Pokémon.</p>
+				<p>A primeira Pokedéx é a da cidade de Kanto, da qual o protagonista do anime inicia sua jornada em
+					busca de se tornar o melhor mestre Pokémon </p>
+				<p>A Pokedéx é uma enciclopédia que contém diversas informações sobre os pokemons,como por exemplo:
+					força de ataque, defesa, tipo(fogo, agua, venenoso, etc) entre outras
+					informações.</p>
 			</div>
-			<div class="col-sm-12 col-sm-6 col-lg-6 col-xl-6 pokebolainvert order-md-2" data-aos="fade-in"></div>
+			<div class="col-sm-12 col-sm-6 col-lg-6 col-xl-6 pokebolainvert" data-aos="fade-in" data-aos-delay="0">
+			</div>
 		</div>
-		<div class="row ">
+		<div class="row w-100">
 			<div class="col-sm-12 col-sm-6 col-lg-6 col-xl-6 pokebolainvert" data-aos="fade-in"></div>
 			<div class="col-sm-12 col-sm-6 col-lg-6 col-xl-6 rad-10 pt-3" data-aos="flip-right">
 				<img src="img/pokedex.png" class="pokedex">
@@ -740,23 +283,32 @@
 	</section>
 
 	<!--SEÇÃO 4--->
-	<section class="sc-0 mt-3 rad-30">
-		<div class="container px-0 text-center">
-			<div class="row pt-3">
-				<div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 text-left text-light" data-aos="flip-left">
+	<section class="sc-0 rad-30 text-light text-center">
+					<h1>Portfólio</h1>
+		<div class="container px-0  card-deck justify-content-center m-auto">
 
-				</div>
-				<div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 text-light ">
-
+			<div class="card text-white border-0">
+				<img class="card-img h-100" src="img/site bootstrap.JPG" alt="Site projeto do curso de Bootsrap da Udemy">
+				<div class="card-img-overlay lead">
+					<h3 class="card-title mt-5">Projeto do Curso Bootsrap</h3>
+					
 				</div>
 			</div>
+			<div class="card text-white border-0">
+				<img class="card-img" src="img/site pokedex.png" alt="Site projeto do curso de Bootsrap da Udemy">
+				<div class="card-img-overlay lead">
+					<h3 class="card-title mt-5">Portfólio Pokedéx</h3>
+					
+				</div>
+			</div>
+
 		</div>
 	</section>
 
 	<!---Seção 3---->
-	<footer class="footer px-0 mx-0">	
-		<div class="container-fluid px-0 mx-0">
-			<table class="table table-borderless my-0 mx-0" style="height: 60px">
+	<footer>
+		<div class="container-fluid text-light px-0">
+			<table class="table table-borderless mb-0" style="height: 60px">
 				<tr>
 					<td class="pb-1" style="width: 15%"></td>
 					<td class="pb-1 gradientefooter dropdown ml-5"></td>
@@ -764,24 +316,18 @@
 					<td class="pb-1 red"></td>
 				</tr>
 			</table>
-			<div class="row red mx-0">
-				<div class="col-lg-11 col-sm-11 col-md-11 col-xl-11 text-light">
-					<div class="container pl-0">
-						<h4>Contato</h4>
-						<a class="btn btn-primary rounded-circle" href="#"><i class="fab fa-linkedin linkedin"></i></a>
-						<a class="btn btn-dark rounded-circle" href="#"><i class="fab fa-github github"></i></a>
-						<a class="btn btn-danger rounded-circle" href="#"><i class="fas fa-envelope email"></i></a>
-						<a class="btn btn-success rounded-circle" href="#"><i class="fab fa-whatsapp whats"></i></a>
-					</div>
-				</div>
-				<div class="col-lg-1 col-sm-1 col-md-1 col-xl-1 text-light">
-					<a href="#topo" id="top">
-						<img src="img/iconTOP.png" class="animated tada infinite shadow voltartopo">
-					</a>
-				</div>
+			<div class="container-fluid red">
+				<h4>Contato</h4>
+				<a class="btn btn-primary rounded-circle" href="#"><i class="fab fa-linkedin linkedin"></i></a>
+				<a class="btn btn-dark rounded-circle" href="#"><i class="fab fa-github github"></i></a>
+				<a class="btn btn-danger rounded-circle" href="#"><i class="fas fa-envelope email"></i></a>
+				<a class="btn btn-success rounded-circle" href="#"><i class="fab fa-whatsapp whats"></i></a>
+				<a href="#topo" id="top" class="text-right">
+					<img src="img/iconTOP.png" class="animated tada infinite shadow voltartopo">
+				</a>
 			</div>
 		</div>
-		</div>
+
 
 		<!-- JS -->
 		<script src="bootstrap/js/jquery.js"></script>
@@ -822,8 +368,6 @@
 
 			}
 		</script>
-
-
 	</footer>
 </body>
 
