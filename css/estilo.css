@@ -1,30 +1,320 @@
-*{padding: 0;	margin: 0;font-family: "Special Elite", monospace;}
-
-header{
-  height: 10%;
-  background-color: black;
+*{
+  padding: 0;
+  margin: 0;
+  font-family: "Special Elite", monospace;
 }
 
-section{height: 350px}
+body{
+  overflow-x: hidden;
+  color: black;
+}
+header{height: 10%;}
+
+section{height: 100vh;width: 100vw;}
+/*Inicio Capa Hover pokedex para o botão azul e seta amarela */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2; /*sobrepõe*/
+  right: 0;
+  top: 0;
+  background-color: crimson; /*fallback*/
+  background-image: url(../img/capa.jpg); /*Imagem de sobreposição, vermelha metálica*/
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  overflow-x: hidden; 
+  transition: 0.5s; /*tempo de fade in e fade out da imagem */
+}
+/* Posição da seta*/
+.overlay .seta {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  text-align: left;
+}
+.fadeOutRight i{
+  font-size: 70px;
+  color: yellow;
+  animation-name: fade;
+}
+#seta{
+  height: 50px;
+  width:min(200px, 30vw);
+}
+/* Ajuste no efeito das setas menores*/
+.fadeOutRight{
+top: 38%;
+position: absolute;
+left: 100px;
+z-index: -1;
+animation-duration: 2s !important;
+}
+#trianguloAbertura{
+  width: 0; 
+  height: 0; 
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 25px solid yellow;
+  border-width: 7pc;
+}
+
+.navbar{padding: 0;}
+/*bola azul e efeito de brilho */
+.brand{
+  position: fixed;
+  z-index: 1;
+  height:min(5.5rem, 25vw) ;
+  width:min(5.5rem, 25vw) ;
+  margin-top: 0 !important;
+  padding-bottom: 0;
+  cursor: pointer;
+}
+.brilho {
+  animation: pulse 0.7s infinite;
+  margin: 0 auto;
+  margin-top: 50px;
+  animation-direction: alternate;
+  -webkit-animation-name: brilho;
+  animation-name: brilho;
+}
+@-webkit-keyframes brilho{
+  0% {
+    -webkit-filter: brightness(80%);
+  }
+  100% {
+    -webkit-filter: brightness(150%);
+  }
+}
+@keyframes brilho{
+  0% {
+    filter: brightness(80%);
+  }
+  100% {
+    filter: brightness(150%);
+  }
+}
+/*Finalbola azul  */
+
+.ajusteMenuCima{padding: 0;background-color: crimson;}
+.ajusteMenuBaixo{padding-right: 0; padding-left: 0;}
+.ajusteMenuBaixo td:nth-child(1){background-color: crimson;width: 17%}/*Efeito vertical do menu*/
+.ajusteMenuBaixo td:nth-child(2){background: linear-gradient(150deg, crimson 50%, transparent 50%);width: 30%}/*Efeito vertical do menu*/
 
 /* Audio Pokemon */
-
 .play,.pause{
   font-size: 14px;
   width:20px !important;
 }
-  
 .ajusteButton{
   padding-right: 4px !important;
   padding-left: 4px !important;
-}
-  
+} 
 .sound{
   width: 30px;
 }
 /* Audio Pokemon */
 
-.typing-animation{
+/*Primeira Section*/
+.girar{
+  animation: spin 20s linear infinite;
+  height: 100% !important;
+  width: 45vw;
+  margin-top:7vw;
+  margin-left: 25vw;
+}
+@keyframes spin{
+  0% {
+    transform: rotate(0deg);
+   }
+   100% {
+    transform: rotate(360deg);
+   }
+}
+
+figcaption{
+  position:absolute;
+  top:20vw;
+  left: 26vw;
+  color: black ;
+  text-align: center;
+ }
+ 
+figcaption h1{ font-size:9vw;font-weight: bold;}
+figcaption p{font-size:5vw;font-weight: bold;}
+
+/* Telefones em paisagem a tablet em retrato */
+@media (max-width: 767px){
+  .girar{
+    height: 100% !important;
+    width: 70vw;
+    margin-top:55vw;
+    margin-left: 13vw;
+}
+
+   figcaption{top:70vw; left: 22vw;}
+   figcaption h1{ font-size:12vw;font-weight: bold;}
+   figcaption p{font-size:9vw;font-weight: bold;}
+}
+
+/* Tablet em retrato a paisagem e desktop */
+@media (min-width: 768px) and (max-width: 979px){
+  .girar{ 
+    width: 45vw;
+    margin-top:15vw;
+    margin-left: 27.5vw;
+}
+
+   figcaption{top:20vw; left: 27vw;}
+   figcaption h1{ font-size:10vw;font-weight: bold;}
+   figcaption p{font-size:5vw;font-weight: bold;}
+}
+
+/* Desktop grande */
+@media (min-width: 1200px) {
+   .girar{ 
+    width: 40vw;
+    margin-top:4vw;
+    margin-left: 29vw;
+}
+
+   figcaption{top:10vw; left: 27vw;}
+   figcaption h1{ font-size:10vw;font-weight: bold;}
+   figcaption p{font-size:5vw;font-weight: bold;}
+  
+} 
+
+
+/* Seção 2 */
+.sc-2{
+  height:300px;
+  max-width: 100vw;
+}
+
+.sc-2 div:nth-child(1){
+  height:200px;
+  border-radius: 20px;
+}
+
+
+
+
+
+/* Seção 3 */
+.sc-3{
+  height: 70vh;
+}
+
+.boneco{
+  margin-left: 25%;
+}
+
+
+#tipo a{
+  width: 110px;
+  margin-top: 10px;
+  text-decoration: none;
+  color: white;
+}
+.redvermillion{ background-color: #e0522c;}/*html*/
+.azulgelo{background-color: #77AAD1;}/*Worpress*/
+.roxo{background-color: #b41dc3;}
+.cinza{background-color: rgb(192, 192, 192);}
+
+.card{
+  width:100% !important;
+  height:6pc !important;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40%;
+  filter: grayscale(100%);
+  margin-top:10px
+}
+
+/* Telefones em paisagem a tablet em retrato */
+@media (max-width: 767px){
+  .card{
+    width:89% !important;
+    height:3.5pc !important;
+    background-size: 60%;
+  }
+}
+/* Tablet em retrato a paisagem e desktop */
+@media (min-width: 768px) and (max-width: 979px){
+  .card{
+    width:89% !important;
+    height:5pc !important;
+    background-size: 60%;
+  }
+}
+
+/* Desktop grande */
+@media (min-width: 1200px) {
+  .card{
+    width:80% !important;
+    height:7pc !important;
+    background-size: 40%;
+  }
+}
+
+.grayscalenone{ filter:grayscale(0%) !important;}
+
+.container-selo{width: 100% !important;}
+.card-selo{
+  right: 10vw;
+  position: absolute;
+  height:30px !important ;
+  width: 30px !important;
+  background-image: url(../img/selo.png);
+}
+
+/* INSIGNIAS ADQUIRIDAS */
+.html{background-image:url(../img/Insígnias/HTML.png);}
+.css{background-image:url(../img/Insígnias/css.png);}
+.bootstrap{background-image:url(../img/Insígnias/bootstrap.png);}
+.wordpress{background-image:url(../img/Insígnias/wordpress.png);}
+.git-hub{background-image:url(../img/Insígnias/github.png);}
+
+/* INSIGNIAS NÃO ADQUIRIDAS */
+.javascript{background-image:url(../img/Insígnias/javascript.png);}
+.jquery{background-image:url(../img/Insígnias/jquery.png);}
+.react{background-image:url(../img/Insígnias/react.png);}
+.node{background-image:url(../img/Insígnias/nodejs.png);}
+.angular{background-image:url(../img/Insígnias/angularjs.png);}
+.vue{background-image:url(../img/Insígnias/vue.png);}
+.php{background-image:url(../img/Insígnias/PHP.png);}
+.sql{background-image:url(../img/Insígnias/SQL.png);}
+.java{background-image:url(../img/Insígnias/java.png);}
+.python{background-image:url(../img/Insígnias/python.png);}
+.go{background-image:url(../img/Insígnias/golang.png);}
+.ruby{background-image:url(../img/Insígnias/ruby.png);}
+.swift{background-image:url(../img/Insígnias/swift.png);}
+
+.popkebolatransp{
+  background-image: url(../img/pokebolatransp.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40% 60%;
+}
+/*Primeira Section*/
+
+
+
+
+
+/* .line {
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  font-family: "Special Elite", monospace;
+  font-size: min(45px, 12vw);
+  text-align: center;
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+} */
+
+/* .typing-animation{
   animation-delay: 4s;
   animation: blinkCursor 500ms steps(30) infinite normal;
   typing 4s steps(30) 1s normal both;
@@ -48,47 +338,32 @@ section{height: 350px}
   to{
      border-right-color: transparent;
   }
-}
+} */
 
 /* Audio Pokemon */
 
 /* Tela inicio */
+
+/* 
+
 .centralizar {
-  padding-top: 15%;
+  position:absolute;
+  top: 35vh;
+  left:40vw;
   z-index: 2;
   height: 20vh;
   width: 20vw;
 }
 
-.pokemonLogoGira{
-  animation: spin 20s linear infinite;
-  height: 40vh;
-  width: 45vw;
-  margin-left: 27%;
-}
-@keyframes spin{
-  0% {
-    transform: rotate(0deg);
-   }
-   100% {
-    transform: rotate(360deg);
-   }
-}
 
-.sc-1{
-  background-color: #161616;
-  width: 100vw;
-  height: 100vh;
-  max-width:100vw;
-}
-/* Telefones em paisagem e abaixo */
+/* Telefones em paisagem e abaixo *
 @media (max-width: 480px) { 
   .sc-1{
       background-size: 15pc 15pc;
       height: 25pc;
   }
 }
-/* Telefones em paisagem a tablet em retrato */
+/* Telefones em paisagem a tablet em retrato *
 
 @media (max-width: 767px){
   .sc-1{
@@ -100,7 +375,7 @@ section{height: 350px}
     margin-left: 30%;
   }
 }
-/* Tablet em retrato a paisagem e desktop */
+/* Tablet em retrato a paisagem e desktop *
 @media (min-width: 768px) and (max-width: 979px){
   .sc-1{
     background-size: 15pc 15pc;
@@ -108,7 +383,7 @@ section{height: 350px}
 }
 
 
-/* Desktop grande */
+/* Desktop grande *
 @media (min-width: 1200px) {
   .sc-1{
     background-size: 15pc 15pc;
@@ -120,7 +395,7 @@ section{height: 350px}
     height: 38vh;
     width: 38vw;
   }
-}
+} */
 
 
 
@@ -159,41 +434,19 @@ section{height: 350px}
 } */
 
 /* Tela inicio */
-
+/* 
 .sc-2{height: 45px;}
-.sc-3{height:42pc}
 
 
-/*Inicio Componentes do Menu */
-#topo h1{
-  font-size: min(100px, 16vw);
-}
 
-.brand{
-  position: fixed;
-  z-index: 1;
-  height:6rem ;
-  width:6rem ;
-}
+/*Inicio Componentes do Menu *
 
-.bolinhas{
-  width:50px;
-  position: static;
-}
+
 /*Final Componentes do Menu */
 
-img{cursor: pointer;}
-.img2{height: 50%;}
-.img3{
-	background-image: url(../img/texturabranco.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 100%;
-	height: 100%;
-	border-radius: 50px;
-}
 
-/*Inicio radius  */
+/* 
+/*Inicio radius  *
 .rad-10{border-radius: 10px !important;}
 .rad-20{border-radius: 20px !important;}
 .rad-30{border-radius: 30px !important;}
@@ -202,111 +455,33 @@ img{cursor: pointer;}
 
 .background_1{background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8))}
 
+.red{
+  background-color: crimson;
+}
+/*inicio Paleta de Cores *
 
-/*inicio Paleta de Cores */
-.gradiente{ background: linear-gradient(150deg, crimson 50%, transparent 50%);}
 .gradientefooter{background: linear-gradient(-30deg, crimson 50%, transparent 50%);}
 
 .branco{background-color: white;}
 .black{background-color: black;}
-.red{background-color: crimson;}
-.laranja{background-color: #FBAE1F !important;}
-.azulcss{background-color: darkblue;}
-.yellow{background-color: yellow;}
-.roxo{background-color: #571396 !important;}
-.verdeescuro{background-color:#0C8504;}
-.azulclaro{background-color: #09D6D2;}
-.azulPHP{background-color: #333385}
-.verdeescuro2{background-color: #338848;}
-.azul2{background-color: #5388CC !important;}
-.red2{background-color: red;}
+
 .laranjavermillion{background-color: #E5390A !important;}
 .azulclaro2{background-color: #09E6E2;}
 .azulgelo{background-color: #77AAD1;}
 .preto{ background-color: #161616;}
 /* Final Paleta de Cores */
 
-/* Ajuste do modal */
-.modal-lg{width:95vw !important;max-width: 100% !important;}
+
+
+/* Inicio modal *
+.sc-3{height:42pc;}
+
+.cinza{ background-color: darkgray !important;}
+
+.modal-lg{width:100vw !important;max-width: 90vw !important;}
  
-/*bola azul  */
-.brilho {
-  animation: pulse 0.5s infinite;
-  margin: 0 auto;
-  margin-top: 50px;
-  animation-direction: alternate;
-  -webkit-animation-name: brilho;
-  animation-name: brilho;
-}
-@-webkit-keyframes brilho{
-  0% {
-    -webkit-filter: brightness(80%);
-  }
-  100% {
-    -webkit-filter: brightness(150%);
-  }
-}
-@keyframes brilho{
-  0% {
-    filter: brightness(80%);
-  }
-  100% {
-    filter: brightness(150%);
-  }
-}
-/* bola azul */
-
-/* Ajuste do modal */
-
-/* Inicio modal */
-.modal-content img{height:40% !important;width:35% !important;max-width:35% !important;display: block;position: static;}
-.card-header h2{
-  font-family: "Special Elite", monospace;
-  color:black;
-}
-.container-selo{width: 100% !important;}
-figure .card-selo{
-  float: right;
-  right: 0;
-  position: absolute;
-  height:30px !important ;
-  width: 30px !important;
-}
-.modal-content .card{
-  position: relative;
-  height: 10em; 
-  width: 100%;
-  align-items: center;
-  background-color:white !important;
-  color: black ;
-  border: none !important;
-}
-.modal-content  .card-img-overlay{
-  position: absolute;
-  color:white;
-  height: 100%;
-  width: 100% ;
-  opacity: 0;
-  transition: 0.5s ease;
-}
-.modal-content  .card:hover .card-img-overlay {
-  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
-  opacity: 1;
-}
-.modal-content h4{margin-top: 50px;text-align: center;}
-.modal-content  .progress{height: 10%;border-radius: 50px !important;}
-.modal-content  .progress-bar{border-radius: 30px;}
-
-.pbar-1{width: 45%;} .pbar-5{width: 45%;}
-.pbar-2{width: 45%;} .pbar-6{width: 45%;}
-.pbar-3{width: 45%;} .pbar-7{width: 45%;}
-.pbar-4{width: 45%;} .pbar-8{width: 45%;}
-.pbar-5{width: 45%;} .pbar-9{width: 45%;}
-.pbar-6{width: 45%;} .pbar-10{width: 45%;}
-/*Final Cards
-
-/* Sobre */
 .card-tela{
+  width: 100%;
   background-color: #87cefa;
   background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1));
 }
@@ -321,103 +496,39 @@ figure .card-selo{
   max-width:100%;
   margin: auto;
 }
-
 .ajustefont{
   font-size:15px;
 }
-
-/* Telefones em paisagem e abaixo */
-
-
 .card-footer tr{
-  background-image: linear-gradient(43deg,transparent 50px,white 50px);
+  background-image: linear-gradient(43deg,transparent 50px,darkgray 50px);
   height: 67px;
  }
 .card-footer th{border-bottom-right-radius: 10px !important;}
+.modal-body, .modal-header{background-color: white;}
+.modal 
+
+
+
+
 .rounded-topo{
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
-.popkebolatransp{
-  background-image: url(../img/pokebolatransp.png);
-  background-repeat: no-repeat;
-  background-position: bottom right;
+
+
+.sc-3{height:42pc;}
+
+.overflow{
+  overflow:hidden
 }
-
-#cardinsignia{border-top-right-radius: 20px;border-bottom-right-radius: 20px;}
-
-.sc-3{height:42pc}
-
-.insignia{
-  margin-top: 1rem; 
-  height:12pc;
-  width:12.1pc;
-  background-color: black;
-}
-
-.insignia img{ 
-  padding-right: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-
-.insignia:hover{background-color: rgb(255, 255, 255);}
-/* Telefones em paisagem e abaixo */
-@media (max-width: 480px){
-  .sc-3{height:50%}
-
-  .insignia{
-    margin-top:1rem; 
-    margin-bottom:3rem; 
-    height:10pc;
-    width:10pc;
-    background-color: black;
-  }
-  .insignia img{ 
-    height:9pc;
-    width:9pc;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-}
-
-/* Telefones em paisagem a tablet em retrato */
-@media (max-width: 600px){
-  .sc-3{height:40pc}
-
-  .insignia{
-    margin-top:1rem; 
-    margin-bottom:3rem; 
-  }
-}
-@media (max-width: 767px){
-  .sc-3{height:40%}
-
-  .insignia{
-    margin-top:1rem; 
-    margin-bottom:3rem; 
-  }
-}
-/* Tablet em retrato a paisagem e desktop */
-@media (min-width: 768px) and (max-width: 979px){
-  .sc-3{height:90pc}
-
-  .insignia{
-    margin-top:1rem; 
-    margin-bottom:4rem; 
-  }
-}
-
-
-/*section inspiração */
+/*section inspiração *
 .sc-5{
   height:80vh;
   font-size: min(14px, 2vw);
 }
 
-/* pokebola */
+/* pokebola *
 .pokebola{
   background-image: url(../img/pokebolagray.png);
   background-repeat: no-repeat;
@@ -432,86 +543,20 @@ figure .card-selo{
 }
 /* pokebola */
 
-/*Inicio Capa Hover pokedex para o botão azul e seta amarela */
-#slide {
-    position: absolute;
-    right: -100px;
-    width: 100px;
-    height: 100px;
-    transition: 1s;
-}
-
-.wrapper:hover #slide {
-    transition: 1s;
-    right: 0;
-}
-
-.overlay {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 2; /*sobrepõe*/
-  right: 0;
-  top: 0;
-  background-color: crimson; /*fallback*/
-  background-image: url(../img/capa.jpg); /*Imagem de sobreposição, vermelha metálica*/
-  background-size:cover;
-  background-repeat: no-repeat;
-  overflow-x: hidden; 
-  transition: 0.5s; /*tempo de fade in e fade out da imagem */
-}
-
-/* Posição da seta*/
-.overlay .seta {
-  position: absolute;
-  top: 30%;
-  width: 100%;
-  text-align: left;
-}
-
-.fadeOutRight i{
-  font-size: 70px;
-  color: yellow;
-  animation-name: fade;
-}
-
-#seta{height: 50px;width:min(200px, 30vw);}
-
-/* Ajuste no efeito das setas menores*/
-.fadeOutRight{
-top: 38%;
-position: absolute;
-left: 100px;
-z-index: -1;
-animation-duration: 2s !important;
-}
-
-#triangulo-para-direita {
-  width: 0; 
-  height: 0; 
-  border-top: 25px solid transparent;
-  border-bottom: 25px solid transparent;
-  border-left: 25px solid yellow;
-  border-width: 7pc;
-}
-/*Final Capa Hover pokedex para o botão azul e seta amarela */
-
-/* Inspiração */
+/* Inspiração *
 .pokedex{
   height:20pc ;
   width:100%;
   border-radius: 30px;
 }
-/* Inspiração */
+/* Inspiração * */
 
-/* Footer  */
+/* Footer  *
 .voltartopo{
   height:55px ;
   width: 50px;
 
 }
-
-
 
 footer i{font-size: max(16px, 3.2vw);}
 
@@ -545,19 +590,48 @@ footer .btn-success:hover,.whats:hover{
 }
 /* Footer  */
 
-.line {
-  border-right: 2px solid rgba(255, 255, 255, 0.75);
-  font-family: "Special Elite", monospace;
-  font-size: min(45px, 12vw);
-  text-align: center;
-  margin: 0 auto;
-  white-space: nowrap;
-  overflow: hidden;
-}
+/* Portfólio *
 
-/* Portfólio */
+.sc-0{
+  margin-top:55vh;
+  margin-bottom:35vw;
+  height: 20vh;
+ 
+ }
+ 
+ /* Telefones em paisagem e abaixo *
+ @media (max-width: 480px) { 
+   .sc-0{
+     margin-bottom:35vw;
+     height: 100vw;
+    }
+    
+ }
+ 
+ /* Telefones em paisagem a tablet em retrato *
+ @media (max-width: 767px) {
+   .sc-0{
+     margin-top:50vh;
+    }
+    
+ }
+ 
+ /* Tablet em retrato a paisagem e desktop 
+ @media (min-width: 768px) and (max-width: 979px) {
+   .sc-0{
+    margin-top:40vh ;
+   } 
+ }
+ 
+ /* Desktop grande */
+ /* @media (min-width: 1200px) {
+   .sc-0{
+ 
+    }
+    
+ } 
 
-.card-img-overlay{
+.sc-0 .card-img-overlay{
   position: absolute;
   background-color: black;
   font-size: 7vw;
@@ -566,49 +640,8 @@ footer .btn-success:hover,.whats:hover{
   opacity: 0;
   transition: 0.5s ease;
 }
- .card:hover .card-img-overlay {
+ .sc-0 .card:hover .card-img-overlay {
   background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
   opacity: 1;
 }
-
-.card .card-img{
-
-}
-
-.sc-0{
- margin-top:55vh;
- margin-bottom:35vw;
- height: 20vh;
-}
-
-/* Telefones em paisagem e abaixo */
-@media (max-width: 480px) { 
-  .sc-0{
-    margin-bottom:35vw;
-    height: 100vw;
-   }
-   
-}
-
-/* Telefones em paisagem a tablet em retrato */
-@media (max-width: 767px) {
-  .sc-0{
-    margin-top:50vh;
-   }
-   
-}
-
-/* Tablet em retrato a paisagem e desktop */
-@media (min-width: 768px) and (max-width: 979px) {
-  .sc-0{
-   margin-top:40vh ;
-  } 
-}
-
-/* Desktop grande */
-/* @media (min-width: 1200px) {
-  .sc-0{
-
-   }
-   
-} */
+ */
