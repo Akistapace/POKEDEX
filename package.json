@@ -1,0 +1,24 @@
+{
+  "name": "pokedex",
+  "version": "1.0.0",
+  "description": "Portfólio realizado com base em uma Pokedéx do anime japonês, Pokémon.",
+  "main": "index.js",
+  "dependencies": {
+    "ruby": "^0.6.1",
+    "sass": "^1.32.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akistapace/POKEDEX.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Akistapace/POKEDEX/issues"
+  },
+  "homepage": "https://github.com/Akistapace/POKEDEX#readme"
+}
