@@ -1,563 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
+
 <head>
 	<title>Portfólio|Pokedéx</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="" rel="shortcut icon">	<!----Favicon Icon---->
-	<link rel="stylesheet" type="text/css" href="./src/libs/main.css">	<!----Folha de estilo Própria---->
-</head>
+
+	<link rel="stylesheet" type="text/css" href="./src/libs/main.css">
 </head>
 
 <header>
-	<nav class="navbar fixed-top">
-		<div id="capa" class="overlay">
-			<!-- Botão para abrir seta amarela -->
-			<a href="javascript:void(0)" class="seta" onclick="closeNav()">
-				<div id="trianguloAbertura"></div>
-				<div class="container-fluid animated fadeOutRight infinite"><img src="img/setas.png"></div>
-			</a>
-		</div>
-		<div class="container-fluid ajusteMenuCima">
-			<div class="d-flex w-100">
-				<div class="col-sm-8 col-md-8 col-lg-1 col-xl-1 w-100">
-					<img class="brand brilho" onclick="openNav()" src="img/BolaAzul.png">
-					<!---Botão de fechar a capa--->
-				</div>
-				<div class="col-sm-4 col-md-4 col-lg-11 col-xl-11 w-100">
-					<img class="img-fluid" src="img/BolaVermelha.png">
-					<img class="img-fluid" src="img/BolaAmarela.png">
-					<img class="img-fluid" src="img/BolaVerde.png">
+	<div class="">
+		<a href="javascript:void(0)" class="" onclick="closeNav()">
+			<div id=""></div>
+			<div class=""><img src="./src/assets/img/setas.png"></div>
+		</a>
+	</div>
+	<nav class="">
+			<div class="container-btns-nav">
+				<img class="" onclick="openNav()" src="./src/assets/img/BolaAzul.png">
+				<div class="imgs-btn-tyni">
+					<img src="./src/assets/img/BolaVermelha.png">
+					<img src="./src/assets/img/BolaAmarela.png">
+					<img src="./src/assets/img/BolaVerde.png">
 				</div>
 			</div>
-		</div>
-		<div class="container-fluid ajusteMenuBaixo">
-			<table class="table table-borderless">
-				<tr>
-					<td></td><td></td><td></td>
-					<td>
-<!-- Audio Pokemon -->	
-<div class="container-fluid text-right">
-							<audio id="pokemon" src="Tema_Pokemon.mp3" type="audio/mpeg" preload="auto"></audio>
-							<div class="btn-group" role="group" aria-label="Basic example">
-								<!-- Botão Play e Pause -->
-			<!--Play/Pause-->	<button type="button" class="btn btn-primary fas fa-play" onclick="mostrar(this)"></button>
-								<button class="btn btn-danger ajusteButton" type="button" data-toggle="collapse" data-target="#btncolapse" aria-expanded="false" aria-controls="btncolapse">
-									<img class="sound" src="img/sound.png" alt="Expandir som">
-								</button>
-								<div class="collapse btn-group" id="btncolapse">
-									<button class="btn btn-primary"	onclick="document.getElementById('pokemon').volume+=0.1">
-										<i class="fas fa-volume-up"></i>
-									</button>
-									<button class="btn btn-primary"
-										onclick="document.getElementById('pokemon').volume-=0.1">
-										<i class="fas fa-volume-down"></i>
-									</button>
-								</div>
-							</div>
-<!--  Audio Pokemon --> </div>
-					</td>
-				</tr>
-			</table>
+	
+		<audio id="pokemon" src="./src/assets/audio/Tema_Pokemon.mp3" type="audio/mpeg" preload="auto"></audio>
+		<div class="">
+			<!-- Botão Play e Pause -->
+			<button type="button" class="fas fa-play" onclick="mostrar(this)"></button>
+			<button class="" type="button">
+				<img class="" src="./src/assets/img/sound.png" alt="">
+			</button>
+			<div class="">
+				<button class="" onclick="document.getElementById('pokemon').volume+=0.1">
+					<i class="fas fa-volume-up"></i>
+				</button>
+				<button class="" onclick="document.getElementById('pokemon').volume-=0.1">
+					<i class="fas fa-volume-down"></i>
+				</button>
+			</div>
 		</div>
 	</nav>
 </header>
+
 <body id="topo">
-<!--SEÇÃO 1--->
-<section class="bg-light">
-	<figure class="container-fluid">
-		<img class="girar" src="img/LogoAzulPokebola.png">
-		<figcaption class="sobrepor">
-		<h1>Front-End</h1>
-		<p>Em evolução</p>
-		</figcaption>
-	</figure>
-</section>
-<!--SEÇÃO 2--->
-<section class="sc-2">
-	<div class="container bg-dark infos">
-		
-			<h2 class="text-center pt-4">Fernando Aquistapace</h2>
-			<p class="lead text-center">
+	
+
+	<!-- <section id="primeira">
+		<figure class="capa-home">
+			<img class="girar" src="./src/assets/img/LogoAzulPokebola.png">
+			<figcaption class="sobrepor">
+				<h1>Front-End</h1>
+				<p>Em evolução</p>
+			</figcaption>
+		</figure>
+	</section> -->
+
+	<!-- <section class="container-about-me">
+		<div class="card-infos">
+			<h2 class="">Fernando Aquistapace</h2>
+			<p class="">
 				22 anos<br>
 				Análise e Desenvolvimento de Sistemas
-			</p>
-	</div>
-</section>
-<!--SEÇÃO 3-->
-<section class="sc-3 text-dark">
-	<div class="container-fluid">
-		<div class="row bg-light">
-			<div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
-				
-					<img class="card-img boneco h-100 w-50 popkebolatransp" src="img/boneco.png" alt="Boneco Eu">
-		
-			</div>
-			<div class="col-sm-12 col-md-12 col-lg-9 col-xl-9">
-				<div class="row">
-					<div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 lead">
-							<div class="container-fluid">
-								<h3 class="text-center">Habilidades</h3>
-							</div>
-						<div class="row">
-							<!-- Coluna 1 -->
-							<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2 bg-light">HTML</div>
-							<div class="col-sm-9 col-md-9 col-lg-10 col-xl-10">
-								<div class="progress mt-1 bg-dark">
-									<div class="progress-bar redvermillion w-50"	role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
-								</div>
-							</div>
-							
-							<!-- Coluna 2 -->
-							<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2 bg-light">CSS</div>
-							<div class="col-sm-9 col-md-9 col-lg-10 col-xl-10">
-								<div class="progress mt-1 bg-dark">
-									<div class="progress-bar bg-primary w-50" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
-								</div>
-							</div>
-							
-							<!-- Coluna 3 -->
-							<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2 bg-light">Bootsrap</div>
-							<div class="col-sm-9 col-md-9 col-lg-10 col-xl-10">
-								<div class="progress mt-1 bg-dark">
-									<div class="progress-bar azulgelo w-50"	role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
-								</div>
-							</div>
-							
-							<!-- Coluna 4 -->
-							<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2 bg-light">wordpress</div>
-							<div class="col-sm-9 col-md-9 col-lg-10 col-xl-10">
-								<div class="progress mt-1 bg-dark">
-									<div class="progress-bar roxo w-50"	role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
-								</div>
-							</div>
-							
-							<!-- Coluna 5 -->
-							<div class="col-sm-3 col-md-3 col-lg-2 col-xl-2 bg-light">Github</div>
-							<div class="col-sm-9 col-md-9 col-lg-10 col-xl-10">
-								<div class="progress mt-1 bg-dark">
-									<div class="progress-bar cinza w-50"	role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45%</div>
-								</div>
-							</div>
-						</div>	
-					</div>
-					<div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 text-center">
-						<div class="" id="tipo">
-							<h3 class="">Tipo</h3>
-							<nav>
-								<div class="nav justify-content-between" id="list-tab" role="tablist">
-								<a class="btn bg-primary nav-item" id="front-end-tab" data-toggle="tab" href="#front-end" role="tab" aria-controls="front-end" aria-selected="true">Front-End</a>
-								<a class="btn bg-warning nav-item" id="agil-tab" data-toggle="tab" href="#agil" role="tab" aria-controls="agil" aria-selected="false">Agil</a>
-								<a class="btn bg-success nav-item" id="raro-tab" data-toggle="tab" href="#raro" role="tab" aria-controls="raro" aria-selected="false">Raro</a>
-								</div>
-							</nav>
-							<div class="tab-content" id="nav-tabContent">
-								<div class="tab-pane fade show active" id="front-end" role="tabpanel" aria-labelledby="front-end-tab">
-									<p class="mt-2">Desenvolve aplicações web de alto nível, criativas e com belissímos designs</p>
-								</div>
-								<div class="tab-pane fade" id="agil" role="agil" aria-labelledby="agil-tab">
-									<p class="mt-2">Atento as boas práticas no desenvolvimento de softwares</p>
-								</div>
-								<div class="tab-pane fade" id="raro" role="raro" aria-labelledby="raro-tab">
-									<p class="mt-2">Um tipo raro é dificil de encontrar, parabèns você encontrou um deles!!!</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-					<div class="container-fluid mt-3">
-						<h3 class="text-center">Insignias</h3>
-					</div>
-					<div class="card-deck">
-						<div class="row no-gutters w-100">
-							<div class="col-2">
-								<div class="container-selo">
-								<div class="card-selo"></div>
-								</div>
-								<div class="card html grayscalenone"></div>
-							</div>
-							<div class="col-2">
-								<div class="card css grayscalenone"></div>
-							</div>
-							<div class="col-2">
-								<div class="card bootstrap grayscalenone"></div>
-							</div>
-							<div class="col-2">
-								<div class="card wordpress grayscalenone"></div>
-							</div>
-							<div class="col-2">
-								<div class="card git-hub grayscalenone"></div>
-							</div>
-							<div class="col-2">
-								<div class="card javascript"></div>
-							</div>
-						</div>	
-					</div>
-					<div class="card-deck">
-						<div class="row no-gutters w-100">
-							<div class="col-2">
-								<div class="card jquery"></div>
-							</div>
-							<div class="col-2">
-								<div class="card react"></div>
-							</div>
-							<div class="col-2">
-								<div class="card node"></div>
-							</div>
-							<div class="col-2">
-								<div class="card angular"></div>
-							</div>
-							<div class="col-2">
-								<div class="card vue"></div>
-							</div>
-							<div class="col-2">
-								<div class="card php"></div>
-							</div>
-						</div>
-					</div>
-					<div class="card-deck">
-						<div class="row no-gutters w-100">
-							<div class="col-2">
-								<div class="card sql"></div>
-								</div>
-							<div class="col-2">
-								<div class="card java"></div>
-							</div>
-							<div class="col-2">
-								<div class="card python"></div>
-							</div>
-							<div class="col-2">
-								<div class="card go"></div>
-								</div>
-							<div class="col-2">
-								<div class="card ruby"></div>
-							</div>
-							<div class="col-2">
-								<div class="card swift"></div>
-							</div>
-						</div>
-					</div>
-				
-			</div><!---Final Col-6-->
+			</p>	
 		</div>
-	</div>	
-</section>
-
-<section>
-
-</section>
-								<!-- Habilidades -->
-						
-						
-								<!-- <h4 class="mt-4">InsÍgnias Tech</h4>
-								<div class="container-fluid mt-4">
-									<a class="shadow-lg btn rounded-circle insignia" href="#Insignias" type="button"
-										role="button" data-toggle="modal">
-										<img src="img/pokeinsignia.png">
-									</a>
-								</div>
-								-- modal --
-								-- <div class="modal fade bg-primary" id="Insignias" tabindex="-1" role="dialog"
-									aria-labelledby="Insignias" aria-hidden="true">
-									<div class="modal-dialog modal-dialog-centered modal-lg text-dark" role="document">
-										<div class="modal-content text-center bg-transparent">
-											<div class="modal-header border-0">
-												<button type="button" class="close" data-dismiss="modal"
-													aria-label="Close">
-													<span aria-hidden="true">&times;</span>
-												</button>
-											</div>
-											<div class="modal-body">
-												<h1 class="text-center">Insígnias Tech</h1>
-												<div class="container-fluid">
-													<div class="row card-deck">
-														<div class="col-2">
-															<div class="card html grayscalenone">
-																<div class="container-selo"><img class="card-selo"
-																		src="img/selo.png"></div>
-																<div class="card-img-overlay">
-																	<h4>HTML</h4>
-																</div>
-															</div>
-														</div>
-														<div class="col-2">
-															<div class="card css grayscalenone">
-																<div class="container-selo"><img class="card-selo"
-																		src="img/selo.png"></div>
-																<div class="card-img-overlay">
-																	<h4>CSS</h4>
-																</div>
-															</div>
-														</div>
-														<div class="col-2">
-															<div class="card bootstrap grayscalenone">
-																<div class="container-selo"><img class="card-selo"
-																		src="img/selo.png"></div>
-																<div class="card-img-overlay">
-																	<h4>Bootsrap</h4>
-																</div>
-															</div>
-														</div>
-														<div class="col-2">
-															<div class="card wordpress grayscalenone">
-																<div class="container-selo"><img class="card-selo"
-																		src="img/selo.png"></div>
-																<div class="card-img-overlay">
-																	<h4>Wordpress</h4>
-																</div>
-															</div>
-														</div>
-														<div class="col-2">
-															<div class="card git-hub grayscalenone">
-																<div class="container-selo"><img class="card-selo"
-																		src="img/selo.png"></div>
-																<div class="card-img-overlay">
-																	<h4>Github</h4>
-																</div>
-															</div>
-														</div>
-														<div class="col-2">
-															<div class="card javascript"></div>
-															<div class="container-selo"><img class="card-selo"
-																	src="img/selo.png"></div>
-															<div class="card-img-overlay">
-																<h4>Javascript</h4>
-															</div>
-														</div>
-													</div>
-
-													<div class="row card-deck mt-2">
-														<div class="col-2">
-															<div class="card jquery"></div>
-															<div class="card-img-overlay">
-																<h4>JQuery</h4>
-															</div>
-														</div>
-														<div class="col-2">
-															<div class="card react"></div>
-															<div class="card-img-overlay">
-																<h4>React</h4>
-															</div>
-														</div>
-														<div class="col-2">
-															<div class="card node"></div>
-															<div class="card-img-overlay">
-																<h4>Node.Js</h4>
-															</div>
-														</div>
-														<div class="col-2">
-															<div class="card angular"></div>
-															<div class="card-img-overlay">
-																<h4>Angular</h4>
-															</div>
-														</div>
-														<div class="col-2">
-															<div class="card vue"></div>
-															<div class="card-img-overlay">
-																<h4>Vue.js</h4>
-															</div>
-														</div>
-														<div class="col-2">
-															<div class="card php"></div>
-															<div class="card-img-overlay">
-																<h4>PHP</h4>
-															</div>
-														</div>
-													</div>
-
-													<div class="row card-deck mt-2">
-														<div class="col-2">
-															<div class="card sql"></div>
-															<div class="card-img-overlay">
-																<h4>MySQL</h4>
-															</div>
-														</div>
-														<div class="col-2">
-															<div class="card java"></div>
-															<div class="card-img-overlay">
-																<h4>Java</h4>
-															</div>
-														</div>
-														<div class="col-2">
-															<div class="card python"></div>
-															<div class="card-img-overlay">
-																<h4>Python</h4>
-															</div>
-														</div>
-														<div class="col-2">
-															<div class="card go"></div>
-															<div class="card-img-overlay">
-																<h4>Goolang</h4>
-															</div>
-														</div>
-														<div class="col-2">
-															<div class="card rails"></div>
-															<div class="card-img-overlay">
-																<h4>Rails</h4>
-															</div>
-														</div>
-														<div class="col-2">
-															<div class="card swift"></div>
-															<div class="card-img-overlay">
-																<h4>Swift</h4>
-															</div>
-														</div>
-													</div>
-
-												</div>
-												<div class="container-fluid text-center mt-5">
-													<button type="button" class="btn btn-primary rad-30 mb-2 buttonblue"
-														data-dismiss="modal"> Voltar</button>
-												</div>
-											</div>
-
-											<div class="card-footer text-dark border-0 py-0 px-0">
-												<table class="w-100 h-100">
-													<tr>
-														<th>
-														</th>
-													</tr>
-												</table>
-											</div>
-										</div>
-									</div>
-								</div> -->
-								<!-- modal Insignias --
-						
-						</div> -->
-
-
-		<!-- <div class="card-footer text-dark border-0 py-0 px-0">
-			<table class="w-100 h-100">
-				<tr></th>
-				<th></tr>
-			</table>
-		</div>	 -->
-
-:
-	<!--SEÇÃO 2--->
-	<!-- <section class="sc-5 text-center pb-4">
-		<h1>Inspiração</h1>
-		<div class="row">
-			<div class="lead col-sm-12 col-sm-6 col-lg-6 col-xl-6 text-center rad-10 mt-3" data-aos="flip-left">
-				---Criar caixas de Popover----
-				<p>Este site/portfólio foi realizado tendo como inspiração a primeira Pokedéx, do anime japonês -
-					Pokémon.</p>
-				<p>A primeira Pokedéx é a da cidade de Kanto, da qual o protagonista do anime inicia sua jornada em
-					busca de se tornar o melhor mestre Pokémon </p>
-				<p>A Pokedéx é uma enciclopédia que contém diversas informações sobre os pokemons,como por exemplo:
-					força de ataque, defesa, tipo(fogo, agua, venenoso, etc) entre outras
-					informações.</p>
-			</div>
-			<div class="col-sm-12 col-sm-6 col-lg-6 col-xl-6 pokebolainvert" data-aos="fade-in" data-aos-delay="0">
-			</div>
+		<div class="container-my-avatar">
+			<img class="my-avatar" src="img/boneco.png" alt="Boneco Eu">
 		</div>
-		<div class="row w-100">
-			<div class="col-sm-12 col-sm-6 col-lg-6 col-xl-6 pokebolainvert" data-aos="fade-in"></div>
-			<div class="col-sm-12 col-sm-6 col-lg-6 col-xl-6 rad-10 pt-3" data-aos="flip-right">
-				<img src="img/pokedex.png" class="pokedex">
-			</div>
+		<div class="card-infos">
+			<h2 class="">Fernando Aquistapace</h2>
+			<p class="">
+				22 anos<br>
+				Análise e Desenvolvimento de Sistemas
+			</p>	
 		</div>
 	</section> -->
 
-	<!--SEÇÃO 4--->
-	<!-- <section class="sc-0 rad-30 text-center">
-		<h1>Portfólio</h1>
-		<div class="container px-0  card-deck justify-content-center m-auto">
-
-			<div class="card text-white border-0">
-				<img class="card-img h-100" src="img/site bootstrap.JPG"
-					alt="Site projeto do curso de Bootsrap da Udemy">
-				<div class="card-img-overlay lead">
-					<h3 class="card-title mt-5">Projeto do Curso Bootsrap</h3>
-
-				</div>
+	<!-- <section class="container">
+			<h3 class="titles-h2">Habilidades</h3>
+			<div class="container-fluid" id="grafico">
+				<canvas id="grafico1" aria-label="Niveis" role="grafico1"></canvas>			
 			</div>
-			<div class="card text-white border-0">
-				<img class="card-img" src="img/site pokedex.png" alt="Site projeto do curso de Bootsrap da Udemy">
-				<div class="card-img-overlay lead">
-					<h3 class="card-title mt-5">Portfólio Pokedéx</h3>
-
-				</div>
+			<div class="card-body text-center">
+				<button id="meioCirculo">Semi Circulo</button>
 			</div>
+		</section>	 -->
 
-		</div>
+	<!-- <section class="container">
+			<h2 class="titles-h2">Tipo</h2>
+				<div class="nav " id="list-tab" role="tablist">
+					<a class="nav-item" id="front-end-tab" data-toggle="tab"
+						href="#front-end" role="tab" aria-controls="front-end" aria-selected="true">
+						Front-End
+					</a>
+
+					<a class="nav-item" id="agil-tab" data-toggle="tab" href="#agil"
+						role="tab" aria-controls="agil" aria-selected="false">
+						Agil
+					</a>
+
+					<a class="nav-item" id="raro-tab" data-toggle="tab" href="#raro"
+						role="tab" aria-controls="raro" aria-selected="false">
+						Raro
+					</a>
+				</div>
+
+				<div class="tab-content" id="nav-tabContent">
+					<div class="tab-pane fade show " id="front-end" role="tabpanel" aria-labelledby="front-end-tab">
+						<p class="text-inner-pane">Desenvolve aplicações web de alto nível, criativas e com	belissímos designs</p>
+					</div>
+					
+					<div class="tab-pane fade" id="agil" role="agil" aria-labelledby="agil-tab">
+						<p class="">Atento as boas práticas no desenvolvimento de softwares</p>
+					</div>
+					
+					<div class="tab-pane fade" id="raro" role="raro" aria-labelledby="raro-tab">
+						<p class="">Um tipo raro é dificil de encontrar, parabèns você encontrou um
+							deles!!!</p>
+					</div>
+				</div>
+		</section> -->
+	<!-- </section>	
+	<section class="container" id="quarta">
+		<h2 class="titles-h2">Insignias</h2>
+		<section class="cards-group-insignias">
+			<div class="card-insiginia html"></div>
+			<div class="card-insiginia css"></div>
+			<div class="card-insiginia javascript"></div>
+			<div class="card-insiginia bootstrap"></div>
+			<div class="card-insiginia wordpress"></div>
+			<div class="card-insiginia github"></div>
+			<div class="card-insiginia react grayscaleAdd"></div>
+			<div class="card-insiginia jquery grayscaleAdd"></div>
+			<div class="card-insiginia angular grayscaleAdd"></div>
+			<div class="card-insiginia vue grayscaleAdd"></div>
+			<div class="card-insiginia node grayscaleAdd"></div>
+			<div class="card-insiginia php grayscaleAdd"></div>
+			<div class="card-insiginia sql grayscaleAdd"></div>
+		</section>
 	</section> -->
-
-	<!---Seção 3---->
-	<footer>
-		<!-- <div class="container-fluid px-0">
-			<table class="table table-borderless mb-0" style="height: 60px">
-				<tr>
-					<td class="pb-1" style="width: 15%"></td>
-					<td class="pb-1 gradientefooter dropdown ml-5"></td>
-					<td class="pb-1 red"></td>
-					<td class="pb-1 red"></td>
-				</tr>
-			</table>
-			<div class="container-fluid red">
-				<h4>Contato</h4>
-				<a class="btn btn-primary rounded-circle" href="#"><i class="fab fa-linkedin linkedin"></i></a>
-				<a class="btn btn-dark rounded-circle" href="#"><i class="fab fa-github github"></i></a>
-				<a class="btn btn-danger rounded-circle" href="#"><i class="fas fa-envelope email"></i></a>
-				<a class="btn btn-success rounded-circle" href="#"><i class="fab fa-whatsapp whats"></i></a>
-				<a href="#topo" id="top" class="text-right">
-					<img src="img/iconTOP.png" class="animated tada infinite shadow voltartopo">
-				</a>
-			</div>
-		</div> -->
-
-		<!-- JS -->
-		
-	
-	
-	
-	
-	
-		<!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-		<script src="three.min.js"> </script>
-		<script src="OrbitControls.js"></script> -->
-		<!---Efeito de rotação 360-->
-		<!-- JS -->
-<!-- 
-		<script type="text/javascript">
-			// Inicializar AOS Scroll
-			AOS.init();
-
-			/* Open when someone clicks on the span element *
-			function openNav() {
-				document.getElementById("capa").style.width = "100%";
-			}
-			// window.onload=document.getElementById("capa").style.width = "100%"	
-
-			/* Ativa o botão de fechar - seta */
-			function closeNav() {
-				document.getElementById("capa").style.width = "0%";
-			}
-
-			// Modal AJUSTE DE ALTURA
-
-			// Pause
-
-			function mostrar(e) {
-
-				if (e.classList.contains("fa-pause")) { //se tem olho aberto
-					e.classList.remove("fa-pause"); //remove classe olho aberto
-					e.classList.add("fa-play"); //coloca classe olho fechado
-					document.getElementById("pokemon").pause()
-				} else { //senão
-					e.classList.remove("fa-play"); //remove classe olho fechado
-					e.classList.add("fa-pause"); //coloca classe olho aberto
-					document.getElementById("pokemon").play()
-				}
-
-			}
-		</script> -->
-
-	
-
-	</footer>
 </body>
 
 </html>
