@@ -1,0 +1,23 @@
+.container-about-me {
+    width: 100%;
+    max-width: 1000px;
+    height: fit-content;
+    margin: auto;
+    @include flex-between;
+  .card-infos {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    padding: 20px;
+    border-radius: 8px;
+    border-color: rgb(0, 0, 0);
+    text-align: center;
+    background-color: rgb(144, 189, 238);
+    transition: ease-in;
+    box-sizing: border-box;
+    transform: skewX();
+    &:hover {
+        box-shadow: 0 0 5px 5px rgba(197, 197, 197, 0.816);
+    }
+   }
+}
