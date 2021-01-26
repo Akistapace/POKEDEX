@@ -1,0 +1,73 @@
+.container-audio {
+    @include flex-end;
+    margin-right: 200px;
+    button {
+        border-radius: 50%;
+        cursor: pointer;
+        width: 35px;
+        height: 35px;
+        margin-right: 10px;
+        margin-top: -20px;
+        z-index: 2;
+    }
+    .btns-audio {
+        background-color:white;
+        border: 5px solid black;
+        outline: 0;
+        width: 50px;
+        height: 50px;
+        @include btn-bright-infinite;
+        span {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0 0 5px 1px rgb(100, 100, 100);
+            position: absolute;
+            z-index: 10;
+            margin-left: -15px;
+            margin-top: -15px;
+           
+        }
+        &:hover {
+            span {
+                transform: scale(0.9);
+            }
+        }
+    }
+    .btn-play,
+    .btn-pause,
+    .btn-volup,
+    .btn-voldown {
+        position: absolute;
+        margin-right: 17.5px ;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+    .btn-play {
+        margin-right: 130px;
+        background-color: rgba(22, 22, 150, 0.713);
+        display: none;
+    }
+
+    .btn-pause {
+        margin-right: 80px;
+        background-color: rgba(22, 22, 150, 0.713);
+        display: none;
+    }
+    .btn-volup {
+        margin-right: -45px;
+        background-color: rgba(22, 22, 150, 0.713);
+        display: none;
+    }
+    .btn-voldown {
+        margin-right: -95px;
+        background-color: rgba(22, 22, 150, 0.713);
+        display: none;
+    }
+
+    .d-block {
+        display: block;
+    }
+}
