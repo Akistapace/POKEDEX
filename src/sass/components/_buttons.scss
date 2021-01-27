@@ -54,6 +54,31 @@
     }
   }
 }
+@mixin btn-bright-red-infinite { 
+  animation: brighRed 0.7s infinite;
+  animation-direction: alternate;
+  -webkit-animation-name: brightRed;
+  animation-name: brightRed;
+  animation-duration: infinite;
+  @-webkit-keyframes brightRed {
+    0% {
+      opacity: 0.9;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes brightRed {
+    0% {
+      opacity: 0.9;
+      background-color: rgb(255, 255, 255);
+    }
+    100% {
+      opacity: 1;
+      background-color: rgb(243, 195, 195);
+    }
+  }
+}
 
 $btn-color: (
   "btn-red": rgba(218, 18, 58, 0.904),

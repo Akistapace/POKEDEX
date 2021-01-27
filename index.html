@@ -6,7 +6,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="stylesheet" type="text/css" href="./src/dist/css/main.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<link rel="stylesheet" type="text/css" href="./src/css/main.min.css">
+
 </head>
 
 <header>
@@ -38,11 +41,27 @@
 </header>
 <body>
 	<main>
-		<section class="home-container-cover">
-			
-		</section>
+		<!-- <section class="home-container-cover">
+			<div class="swiper-container slide-home">
+				<div class="swiper-wrapper">
+				  <div class="swiper-slide">
+					  <figure>
+						  <img src="" alt="">
+						  <figcption>
 
-		<section class="container-about-me">
+						  </figcption>
+					  </figure>
+				  </div>
+				  <div class="swiper-slide">Slide 2</div>
+				  <div class="swiper-slide">Slide 3</div>
+				</div>
+				<div class ="swiper-button-next"></div>
+ 				<div class ="swiper-button-prev"></div>
+				<div class="swiper-pagination"></div>
+			  </div>
+		</section> -->
+
+		<!-- <section class="container-about-me">
 			<div class="card-infos">
 				<h2 class="">Fernando Aquistapace</h2>
 				<p class="">
@@ -58,55 +77,111 @@
 			<div class="card-infos">
 				
 			</div>
-		</section>
+		</section> -->
 
-		<section class="container" id="quarta">
-			<h2 class="titles-h2">Insignias</h2>
-			<div class="cards-group-insignias">
-				<div class="card-insiginia"></div>
+		<section class="cards">
+			<h1 class="titles-h2">Insignias</h1>
+			<div class="swiper-container" id="teste">
+				
+				<div class="swiper-wrapper">					
+					<div class="swiper-slide">
+						<div class="card card-orange">
+							<div class="card-img">
+								<img src="" alt="">
+							</div>
+							<div class="card-body">
+								<p>html 5</p>
+								<small>Hipertxto</small>
+							</div>
+						</div>
+					</div>
 
-				<button type="button">hover</button>
+					<div class="swiper-slide">
+						<div class="card card-blue">
+							<div class="card-img">
+								<img src="" alt="">
+							</div>
+							<div class="card-body">
+								<p>css 3</p>
+								<small>Estilzação</small>
+							</div>
+						</div>
+					</div>
+
+					<div class="swiper-slide">
+						<div class="card card-yellow ">
+							<div class="card-img">
+								<img src="" alt="">
+							</div>
+							<div class="card-body">
+								<p>javascript</p>
+								<small></small>
+								<small>Programação</small>
+							</div>
+						</div>
+					</div>
+
+					<div class="swiper-slide">
+						<div class="card card-pink ">
+							<div class="card-img">
+								<img src="" alt="">
+							</div>
+							<div class="card-body">
+								<p>sass</p>
+								<small>Estilzação</small>
+							</div>
+						</div>
+					</div>
+
+					<div class="swiper-slide">
+						<div class="card card-purple ">
+							<div class="card-img">
+								<img src="" alt="">
+							</div>
+							<div class="card-body">
+								<p>bootstrap</p>
+								<small>framework | Estilizaçãp</small>
+							</div>
+						</div>
+					</div>	
+					
+					<div class="swiper-slide">
+						<div class="card card-black ">
+							<div class="card-img">
+								<img src="" alt="">
+							</div>
+							<div class="card-body">
+								<p>git</p>
+								<small>Versionamento</small>
+							</div>
+						</div>
+					</div>
+
+					<div class="swiper-slide">
+						<div class="card card-light-blue">
+							<div class="card-img">
+								<img src="" alt="">
+							</div>
+							<div class="card-body">
+								<p>wordpress</p>
+								<small>PlataForma de criação de sites</small>
+							</div>
+						</div>
+					</div>
+				</div>
+				
 			</div>
 		</section> 
 	</main>
 	<footer>
-		<script src="./src/assets/js/audio.js"></script>
+		<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	
+		<script src="./src/js/audio.js"></script>
+		<script src="./src/js/home-cover.js"></script>
+		<script src="./src/js/cards.js"></script>
+		
 	</footer>
-	<!-- <section class="container">
-			<h2 class="titles-h2">Tipo</h2>
-				<div class="nav " id="list-tab" role="tablist">
-					<a class="nav-item" id="front-end-tab" data-toggle="tab"
-						href="#front-end" role="tab" aria-controls="front-end" aria-selected="true">
-						Front-End
-					</a>
-
-					<a class="nav-item" id="agil-tab" data-toggle="tab" href="#agil"
-						role="tab" aria-controls="agil" aria-selected="false">
-						Agil
-					</a>
-
-					<a class="nav-item" id="raro-tab" data-toggle="tab" href="#raro"
-						role="tab" aria-controls="raro" aria-selected="false">
-						Raro
-					</a>
-				</div>
-
-				<div class="tab-content" id="nav-tabContent">
-					<div class="tab-pane fade show " id="front-end" role="tabpanel" aria-labelledby="front-end-tab">
-						<p class="text-inner-pane">Desenvolve aplicações web de alto nível, criativas e com	belissímos designs</p>
-					</div>
-					
-					<div class="tab-pane fade" id="agil" role="agil" aria-labelledby="agil-tab">
-						<p class="">Atento as boas práticas no desenvolvimento de softwares</p>
-					</div>
-					
-					<div class="tab-pane fade" id="raro" role="raro" aria-labelledby="raro-tab">
-						<p class="">Um tipo raro é dificil de encontrar, parabèns você encontrou um
-							deles!!!</p>
-					</div>
-				</div>
-		</section> -->
-
 </body>
 
 </html>
