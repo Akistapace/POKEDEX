@@ -21,7 +21,7 @@
     background-image:linear-gradient(to bottom,rgb(26, 243, 55),rgb(54, 163, 72)),
 }
 @mixin grad-blue {
-    background-image:linear-gradient(to bottom,rgba(18, 26, 243, 0.933),rgba(47, 112, 209, 0.802)),
+    background-image:linear-gradient(to bottom,rgba(92, 96, 226, 0.933),rgba(47, 112, 209, 0.802)),
 }
 @mixin grad-purple {
     background-image:linear-gradient(to bottom,rgb(171, 96, 233),rgb(116, 35, 182)),
@@ -31,6 +31,15 @@
 }
 @mixin grad-orange {
     background-image:linear-gradient(to bottom,rgb(255, 174, 0),rgb(216, 171, 22)),
+}
+@mixin grad-pink {
+    background-image:linear-gradient(to bottom,rgb(255, 3, 171),rgb(221, 50, 187)),
+}
+@mixin grad-light-blue {
+    background-image:linear-gradient(to bottom,rgba(0, 217, 255, 0.878),rgb(53, 175, 184)),
+}
+@mixin grad-black {
+    background-image:linear-gradient(to bottom,rgb(0, 0, 0),rgb(80, 79, 74)),
 }
 @mixin grad-pink {
     background-image:linear-gradient(to bottom,rgb(255, 3, 171),rgb(221, 50, 187)),

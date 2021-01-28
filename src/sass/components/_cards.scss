@@ -1,14 +1,13 @@
 .cards {
     width: 100%;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
     &-group {
         width: 100%;
         height: 100%;
-        background-color: aqua;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
         margin: auto;
     }
     &:hover {
@@ -21,31 +20,44 @@
 }
 
 .card {
-    width: 130px;
-    height: 130px;
+    width: 100%;
+    max-width: 330px;
+    height: fit-content;
     border-radius: 8px;
-    padding: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 5px;
     &:hover {
         box-shadow: 0 0 8px 5px rgb(228, 228, 228);
     }
     &-img {
-        background-color: white;
-        width: 60px;
-        height: 60px;
+        max-width: 95px;
+        height: fit-content;
         border-radius: 8px;
         object-fit: cover;
+        img {
+            height: auto;
+            width: 100%;
+        }
     }
     &-body {
         padding: 10px 0 10px 0;
-        @include flex-center;
-        height: 40px;
         flex-direction: column;
+        flex-wrap: wrap;
         text-align: center;
         color:white;
         p {
             text-transform: uppercase;
             font-weight: 700;
-            line-height: 30px
+            line-height: 30px;
+            font-size: 24px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        small {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 18px;
         }
     }
 }
@@ -76,28 +88,3 @@
 .card-black {
     @include grad-black;
 }
-
-// .swiper-container {
-//     width: 100%;
-//     height: 100%;
-//   }
-
-//   .swiper-slide {
-//     text-align: center;
-//     font-size: 18px;
-//     background: #fff;
-
-//     /* Center slide text vertically */
-//     display: -webkit-box;
-//     display: -ms-flexbox;
-//     display: -webkit-flex;
-//     display: flex;
-//     -webkit-box-pack: center;
-//     -ms-flex-pack: center;
-//     -webkit-justify-content: center;
-//     justify-content: center;
-//     -webkit-box-align: center;
-//     -ms-flex-align: center;
-//     -webkit-align-items: center;
-//     align-items: center;
-//   }
