@@ -5,14 +5,13 @@
     margin: auto;
     @include flex-between;
   .card-infos {
-    width: 100%;
-    max-width: 400px;
-    height: 300px;
+    width: 90%;
+    height: 400px;
     padding: 20px;
     border-radius: 8px;
     border-color: rgb(0, 0, 0);
     text-align: center;
-    background-color: rgb(144, 189, 238);
+    background-color: rgb(126, 126, 126);
     transition: ease-in;
     box-sizing: border-box;
     transform: skewX();

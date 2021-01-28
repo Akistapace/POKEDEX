@@ -1,15 +1,60 @@
 .home-container-cover {
     height: 70vh;
-    background-color: rgb(182, 182, 182);
     .slide-home {
-        height: 400px;
-        figure {
-            img {
-
+        height: 100%;
+        .Slide-first {
+            figure {
+                background-color: black;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {                    
+                    position: absolute;
+                    height: auto;
+                    max-height: 600px;
+                    width: 100%;
+                    max-width: 600px;
+                    margin: auto;
+                    animation: spinOut 6s linear infinite;
+                }
+                @keyframes spinOut {
+                    from  {
+                         transform:rotate(360deg);
+                    }
+                    to {
+                        transform:rotate(0deg);
+                    }
+                }
+                &::before {
+                    content: url("/src/assets/img/img-circle-inner.png");
+                    animation: spinInner 6s linear infinite;
+                    position: absolute;
+                    z-index: 4;
+                }
+                @keyframes spinInner {
+                    from  {
+                        transform:rotate(0deg);
+                    }
+                    to {
+                        transform:rotate(360deg);
+                    }
+                }
+                figcaption {
+                    position: relative;
+                    z-index: 5;
+                    color: azure;
+                    background-color: rgba(0, 102, 255,0.4);
+                    font-size: 50px;
+                    text-align: center;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }            
             }
-            figcaption {
-            
-            }            
         }
     }
 }
