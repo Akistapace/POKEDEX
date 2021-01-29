@@ -38,25 +38,24 @@
               }
             }
         }
-        &-label {
-          border-radius: 10px;
-          width: 200px;
-          height: fit-content;
-          background-color: whitesmoke;
-          position: absolute;
-          z-index: 6;
-          padding: 3px;
-          margin-left: 220px;
-          // &::before {
-          //   content: " ";
-          //   width: 150px;
-          //   height: 7px;
-          //   background-color: blue;
-          //   position: absolute;
-          //   margin-left: -110px;
-          //   margin-top: 5px;
-
-          // }
+        ul {
+          width: 100%;
+          max-width: 500px;
+          display: flex;
+          align-self: flex-end;
+          margin: auto;
+          margin-bottom: 0;
+          justify-content: space-between;
+          li {
+            a {
+              text-decoration: none;
+              opacity: 1;
+              color: color(pk-white);
+              &:hover {
+                opacity: 0.8;
+              }
+            }
+          }
         }
     }
    &-bottom {

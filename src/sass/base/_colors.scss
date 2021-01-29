@@ -1,5 +1,6 @@
 $colors: (
   "pk-red": crimson,
+  "pk-white": rgb(245, 244, 244),
 );
 @function color($key) {
   @if not map-has-key($colors, $key) {
