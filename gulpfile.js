@@ -66,7 +66,7 @@ function imgmini() {
 
 function watchTask(){
   // watch('*.html', browsersyncReload);
-  watch(['src/sass/**/*.scss', 'src/js/*.js'], series(gsass,cssmin, uglifyjs));
+  watch(['src/sass/**/*.scss', 'src/js/*.js'], series(gsass, cssmin, uglifyjs));
 }
 
 exports.uglifyjs = uglifyjs;
@@ -78,4 +78,4 @@ exports.cssmin = cssmin;
 exports.watchTask = watchTask;
 
 
-exports.default = parallel(uglifyjs, gsass, imgmini, cssmin, watchTask, insignias);
+exports.default = series(uglifyjs, gsass, cssmin, imgmini, watchTask, insignias);

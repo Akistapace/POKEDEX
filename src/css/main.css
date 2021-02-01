@@ -44,7 +44,11 @@ img {
   cursor: pointer; }
 
 header {
-  height: 200px; }
+  height: 60px;
+  background-color: #333232; }
+
+main {
+  background-color: #333232; }
 
 .titles-h2 {
   text-align: center;
@@ -144,7 +148,13 @@ header {
   background-image: linear-gradient(to bottom, rgba(0, 217, 255, 0.878), #35afb8); }
 
 .card-black {
-  background-image: linear-gradient(to bottom, black, #504f4a); }
+  background-image: linear-gradient(black, #1a1919); }
+
+.list-search-type {
+  display: none;
+  position: absolute;
+  z-index: 3;
+  background-color: white; }
 
 .container-audio {
   display: flex;
@@ -234,7 +244,7 @@ header {
   z-index: 5;
   border-bottom: 10px solid black; }
   .nav-content {
-    width: 100%;
+    width: 80%;
     height: 60px;
     display: flex;
     padding: 10px; }
@@ -296,11 +306,10 @@ header {
     background-image: linear-gradient(155deg, crimson 150px, transparent 100px); }
 
 .home-container-cover {
-  height: 70vh; }
+  height: 100vh; }
   .home-container-cover .slide-home {
     height: 100%; }
     .home-container-cover .slide-home .Slide-first figure {
-      background-color: black;
       height: 100%;
       width: 100%;
       display: flex;
@@ -309,9 +318,9 @@ header {
       .home-container-cover .slide-home .Slide-first figure img {
         position: absolute;
         height: auto;
-        max-height: 600px;
+        max-height: 400px;
         width: 100%;
-        max-width: 600px;
+        max-width: 400px;
         margin: auto;
         animation: spinOut 6s linear infinite; }
 
@@ -335,7 +344,7 @@ header {
         position: relative;
         z-index: 5;
         color: azure;
-        background-color: rgba(0, 102, 255, 0.4);
+        background-color: rgba(4, 15, 31, 0.4);
         font-size: 50px;
         text-align: center;
         width: 100%;
@@ -367,7 +376,7 @@ header {
       box-shadow: 0 0 5px 5px rgba(197, 197, 197, 0.816); }
 
 footer .footer-top {
-  background-image: linear-gradient(25deg, crimson 150px, transparent 100px);
+  background-image: linear-gradient(25deg, crimson 150px, #333232 100px);
   height: 40px; }
 
 footer .footer-content {

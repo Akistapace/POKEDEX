@@ -8,8 +8,7 @@
 
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-	<link rel="stylesheet" type="text/css" href="../dist/style.min.css">
-
+	<link rel="stylesheet" type="text/css" href="./dist/style.min.css">
 </head>
 
 <header>
@@ -43,17 +42,25 @@
 
 <body>
 	<main>
-		<section style="width: 100vw;height: 100vh;">
+		<!-- <section style="width: 90%;height: 90vh;">
 			<img style="width:100%; max-height:800px;" src="./src/assets/img/404.jpg" alt="Em construção">
 			<a href='https://br.freepik.com/vetores/modelo'>Modelo vetor criado por freepik - br.freepik.com</a>
-		</section>
+		</section> -->
 
 		<section class="home-container-cover">
 			<div class="swiper-container slide-home">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide Slide-first">
 						<figure>
-							<img src="/src/assets/img/img-circle-out.png" alt="">
+							<img src="./dist/img/img-circle-out.png" alt="">
+							<figcaption>
+								Bem-Vindo a minha Portdéx
+							</figcaption>
+						</figure>
+					</div>
+					<div class="swiper-slide Slide-first">
+						<figure>
+							<img src="./dist/img/img-circle-out.png" alt="">
 							<figcaption>
 								teste
 							</figcaption>
@@ -61,23 +68,15 @@
 					</div>
 					<div class="swiper-slide Slide-first">
 						<figure>
-							<img src="/src/assets/img/img-circle-out.png" alt="">
-							<figcaption>
-								teste
-							</figcaption>
-						</figure>
-					</div>
-					<div class="swiper-slide Slide-first">
-						<figure>
-							<img src="/src/assets/img/img-circle-out.png" alt="">
+							<img src="./dist/img/img-circle-out.png" alt="">
 							<figcaption>
 								teste
 							</figcaption>
 						</figure>
 					</div>
 				</div>
-				<div class="swiper-button-next"></div>
-				<div class="swiper-button-prev"></div>
+				<!-- <div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div> -->
 				<div class="swiper-pagination"></div>
 			</div>
 		</section>
@@ -93,8 +92,8 @@
 
 		<section class="cards">
 			<h1 class="titles-h2">Insignias de Conhecimento</h1>
-			<input type="text">
-				<ul>
+			<input class="input-Search" type="text">
+				<ul class="list-search-type">
 					<li>Todas...</li>
 					<li>Hipertxto</li>
 					<li>Estilzação</li>
@@ -231,6 +230,26 @@
 
 			</div>
 		</section>
+
+		<section class="portf">
+			<div class="swiper-container gallery-top">
+				<div class="swiper-wrapper">
+				  <div class="swiper-slide"></div>
+				  <div class="swiper-slide"></div>
+				  <div class="swiper-slide"></div>
+				</div>
+				<!-- <div class="swiper-button-next swiper-button-white"></div>
+				<div class="swiper-button-prev swiper-button-white"></div> -->
+			  </div>
+
+			  <div class="swiper-container gallery-thumbs">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"></div>
+					<div class="swiper-slide"></div>
+					<div class="swiper-slide"></div>
+				</div>
+			  </div>
+		</section>
 	</main>
 	<footer>
 		<div class="footer-top"></div>
@@ -242,7 +261,7 @@
 
 		<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-		<script src="../dist/index.js"></script>
+		<script src="./dist/index.js"></script>
 
 	</footer>
 </body>

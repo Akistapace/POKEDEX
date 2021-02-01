@@ -38,9 +38,6 @@
 @mixin grad-light-blue {
     background-image:linear-gradient(to bottom,rgba(0, 217, 255, 0.878),rgb(53, 175, 184)),
 }
-@mixin grad-black {
-    background-image:linear-gradient(to bottom,rgb(0, 0, 0),rgb(80, 79, 74)),
-}
 @mixin grad-pink {
     background-image:linear-gradient(to bottom,rgb(255, 3, 171),rgb(221, 50, 187)),
 }
@@ -48,6 +45,6 @@
     background-image:linear-gradient(to bottom,rgba(0, 217, 255, 0.878),rgb(53, 175, 184)),
 }
 @mixin grad-black {
-    background-image:linear-gradient(to bottom,rgb(0, 0, 0),rgb(80, 79, 74)),
+    background-image:linear-gradient(rgb(0, 0, 0),rgb(26, 25, 25)),
 }
   
