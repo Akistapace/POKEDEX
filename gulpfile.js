@@ -2,24 +2,29 @@ const gulp = require('gulp');
 const { src, dest, series, watch, parallel } = require('gulp');
 const uglify = require('gulp-uglify');
 const sass = require('gulp-sass');
-// const html = require('gulp-htmlmin');
+const browserSync = require('browser-sync').create();
 const concat = require('gulp-concat');
 const imgmin = require('gulp-imagemin');
 const cleanCSS = require('gulp-clean-css'); 
 const rename = require('gulp-rename');
 const autoprefixer = require('gulp-autoprefixer');
 
+
+
+
 function uglifyjs() {
   return src('./src/**/*.js')
          .pipe(concat('index.js'))
          .pipe(uglify())
          .pipe(gulp.dest('./dist/'))
+         .pipe(browserSync.stream());
 }
 
 function gsass(){
   return src('./src/sass/main.scss')
          .pipe(sass())
          .pipe(gulp.dest('./src/css/'))
+         .pipe(browserSync.stream());
 }
 
 function cssmin(){
@@ -45,14 +50,6 @@ function cssmin(){
 
 }
 
-// function htmlmin(){
-//   return src('./src/*.html')
-//          .pipe(html({
-//            collapseWhitespace:true
-//          }))
-//          .pipe(gulp.dest('./dist/'))
-// }
-
 function insignias() {
   return src('./src/assets/img/insignias/*')
          .pipe(imgmin())
@@ -64,9 +61,18 @@ function imgmini() {
          .pipe(gulp.dest('./dist/img/'))
 }
 
-function watchTask(){
-  // watch('*.html', browsersyncReload);
-  watch(['src/sass/**/*.scss', 'src/js/*.js'], series(gsass, cssmin, uglifyjs));
+// function watchTask(){
+//   watch(['src/sass/**/*.scss', 'src/js/*.js'], series(gsass, cssmin, uglifyjs));
+// }
+
+// Static Server + watching scss/html files
+function browsSync() {
+  browserSync.init({
+      server: "."
+  });
+
+  watch(['src/sass/**/*.scss', 'src/js/*.js'], series(gsass, cssmin, uglifyjs)).on('change', browserSync.reload);;
+  watch("*.html").on('change', browserSync.reload);
 }
 
 exports.uglifyjs = uglifyjs;
@@ -75,7 +81,7 @@ exports.gsass = gsass;
 exports.imgmini = imgmini;
 exports.insignias = insignias;
 exports.cssmin = cssmin;
-exports.watchTask = watchTask;
+// exports.watchTask = watchTask;
+exports.browsSync = browsSync;
 
-
-exports.default = series(uglifyjs, gsass, cssmin, imgmini, watchTask, insignias);
+exports.default = series(parallel(uglifyjs, gsass, imgmini, insignias), cssmin);
