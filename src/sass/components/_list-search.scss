@@ -1,6 +1,19 @@
-.list-search-type {
-    display: none;
+.list-filter-type {
+    display: flex;
     position: absolute;
     z-index: 3;
     background-color: white;
+}
+
+// .filter {
+//     display: none;
+// }
+
+.show {
+    display: flex;
+}
+
+.active {
+    background-color: #666;
+    color: white;
 }
