@@ -58,15 +58,15 @@ var swiper = new Swiper('#types-card', {
   breakpoints: {
     // when window width is >= 32
     100: {
-      slidesPerView: 2.4,
+      slidesPerView: 2,
       spaceBetween: 20
     },
     250: {
-      slidesPerView: 3.3,
+      slidesPerView: 3,
       spaceBetween: 20
     },
     359: {
-      slidesPerView: 4.5,
+      slidesPerView: 3.5,
       spaceBetween: 20
     },
     // when window width is >= 480px
@@ -80,4 +80,5 @@ var swiper = new Swiper('#types-card', {
       spaceBetween: 40
     }
   }
+  // teste
 });

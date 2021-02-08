@@ -1,34 +1,62 @@
 const gulp = require('gulp');
+const browserSync  = require('browser-sync').create();
 const { src, dest, series, watch, parallel } = require('gulp');
 const uglify = require('gulp-uglify');
 const sass = require('gulp-sass');
-const browserSync = require('browser-sync').create();
 const concat = require('gulp-concat');
-const imgmin = require('gulp-imagemin');
+// const imgmin = require('gulp-imagemin');
 const cleanCSS = require('gulp-clean-css'); 
 const rename = require('gulp-rename');
 const autoprefixer = require('gulp-autoprefixer');
+const fileinclude = require('gulp-file-include');
 
+var paths = {
+      html: {
+        src: './src/pages/*.html',
+        dest: './'
+      },
+      scripts: { 
+        js: ['./src/js/*.js'],
+        dir_js: ['./src/js/min/'],
+      },
+      styles: {
+        css: ['./src/css/'],
+        cssmain: ['./src/css/main.css'],
+        sass: ['./src/sass/main.scss'],
 
+        dir_css: ['./src/css/min/'],
+      },
+      images: {
+        src: [
+          './src/assets/img/*',
+          './src/assets/img/insignias/*',
+        ],
+        dest: [
+          './src/assets/img/min/',
+          './src/assets/img/min/insignias/',
+        ]
+      },
+      watchs: ['./src/sass/**/*.scss', './src/js/*.js', './src/parcels/*.html', './src/pages/*.html'] 
+}
 
-
+// Concatena e Minimiza o javascript
 function uglifyjs() {
-  return src('./src/**/*.js')
+  return src(paths.scripts.js)
          .pipe(concat('index.js'))
          .pipe(uglify())
-         .pipe(gulp.dest('./dist/'))
-         .pipe(browserSync.stream());
+         .pipe(gulp.dest(paths.scripts.dir_js))
+         .pipe(browserSync.stream())
 }
 
 function gsass(){
-  return src('./src/sass/main.scss')
+  return src(paths.styles.sass)
          .pipe(sass())
-         .pipe(gulp.dest('./src/css/'))
+         .pipe(gulp.dest(paths.styles.css))
          .pipe(browserSync.stream());
 }
 
 function cssmin(){
-  return gulp.src('./src/css/*.css')
+  return gulp.src(paths.styles.cssmain)
          .pipe(cleanCSS({
             debug: true,
             compatibility: 'ie8',
@@ -40,48 +68,52 @@ function cssmin(){
          }))
          .pipe(autoprefixer({
             overrideBrowserslist: ['last 2 versions'],
-            cascade: false
+            cascade: false,
          }))
          .pipe(rename({
-            basename: 'style',
+            basename: 'main',
             suffix: '.min',
          }))
-         .pipe(gulp.dest('./dist/'))
-
+         .pipe(dest(paths.styles.dir_css))
 }
 
-function insignias() {
-  return src('./src/assets/img/insignias/*')
-         .pipe(imgmin())
-         .pipe(gulp.dest('./dist/img/insignias/'))
+// Static Server + watching scss/html/js files
+function browsSync() {
+  browserSync.init({
+    server: {
+      baseDir: paths.html.dest
+    }
+  });
+
+  watch(paths.watchs, series(gsass, cssmin, uglifyjs,includeHTML)).on('change', browserSync.reload);;
 }
-function imgmini() {
-  return src('./src/assets/img/*')
-         .pipe(imgmin())
-         .pipe(gulp.dest('./dist/img/'))
+
+function includeHTML(){
+  return gulp.src(paths.html.src)
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
+    .pipe(gulp.dest(paths.html.dest));
 }
 
 // function watchTask(){
-//   watch(['src/sass/**/*.scss', 'src/js/*.js'], series(gsass, cssmin, uglifyjs));
+//   gulp.watch(paths.watchs, series(gsass, cssmin, uglifyjs));
 // }
 
-// Static Server + watching scss/html files
-function browsSync() {
-  browserSync.init({
-      server: "."
-  });
-
-  watch(['src/sass/**/*.scss', 'src/js/*.js'], series(gsass, cssmin, uglifyjs)).on('change', browserSync.reload);;
-  watch("*.html").on('change', browserSync.reload);
-}
+// function imgmini() {
+//   return src(paths.images.src)
+//          .pipe(imgmin())
+//          .pipe(gulp.dest(paths.images.dest))
+// }
 
 exports.uglifyjs = uglifyjs;
 exports.gsass = gsass;
-// exports.htmlmin = htmlmin;
-exports.imgmini = imgmini;
-exports.insignias = insignias;
 exports.cssmin = cssmin;
-// exports.watchTask = watchTask;
 exports.browsSync = browsSync;
 
-exports.default = series(parallel(uglifyjs, gsass, imgmini, insignias), cssmin);
+exports.includeHTML = includeHTML;
+// exports.imgmini = imgmini;
+// exports.watchTask = watchTask;
+
+exports.default = parallel(series(includeHTML,gsass,cssmin,browsSync),uglifyjs)
