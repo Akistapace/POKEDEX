@@ -1,8 +1,11 @@
 
 footer {
     .footer-top {
-        background-image: linear-gradient(25deg, color(pk-red) 150px, color(pk-bg-darkGray) 100px);
+        background-image: linear-gradient(314deg, color(pk-red) 50%, color(pk-bg-darkGray) 100px);
         height: 40px;
+        @media (min-width: 820px) {
+            background-image: linear-gradient(337deg, color(pk-red) 150px, color(pk-bg-darkGray) 100px);
+        }
     }
 
     .footer-content {

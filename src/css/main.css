@@ -97,24 +97,30 @@ main {
 
 .card {
   width: 100%;
-  max-width: 330px;
-  height: fit-content;
+  max-width: 120px;
+  height: 145px;
   border-radius: 8px;
   padding: 15px;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 5px; }
   .card:hover {
     box-shadow: 0 0 8px 5px #e4e4e4; }
   .card-img {
-    max-width: 95px;
     height: fit-content;
     border-radius: 8px;
     object-fit: cover; }
     .card-img img {
-      height: auto;
-      width: 100%; }
+      height: 70px;
+      width: 70px; }
+    @media (min-width: 820px) {
+      .card-img {
+        max-width: 100px; }
+        .card-img img {
+          height: auto;
+          width: 100%; } }
   .card-body {
     padding: 10px 0 10px 0;
     flex-direction: column;
@@ -126,11 +132,30 @@ main {
       text-transform: uppercase;
       font-weight: 700;
       line-height: 30px;
-      font-size: 24px;
+      font-size: 16px;
       font-family: Verdana, Geneva, Tahoma, sans-serif; }
     .card-body small {
       font-family: Verdana, Geneva, Tahoma, sans-serif;
-      font-size: 18px; }
+      font-size: 12px; }
+    @media (min-width: 820px) {
+      .card-body p {
+        text-transform: uppercase;
+        font-weight: 700;
+        line-height: 30px;
+        font-size: 24px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif; }
+      .card-body small {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 18px; } }
+  @media (min-width: 820px) {
+    .card {
+      width: 100%;
+      max-width: 330px;
+      height: fit-content;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start; } }
 
 .card-red {
   background-image: linear-gradient(to bottom, #dc1a1a, #a93b3b); }
@@ -332,7 +357,10 @@ main {
   .nav-bottom {
     width: 100%;
     height: 40px;
-    background-image: linear-gradient(155deg, crimson 150px, transparent 100px); }
+    background-image: linear-gradient(139deg, crimson 50%, transparent 100px); }
+    @media (min-width: 820px) {
+      .nav-bottom {
+        background-image: linear-gradient(155deg, crimson 150px, transparent 100px); } }
 
 .home-container-cover {
   height: 100vh; }
@@ -405,8 +433,11 @@ main {
       box-shadow: 0 0 5px 5px rgba(197, 197, 197, 0.816); }
 
 footer .footer-top {
-  background-image: linear-gradient(25deg, crimson 150px, #333232 100px);
+  background-image: linear-gradient(314deg, crimson 50%, #333232 100px);
   height: 40px; }
+  @media (min-width: 820px) {
+    footer .footer-top {
+      background-image: linear-gradient(337deg, crimson 150px, #333232 100px); } }
 
 footer .footer-content {
   height: 60vh;
