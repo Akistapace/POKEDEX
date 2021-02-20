@@ -6,6 +6,7 @@
         spaceBetween: 30,
         grabCursor:true,
         keyboard: true,
+        slidesPerView: 1,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',

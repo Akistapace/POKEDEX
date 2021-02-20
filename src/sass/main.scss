@@ -5,6 +5,7 @@
 
 @import "base/reset";
 @import "base/mixins";
+@import "base/media-queries";
 @import "base/colors";
 @import "base/variables";
 @import "base/global";
@@ -15,6 +16,7 @@
 @import "components/cards";
 @import "components/list-search";
 @import "components/audio";
+@import "components/contact";
 
 @import "layout/navigation";
 @import "layout/home-cover";

@@ -290,6 +290,50 @@ main {
   .container-audio .d-block {
     display: block; }
 
+.contact {
+  display: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin-top: -200px;
+  z-index: 2; }
+  .contact__form {
+    background-color: white;
+    border-radius: 8px;
+    height: fit-content;
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto; }
+    .contact__form span {
+      cursor: pointer;
+      position: absolute;
+      top: 10px; }
+    .contact__form label {
+      width: 100%;
+      line-height: 30px; }
+    .contact__form input {
+      height: 37px;
+      width: 100%;
+      max-width: 350px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      border-color: dodgerblue; }
+      .contact__form input::placeholder {
+        padding: 0 10px; }
+    .contact__form textarea {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 8px; }
+    .contact__form input[type="submit"] {
+      margin-top: 20px;
+      background-color: dodgerblue !important;
+      color: white; }
+
 .nav {
   background-color: crimson;
   width: 100%;
@@ -433,18 +477,37 @@ main {
       box-shadow: 0 0 5px 5px rgba(197, 197, 197, 0.816); }
 
 .portfolio {
-  height: 500px;
+  height: fit-content;
   max-width: 1100px;
-  margin: auto; }
+  margin: auto;
+  padding: 10px; }
+  .portfolio h1 {
+    margin-top: 30px; }
   .portfolio__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap; }
   .portfolio__content {
-    width: 45%; }
+    width: 100%; }
     .portfolio__content img {
-      width: 100%; }
+      width: 100%;
+      margin-bottom: 50px; }
+    @media (min-width: 500px) {
+      .portfolio__content {
+        width: 48%; }
+        .portfolio__content img {
+          width: 100%; } }
+  .portfolio__content:last-child {
+    color: white;
+    text-align: center; }
+  .portfolio .title {
+    padding-top: 15px; }
+    @media (min-width: 700px) {
+      .portfolio .title {
+        font-size: 16px; } }
+  .portfolio .text {
+    padding-top: 20px; }
 
 footer .footer-top {
   background-image: linear-gradient(314deg, crimson 50%, #333232 100px);
@@ -453,6 +516,29 @@ footer .footer-top {
     footer .footer-top {
       background-image: linear-gradient(337deg, crimson 150px, #333232 100px); } }
 
-footer .footer-content {
+footer .footer-container {
   height: 60vh;
-  background-color: crimson; }
+  background-color: crimson;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto; }
+  footer .footer-container .footer-content {
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    footer .footer-container .footer-content .footer-col {
+      width: 48%; }
+      footer .footer-container .footer-content .footer-col h2 {
+        font-size: 24px;
+        color: white; }
+      footer .footer-container .footer-content .footer-col button {
+        background-color: dodgerblue;
+        height: 50px;
+        outline: none; }
+        footer .footer-container .footer-content .footer-col button:hover {
+          opacity: 0.5; }
+      footer .footer-container .footer-content .footer-col .pokemons {
+        height: 300px;
+        width: 100%;
+        background-color: aliceblue; }

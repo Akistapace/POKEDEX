@@ -1,0 +1,51 @@
+.contact {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin-top: -300px;
+    z-index: 2;
+    &__form {
+        background-color: color(pk-white);
+        border-radius: 8px;
+        height: fit-content;
+        width: 90%;
+        max-width: 500px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: auto;
+        span {
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+        }
+        label {
+            width: 100%;
+            line-height: 30px;
+        }
+        input {
+            height: 37px;
+            width: 100%;
+            max-width: 350px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border-color: dodgerblue;
+            &::placeholder {
+                padding: 0 10px;
+            }
+        }
+        textarea {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 8px;
+        }
+        input[type="submit"] {
+            margin-top: 20px;
+            background-color: dodgerblue !important;
+            color: color(pk-white);
+        }
+    }
+}

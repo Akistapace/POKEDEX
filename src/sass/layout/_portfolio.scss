@@ -1,7 +1,11 @@
 .portfolio {
-    height: 500px;
+    height: fit-content;
     max-width: 1100px;
     margin: auto;
+    padding: 10px;
+    h1 {
+        margin-top: 30px;
+    }
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -9,9 +13,29 @@
         flex-wrap: wrap;
     }
     &__content {
-        width: 45%;
+        width: 100%;
         img {
             width: 100%;
+            margin-bottom: 50px;
         }
+        @include bkp(sm){
+            width: 48%;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    &__content:last-child{
+        color: color(pk-white);
+        text-align: center;
+    }
+    .title {
+        padding-top: 15px;
+        @include bkp(md) {
+            font-size: 16px;
+        }
+    }
+    .text {
+        padding-top: 20px;
     }
 }

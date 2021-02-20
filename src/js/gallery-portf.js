@@ -1,10 +1,14 @@
-var portfolio = new Swiper('.portfolio-slide', {
+const galleryThumbs = new Swiper('.gallery-thumbs', {
+  slidesPerView: 'auto',
+  centeredSlides: true,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+});
+const portfolio = new Swiper('.portfolio-slide', {
   effect: 'coverflow',
   grabCursor: true,
   centeredSlides: true,
-  slidesPerView: 2.2,
-  watchSlidesVisibility: true,
-  watchSlidesProgress: true,
+  slidesPerView: 1.2,
   coverflowEffect: {
     rotate: 50,
     stretch: 0,
@@ -12,16 +16,10 @@ var portfolio = new Swiper('.portfolio-slide', {
     modifier: 1,
     slideShadows: true,
   },
+  thumbs: {
+    swiper: galleryThumbs
+  },
   pagination: {
     el: '.swiper-pagination',
   },
-});
-
-var galleryThumbs = new Swiper('.gallery-thumbs', {
-  spaceBetween: 10,
-  slidesPerView: 1,
-  freeMode: true,
-  thumbs: {
-    swiper: portfolio
-  }
 });

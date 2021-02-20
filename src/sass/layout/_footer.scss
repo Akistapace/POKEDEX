@@ -1,15 +1,44 @@
-
 footer {
     .footer-top {
         background-image: linear-gradient(314deg, color(pk-red) 50%, color(pk-bg-darkGray) 100px);
         height: 40px;
+        
         @media (min-width: 820px) {
             background-image: linear-gradient(337deg, color(pk-red) 150px, color(pk-bg-darkGray) 100px);
         }
     }
 
-    .footer-content {
+    .footer-container {
         height: 60vh;
         background-color: color(pk-red);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        .footer-content {
+            width:100%;
+            display: flex;
+            justify-content: center;
+            .footer-col {
+                width: 48%;
+                h2 {
+                    font-size: 24px;
+                    color: color(pk-white);
+                }
+                button {
+                    background-color: dodgerblue;
+                    height: 50px;
+                    outline: none;
+                    &:hover {
+                        opacity: 0.5;
+                    }
+                }
+                .pokemons {
+                    height: 300px;
+                    width: 100%;
+                    background-color: aliceblue;
+                }
+            }
+        }
     }
 }

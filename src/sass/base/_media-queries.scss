@@ -1,2 +1,14 @@
-$md: 768px;
-
+@mixin bkp($bkp){
+    @if $bkp == xl {
+        @media (max-width: 499px){@content;}
+    }
+    @else if $bkp == sm {
+        @media (min-width: 500px) {@content;}
+    } 
+    @else if $bkp == md {
+        @media (min-width: 700px) {@content;}
+    } 
+    @else if $bkp == lg {
+        @media (min-width: 900px) {@content;}
+    }
+}
