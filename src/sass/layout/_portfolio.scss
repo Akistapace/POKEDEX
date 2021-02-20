@@ -1,0 +1,17 @@
+.portfolio {
+    height: 500px;
+    max-width: 1100px;
+    margin: auto;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    &__content {
+        width: 45%;
+        img {
+            width: 100%;
+        }
+    }
+}

@@ -22,7 +22,7 @@
     "swiper": "^6.4.8"
   },
   "keywords": [
-    "grunt, sass"
+    "gulp, sass"
   ],
   "devDependencies": {},
   "scripts": {
