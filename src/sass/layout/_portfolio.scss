@@ -17,6 +17,7 @@
         img {
             width: 100%;
             margin-bottom: 50px;
+            border-radius: 8px
         }
         @include bkp(sm){
             width: 48%;

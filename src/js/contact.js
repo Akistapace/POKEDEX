@@ -9,4 +9,6 @@ btnContact.onclick = function () {
 close.onclick =function () {
     contact.style.display='none';
 }
-
+contact.on = function () {
+    contact.style.display='none';
+}

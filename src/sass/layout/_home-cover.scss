@@ -12,33 +12,8 @@
                 img {                    
                     position: absolute;
                     height: auto;
-                    max-height: 400px;
                     width: 100%;
-                    max-width: 400px;
                     margin: auto;
-                    animation: spinOut 6s linear infinite;
-                }
-                @keyframes spinOut {
-                    from  {
-                         transform:rotate(360deg);
-                    }
-                    to {
-                        transform:rotate(0deg);
-                    }
-                }
-                &::before {
-                    content: url("/src/assets/img/img-circle-inner.png");
-                    animation: spinInner 6s linear infinite;
-                    position: absolute;
-                    z-index: 4;
-                }
-                @keyframes spinInner {
-                    from  {
-                        transform:rotate(0deg);
-                    }
-                    to {
-                        transform:rotate(360deg);
-                    }
                 }
                 figcaption {
                     position: relative;

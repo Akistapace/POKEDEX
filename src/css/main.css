@@ -292,11 +292,18 @@ main {
 
 .contact {
   display: none;
-  position: absolute;
+  position: fixed;
   height: 100%;
   width: 100%;
-  margin-top: -200px;
-  z-index: 2; }
+  max-width: 100%;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  background: linear-gradient(rgba(0, 89, 255, 0.5), rgba(0, 89, 255, 0.5));
+  padding: 20px; }
+  @media (max-width: 555px) {
+    .contact {
+      width: calc(100% - 40px); } }
   .contact__form {
     background-color: white;
     border-radius: 8px;
@@ -311,8 +318,8 @@ main {
     margin: auto; }
     .contact__form span {
       cursor: pointer;
-      position: absolute;
-      top: 10px; }
+      position: relative;
+      margin-left: 100%; }
     .contact__form label {
       width: 100%;
       line-height: 30px; }
@@ -419,28 +426,8 @@ main {
       .home-container-cover .slide-home .Slide-first figure img {
         position: absolute;
         height: auto;
-        max-height: 400px;
         width: 100%;
-        max-width: 400px;
-        margin: auto;
-        animation: spinOut 6s linear infinite; }
-
-@keyframes spinOut {
-  from {
-    transform: rotate(360deg); }
-  to {
-    transform: rotate(0deg); } }
-      .home-container-cover .slide-home .Slide-first figure::before {
-        content: url("/src/assets/img/img-circle-inner.png");
-        animation: spinInner 6s linear infinite;
-        position: absolute;
-        z-index: 4; }
-
-@keyframes spinInner {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
+        margin: auto; }
       .home-container-cover .slide-home .Slide-first figure figcaption {
         position: relative;
         z-index: 5;
@@ -455,26 +442,93 @@ main {
         align-items: center; }
 
 .container-about-me {
-  width: 100%;
-  max-width: 1000px;
+  width: calc(100% - 40px);
   height: fit-content;
   margin: auto;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center; }
-  .container-about-me .card-infos {
-    width: 90%;
-    height: 400px;
-    padding: 20px;
-    border-radius: 8px;
-    border-color: black;
-    text-align: center;
-    background-color: #7e7e7e;
-    transition: ease-in;
-    box-sizing: border-box;
-    transform: skewX(); }
-    .container-about-me .card-infos:hover {
-      box-shadow: 0 0 5px 5px rgba(197, 197, 197, 0.816); }
+  .container-about-me .container-my-avatar {
+    width: 100%;
+    max-width: 1100px;
+    position: relative;
+    margin: auto;
+    text-align: right; }
+    .container-about-me .container-my-avatar .container-inner {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      max-width: 1100px;
+      margin: auto; }
+    .container-about-me .container-my-avatar .box {
+      width: 100%;
+      max-width: 50px;
+      height: 50px;
+      background: #fff;
+      padding: 2px;
+      font-size: 12px;
+      border-radius: 100%;
+      margin-left: 5%;
+      margin-top: 5%; }
+    .container-about-me .container-my-avatar .box .title {
+      display: none; }
+    .container-about-me .container-my-avatar .box p {
+      display: none; }
+    .container-about-me .container-my-avatar .box:after {
+      margin-left: 10px;
+      margin-top: 10px;
+      position: absolute; }
+    .container-about-me .container-my-avatar .box:first-child:after {
+      content: "Fernando Aquistapace"; }
+    .container-about-me .container-my-avatar .box:nth-child(2):after {
+      content: "22 anos"; }
+    .container-about-me .container-my-avatar .box:nth-child(3):after {
+      content: ""; }
+    .container-about-me .container-my-avatar .box:last-child:after {
+      content: ""; }
+    @media (min-width: 900px) {
+      .container-about-me .container-my-avatar {
+        text-align: center;
+        width: calc(100% - 40px);
+        max-width: 1100px;
+        height: fit-content; }
+        .container-about-me .container-my-avatar .my-avatar {
+          margin: auto; }
+        .container-about-me .container-my-avatar .box .title {
+          display: block;
+          font-weight: 700;
+          margin-bottom: 10px; }
+        .container-about-me .container-my-avatar .box p {
+          display: block; }
+        .container-about-me .container-my-avatar .box {
+          width: 100%;
+          max-width: 130px;
+          border-radius: initial;
+          margin: initial;
+          padding: 10px; }
+        .container-about-me .container-my-avatar .box:first-child:after,
+        .container-about-me .container-my-avatar .box:nth-child(2):after,
+        .container-about-me .container-my-avatar .box:nth-child(3):after,
+        .container-about-me .container-my-avatar .box:last-child:after {
+          content: ""; }
+        .container-about-me .container-my-avatar .box:first-child {
+          position: absolute;
+          left: 10%;
+          top: 10%; }
+        .container-about-me .container-my-avatar .box:nth-child(2) {
+          position: absolute;
+          right: 10%;
+          top: 10%; }
+        .container-about-me .container-my-avatar .box:nth-child(3) {
+          position: absolute;
+          left: 10%;
+          bottom: 10%; }
+        .container-about-me .container-my-avatar .box:last-child {
+          position: absolute;
+          right: 10%;
+          bottom: 10%; } }
 
 .portfolio {
   height: fit-content;
@@ -492,7 +546,8 @@ main {
     width: 100%; }
     .portfolio__content img {
       width: 100%;
-      margin-bottom: 50px; }
+      margin-bottom: 50px;
+      border-radius: 8px; }
     @media (min-width: 500px) {
       .portfolio__content {
         width: 48%; }

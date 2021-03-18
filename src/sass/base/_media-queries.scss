@@ -1,5 +1,5 @@
 @mixin bkp($bkp){
-    @if $bkp == xl {
+    @if $bkp == xs {
         @media (max-width: 499px){@content;}
     }
     @else if $bkp == sm {
