@@ -29,12 +29,14 @@ footer {
                     background-color: dodgerblue;
                     height: 50px;
                     outline: none;
+                    cursor: pointer;
                     &:hover {
                         opacity: 0.5;
                     }
                 }
                 .pokemons {
-                    height: 300px;
+                    height: 100%;
+                    max-height: 300px;
                     width: 100%;
                     background-color: aliceblue;
                 }

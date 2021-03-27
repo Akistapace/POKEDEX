@@ -290,56 +290,66 @@ main {
   .container-audio .d-block {
     display: block; }
 
-.contact {
+.fade {
   display: none;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   height: 100%;
   width: 100%;
-  max-width: 100%;
-  z-index: 20;
+  z-index: 10;
   left: 0;
   top: 0;
   background: linear-gradient(rgba(0, 89, 255, 0.5), rgba(0, 89, 255, 0.5));
   padding: 20px; }
   @media (max-width: 555px) {
-    .contact {
+    .fade {
       width: calc(100% - 40px); } }
-  .contact__form {
+  .fade .contact {
     background-color: white;
     border-radius: 8px;
     height: fit-content;
-    width: 90%;
+    width: 85%;
     max-width: 500px;
     padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: auto; }
-    .contact__form span {
-      cursor: pointer;
-      position: relative;
-      margin-left: 100%; }
-    .contact__form label {
+    margin: auto;
+    z-index: 21;
+    position: absolute; }
+    .fade .contact__form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
       width: 100%;
-      line-height: 30px; }
-    .contact__form input {
-      height: 37px;
-      width: 100%;
-      max-width: 350px;
-      margin-bottom: 10px;
-      border-radius: 8px;
-      border-color: dodgerblue; }
-      .contact__form input::placeholder {
-        padding: 0 10px; }
-    .contact__form textarea {
-      width: 100%;
-      max-width: 350px;
-      border-radius: 8px; }
-    .contact__form input[type="submit"] {
-      margin-top: 20px;
-      background-color: dodgerblue !important;
-      color: white; }
+      height: fit-content; }
+      .fade .contact__form span {
+        cursor: pointer;
+        position: relative;
+        margin-left: 100%; }
+      .fade .contact__form label {
+        width: 100%;
+        line-height: 30px;
+        text-align: center;
+        font-size: 18px; }
+      .fade .contact__form input {
+        width: 100%;
+        max-width: 350px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        border-color: dodgerblue;
+        outline: none;
+        padding: 10px; }
+      .fade .contact__form textarea {
+        width: 100%;
+        max-width: 350px;
+        border-radius: 8px;
+        border-color: dodgerblue; }
+      .fade .contact__form input[type="submit"] {
+        margin-top: 20px;
+        background-color: dodgerblue !important;
+        color: white; }
+        .fade .contact__form input[type="submit"]:hover {
+          opacity: 0.5; }
 
 .nav {
   background-color: crimson;
@@ -590,10 +600,12 @@ footer .footer-container {
       footer .footer-container .footer-content .footer-col button {
         background-color: dodgerblue;
         height: 50px;
-        outline: none; }
+        outline: none;
+        cursor: pointer; }
         footer .footer-container .footer-content .footer-col button:hover {
           opacity: 0.5; }
       footer .footer-container .footer-content .footer-col .pokemons {
-        height: 300px;
+        height: 100%;
+        max-height: 300px;
         width: 100%;
         background-color: aliceblue; }

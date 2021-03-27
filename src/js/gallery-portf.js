@@ -3,12 +3,14 @@ const galleryThumbs = new Swiper('.gallery-thumbs', {
   centeredSlides: true,
   watchSlidesVisibility: true,
   watchSlidesProgress: true,
+  loop: true,
 });
 const portfolio = new Swiper('.portfolio-slide', {
   effect: 'coverflow',
   grabCursor: true,
   centeredSlides: true,
   slidesPerView: 1.2,
+  loop: true,
   coverflowEffect: {
     rotate: 50,
     stretch: 0,
@@ -21,5 +23,6 @@ const portfolio = new Swiper('.portfolio-slide', {
   },
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
   },
 });

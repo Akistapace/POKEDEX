@@ -1,14 +1,17 @@
 const btnContact = document.getElementById("btn-contact");
-const close = document.getElementById("close");
-const contact = document.querySelector(".contact");
+const closeContact = document.getElementById("close");
+const Modalcontact = document.querySelector(".fade");
 
+closeContact.onclick =  ()=> {
+    Modalcontact.style.display   = 'none'
+}
 
-btnContact.onclick = function () {
-    contact.style.display='block';
+btnContact.onclick   =  ()=> {
+    Modalcontact.style.display   = 'flex'
 }
-close.onclick =function () {
-    contact.style.display='none';
-}
-contact.on = function () {
-    contact.style.display='none';
+
+window.onclick = function(event) {
+  if (event.target == Modalcontact) {
+    Modalcontact.style.display = 'none';
+  }
 }
