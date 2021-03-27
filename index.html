@@ -6,6 +6,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 	<link rel="stylesheet" type="text/css" href="./src/css/min/main.min.css">
@@ -16,28 +17,28 @@
 		<header>
 	<nav class="nav">
 		<div class="nav-content">
-			<img onclick="openNav()" src="./src/assets/img/BolaAzul.png">
+			<img id="btnOpen" src="./src/assets/img/BolaAzul.png">
 			<div class="nav-content-btns">
 				<button class="btn-red" type="button"></button>
 				<button class="btn-yellow" type="button"></button>
 				<button class="btn-green" type="button"></button>
 			</div>	
-			<ul>
+			<!-- <ul>
 				<li><a href="#">text1</a></li>
 				<li><a href="#">text2</a></li>
 				<li><a href="#">text3</a></li>
 				<li><a href="#">text4</a></li>
-			</ul>
+			</ul> -->
 		</div>
 		<div class="nav-bottom">
-			<div class="container-audio">
+			<!-- <div class="container-audio">
 				<audio id="pokemon" src="./assets/audio/Tema_Pokemon.mp3" type="audio/mpeg" preload="auto"></audio>
 				<button class="btn-play" type="button" class="fas fa-play" onclick="mostrar(this)">play</button>
 				<button class="btn-pause" type="button">.</button>
 				<button class="btns-audio" type="button"><span></span></button>
 				<button class="btn-volup" type="button">+</button>
 				<button class="btn-voldown" type="button">-</button>
-			</div>
+			</div> -->
 		</div>
 	</nav>
 </header>
@@ -81,20 +82,24 @@
         <img class="my-avatar" src="./src/assets/img/boneco.png" alt="Boneco Eu">
         <div class="container-inner">
             <div class="box">
+                <i class="fas fa-user-secret"></i>
                 <h6 class="title">Nome</h6>
                 <p>Fernando Aquistapace</p>
             </div>
             <div class="box">
+                <i class="fas fa-birthday-cake"></i>
                 <h6 class="title">Idade</h6>
                 <p>22</p>
             </div>
             <div class="box">
-                <h6 class="title">Idade</h6>
-                <p>22</p>
+                <i class="fas fa-laptop-code"></i>
+                <h6 class="title">Atuação</h6>
+                <p>Front-End</p>
             </div>
             <div class="box">
-                <h6 class="title">Idade</h6>
-                <p>22</p>
+                <i class="fas fa-book"></i>
+                <h6 class="title">Formação</h6>
+                <p>Análise e Desenvolvimento de Sistemas</p>
             </div>
         </div>
     </div>
@@ -310,7 +315,13 @@
             </div>
         </div>
     </div>
+    
+    <div id="CoverRed" class="cover-red">
+        <img src="src/assets/img/bg-cover-red.png" alt="">fds
+    </div>
 
+    <script src="https://use.fontawesome.com/609ffafc18.js"></script>
+   
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./src/js/min/index.js"></script>

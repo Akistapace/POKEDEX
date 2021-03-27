@@ -15,5 +15,3 @@
             el: '.swiper-pagination',
         },
     });
-
-    
