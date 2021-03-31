@@ -2,7 +2,7 @@
   background-color: color(pk-red);
   width: 100%;
   height: 80px;
-  position: absolute;
+  position: fixed;
   z-index: 5;
   border-bottom: 10px solid rgb(0, 0, 0);
     &-content {
@@ -10,12 +10,38 @@
       height: 60px;
       display: flex;
       padding: 10px;
-        img {
+      #btnOpen {
+          outline: none;
           width: 95px;
           height: 90px;
           position: absolute;
+          border-radius: 100%;
+          border: 1px solid white;
+          background-image: radial-gradient(to bottom,rgb(255, 255, 255),rgba(255, 255, 255, 0.671));
+          &:before {
+            content: '';
+            width: 85%;
+            height: 85%;
+            background-color: rgba(0, 183, 255, 0.904);
+            background-image: radial-gradient(rgba(9, 156, 214, 0.904),rgba(20, 153, 206, 0.904));
+            position: absolute;
+            top: 8%;
+            left: 7%;
+            border-radius: 100%;
+          }
+          &:after {
+            content: '';
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            position: absolute;
+            top: 8%;
+            left: 7%;
+            border-radius: 100%;
+            filter: blur(10px);
+          }
           &:hover {
-            transform: scale(1.1);
+            transform: scale(1.04);
           }
         }
         &-btns {
