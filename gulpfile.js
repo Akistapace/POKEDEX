@@ -85,7 +85,7 @@ function browsSync() {
     }
   });
 
-  watch(paths.watchs, series(gsass, cssmin, uglifyjs,includeHTML)).on('change', browserSync.reload);;
+  watch(paths.watchs, series(gsass, cssmin, uglifyjs,includeHTML)).on('change', browserSync.reload);
 }
 
 function includeHTML(){
