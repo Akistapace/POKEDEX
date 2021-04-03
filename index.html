@@ -6,6 +6,9 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;600;700&display=swap" rel="stylesheet">
+	
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -14,6 +17,10 @@
 
 <body>
 	<main>
+		<div id="CoverRed" class="cover-red">
+			<img src="src/assets/img/bg-cover-red.png" alt="">
+			<div class="triangulo-yellow"></div>
+		</div>
 		<header>
 	<nav class="nav">
 		<div class="nav-content">
@@ -43,7 +50,7 @@
 	</nav>
 </header>
 	
-		<section class="home-container-cover">
+		<section class="home-container-cover" id="topo">
     <div class="swiper-container slide-home">
         <div class="swiper-wrapper">
             <div class="swiper-slide Slide-first">
@@ -72,8 +79,8 @@
             </div>
         </div>
         <!-- <div class="swiper-button-next"></div>-->
-        <div class="swiper-button-prev"></div> 
-        <div class="swiper-pagination"></div>
+        <!-- <div class="swiper-button-prev"></div>  -->
+        <!-- <div class="swiper-pagination"></div> -->
     </div>
 </section>
 	
@@ -81,44 +88,47 @@
     <div class="container-my-avatar">
         <img class="my-avatar" src="./src/assets/img/boneco.png" alt="Boneco Eu">
     </div>
-    <div class="swiper-container container-inner slider-about">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="box">
-                    <i class="fas fa-user-secret"></i>
-                    <h6 class="title">Nome</h6>
-                    <p>Fernando Aquistapace</p>
+    <div style="display: none;">
+        <div class="swiper-container container-inner slider-about">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="box">
+                        <i class="fas fa-user-secret"></i>
+                        <h6 class="title">Nome</h6>
+                        <p>Fernando Aquistapace</p>
+                    </div>
                 </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="box">
-                    <i class="fas fa-birthday-cake"></i>
-                    <h6 class="title">Idade</h6>
-                    <p>22</p>
+                <div class="swiper-slide">
+                    <div class="box">
+                        <i class="fas fa-birthday-cake"></i>
+                        <h6 class="title">Idade</h6>
+                        <p>22</p>
+                    </div>
                 </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="box">
-                    <i class="fas fa-laptop-code"></i>
-                    <h6 class="title">Atuação</h6>
-                    <p>Front-End</p>
+                <div class="swiper-slide">
+                    <div class="box">
+                        <i class="fas fa-laptop-code"></i>
+                        <h6 class="title">Atuação</h6>
+                        <p>Front-End</p>
+                    </div>
                 </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="box">
-                    <i class="fas fa-book"></i>
-                    <h6 class="title">Formação</h6>
-                    <p>Análise e Desenvolvimento de Sistemas</p>
+                <div class="swiper-slide">
+                    <div class="box">
+                        <i class="fas fa-book"></i>
+                        <h6 class="title">Formação</h6>
+                        <p>Análise e Desenvolvimento de Sistemas</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 		<section class="cards">
-    <h1 class="titles-h2">Insígnias de Conhecimento</h1>
+    <h1 class="titles-h2">Insígnias</h1>
    
     <div class="cards-group">
-        <div class="card card-orange filter hiper">
+        <div class="card card-orange">
+            <img class="gotcha-seal" src="https://img.icons8.com/color/48/000000/gotcha.png"/>
             <figure class="card-img">
                 <img src="./src/assets/img/insignias/html.png" alt="Logo Html">
             </figure>
@@ -127,7 +137,8 @@
                 <small>Hipertexto</small>
             </div>
         </div>
-        <div class="card card-blue filter style">
+        <div class="card card-blue">
+            <img class="gotcha-seal" src="https://img.icons8.com/color/48/000000/gotcha.png"/>
             <figure class="card-img">
                 <img src="./src/assets/img/insignias/css3.png" alt="Logo css3">
             </figure>
@@ -136,7 +147,8 @@
                 <small>Estilzação</small>
             </div>
         </div>
-        <div class="card card-yellow filter prog">
+        <div class="card card-yellow">
+            <img class="gotcha-seal" src="https://img.icons8.com/color/48/000000/gotcha.png"/>
             <figure class="card-img">
                 <img src="./src/assets/img/insignias/js.png" alt="Logo javascript">
             </figure>
@@ -146,7 +158,8 @@
                 <small>Programação</small>
             </div>
         </div>
-        <div class="card card-pink filter preprop">
+        <div class="card card-pink">
+            <img class="gotcha-seal" src="https://img.icons8.com/color/48/000000/gotcha.png"/>
             <figure class="card-img">
                 <img src="./src/assets/img/insignias/sass.png" alt="Logo sass">
             </figure>
@@ -155,7 +168,8 @@
                 <small>Pré-Processador CSS</small>
             </div>
         </div>
-        <div class="card card-purple filter frame">
+        <div class="card card-purple">
+            <img class="gotcha-seal" src="https://img.icons8.com/color/48/000000/gotcha.png"/>
             <figure class="card-img">
                 <img src="./src/assets/img/insignias/bootstrap.png" alt="Logo bootstrap">
             </figure>
@@ -164,7 +178,8 @@
                 <small>Framework CSS</small>
             </div>
         </div>
-        <div class="card card-black filter plahosp">
+        <div class="card card-black">
+            <img class="gotcha-seal" src="https://img.icons8.com/color/48/000000/gotcha.png"/>
             <figure class="card-img">
                 <img src="./src/assets/img/insignias/github.png" alt="Logo github">
             </figure>
@@ -173,7 +188,8 @@
                 <small>PlataForma de hospedagem</small>
             </div>
         </div>
-        <div class="card card-green filter run">
+        <div class="card card-green">
+            <img class="gotcha-seal" src="https://img.icons8.com/color/48/000000/gotcha.png"/>
             <figure class="card-img">
                 <img src="./src/assets/img/insignias/nodejs.png" alt="Logo nodejs">
             </figure>
@@ -182,7 +198,8 @@
                 <small>Runtime JavaScript</small>
             </div>
         </div>
-        <div class="card card-red filter g-pack">
+        <div class="card card-red">
+            <img class="gotcha-seal" src="https://img.icons8.com/color/48/000000/gotcha.png"/>
             <figure class="card-img">
                 <img src="./src/assets/img/insignias/npm.png" alt="Logo npm">
             </figure>
@@ -191,7 +208,8 @@
                 <small>Gerenciador de pacotes</small>
             </div>
         </div>
-        <div class="card card-light-blue filter plasites">
+        <div class="card card-light-blue">
+            <img class="gotcha-seal" src="https://img.icons8.com/color/48/000000/gotcha.png"/>
             <figure class="card-img">
                 <img src="./src/assets/img/insignias/wordpress.png" alt="Logo wordpress">
             </figure>
@@ -200,7 +218,8 @@
                 <small>PlataForma de criação de sites</small>
             </div>
         </div>
-        <div class="card card-red filter vers">
+        <div class="card card-red">
+            <img class="gotcha-seal" src="https://img.icons8.com/color/48/000000/gotcha.png"/>
             <figure class="card-img">
                 <img src="./src/assets/img/insignias/git.png" alt="Logo git">
             </figure>
@@ -209,7 +228,8 @@
                 <small>Versionamento</small>
             </div>
         </div>
-        <div class="card card-blue filter plahosp">
+        <div class="card card-blue">
+            <img class="gotcha-seal" src="https://img.icons8.com/color/48/000000/gotcha.png"/>
             <figure class="card-img">
                 <img src="./src/assets/img/insignias/bitbucket.png" alt="Logo bitbucket">
             </figure>
@@ -218,7 +238,8 @@
                 <small>PlataForma de hospedagem</small>
             </div>
         </div>
-        <div class="card card-orange filter tasks">
+        <div class="card card-orange">
+            <img class="gotcha-seal" src="https://img.icons8.com/color/48/000000/gotcha.png"/>
             <figure class="card-img">
                 <img src="./src/assets/img/insignias/grunt.png" alt="Logo grunt">
             </figure>
@@ -227,7 +248,8 @@
                 <small>Executor de tarefas JavaScript</small>
             </div>
         </div>
-        <div class="card card-red filter tasks">
+        <div class="card card-red">
+            <img class="gotcha-seal" src="https://img.icons8.com/color/48/000000/gotcha.png"/>
             <figure class="card-img">
                 <img src="./src/assets/img/insignias/gulp.png" alt="Logo gulp">
             </figure>
@@ -245,16 +267,18 @@
       <div class="swiper-container portfolio-slide">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img src="./src/assets/img/portfolio/pokebola.jpg" alt="">
+            <a href="https://akistapace.github.io/Pokebola/">
+              <img src="./src/assets/img/portfolio/pokebola.jpg" alt="Pokebola em CSS Puro" title="Pokebola em CSS Puro">
+            </a>
           </div>
           <div class="swiper-slide">
-            <img src="./src/assets/img/404-image.jpg" alt="">
+            <img src="./src/assets/img/404-image.jpg" alt="" title="">
           </div>
           <div class="swiper-slide">
-            <img src="./src/assets/img/404-image.jpg" alt="">
+            <img src="./src/assets/img/404-image.jpg" alt="" title="">
           </div>
           <div class="swiper-slide">
-            <img src="./src/assets/img/404-image.jpg" alt="">
+            <img src="./src/assets/img/404-image.jpg" alt="" title="">
           </div>
         </div>
         <!-- Add Pagination -->
@@ -290,44 +314,80 @@
     </div>
   </div>
 </section>
+		<section class="contact">
+    <h2>Curtiu? Mande uma mensagem!!</h2>
+    <p>Ficarei grato em recebê-la</p>
+    <a class="btn" id="openContact" data-href="javascript:void(0)">Entre em Contato</a>
+    <ul class="list-contacts is-mobile">
+        <li>
+            <a href="https://wa.me/51985654436">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </li>
+        <li>
+            <a href="linkedin.com/in/fernando-aquistapace-33a414165">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </li>
+        <li>
+            <a href="github.com/Akistapace"> 
+                <i class="fab fa-github"></i>
+            </a>
+        </li>
+    </ul>
+    <div class="contact-container">
+        <span class="close"><i class="fas fa-times-circle"></i></span>
+        <ul class="list-contacts is-desktop ">
+            <li>
+                <a href="https://wa.me/51985654436">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </li>
+            <li>
+                <a href="linkedin.com/in/fernando-aquistapace-33a414165">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </li>
+            <li>
+                <a href="github.com/Akistapace"> 
+                    <i class="fab fa-github"></i>
+                </a>
+            </li>
+        </ul>
+        <form action="">
+            <div>
+                <label for="nome">Nome</label>
+                <input type="text" id="nome">
+
+                <label for="celular">Celular</label>
+                <input type="text" id="celular">
+
+                <label for="email">E-mail</label>
+                <input type="text" id="email">
+            </div>
+        <div>
+            <label for="msg">Mensagem</label>
+            <textarea name="" id="msg" cols="30" rows="10"></textarea>
+            <input type="submit" value="Enviar">
+        </div>
+        </form>
+    </div>
+</section>    
+            
 	</main>
 	<footer>
     
-    <div class="footer-top">
-        <span class="fade">
-            <div class="contact">
-                <form class="contact__form" action="">
-                    <span id="close">X</span>
-                    <label for="nome">Nome</label>
-                    <input type="text" name="nome" id="nome" placeholder="Seu nome...">
-
-                    <label for="email">E-mail</label>
-                    <input type="text" name="email" id="email" placeholder="seuemail@email.com">
-
-                    <label for="celular">Celular</label>
-                    <input type="text" name="celular" id="celular" placeholder="(00) 00000-0000">
-
-                    <label for="conteudo">Mensagem</label>
-                    <textarea name="conteudo" id="conteudo" cols="40" rows="10" placeholder="Insira sua mensagem"></textarea>
-                    <input type="submit" value="Enviar">
-                </form>
-            </div>
-        </span>
-    </div>
+    <div class="footer-top"></div>
     <div class="footer-container">
         <div class="footer-content">
-            <div class="footer-col">
-                <h2>Entre em contato</h2>
-                <button id="btn-contact" type="button">Entrar</button>
-            </div>
-            <div class="footer-col">
-                <div class="pokemons"></div>
-            </div>
+            <a class="back-top" href="#topo">
+                <i class="fas fa-chevron-circle-up"></i>
+            </a>
         </div>
     </div>
     
     <div id="CoverRed" class="cover-red">
-        <img src="src/assets/img/bg-cover-red.png" alt="">
+        <img src="src/assets/img/bg-cover-red.png" alt="Capa Pokedéx">
         <div class="triangulo-yellow"></div>
     </div>
 
@@ -336,6 +396,10 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./src/js/min/index.js"></script>
+
+    <div style="display: none;">
+        <a href="https://icons8.com/icon/45513/te-peguei">Te peguei icon by Icons8</a>
+    </div>
 </footer>
 </body>
 

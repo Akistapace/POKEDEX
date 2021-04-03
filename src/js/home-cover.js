@@ -3,7 +3,6 @@
 
     var swiper = new Swiper('.slide-home', {
         speed: 400,
-        spaceBetween: 30,
         grabCursor:true,
         keyboard: true,
         slidesPerView: 1,

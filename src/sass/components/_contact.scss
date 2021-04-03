@@ -1,69 +1,168 @@
-.fade {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    height: 100%;
-    width:100%;
-    z-index: 10;
-    left:0;
-    top:0;
-    background: linear-gradient(rgba(0, 89, 255, 0.5),rgba(0,89,255,0.5));
-    padding: 20px;
-    @media (max-width: 555px){
-        width: calc(100% - 40px);
-    }  
-    .contact {
+.contact {
+    color: color(pk-white);
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    @include flex-center;
+    flex-direction: column;
+    margin-bottom: 30px;
+    h2 {
+        font-size: 38px;
+        font-weight: 700;
+    }
+    p {
+        font-size: 24px;
+        padding: 15px 0;
+    }
+    @include bkp(xs){
+        height: 450px;
+        h2 {
+            font-size: 28px;
+        }
+        p {
+            font-size: 18px;
+        }
+    }
+    .btn {
+        background-color: rgb(0, 132, 255);
+        height: 37px;
+        @include flex-center;
+        color: color(pk-white);
+        padding: 0 20px;
+        margin-top: 20px;
+        cursor: pointer;
+        font-weight: 700;
+        border-radius: 4px;
+    }
+    
+    .list-contacts {
+        height: 100%;
+        @include flex-center;
+        flex-direction: column;
+        vertical-align: middle;
         background-color: color(pk-white);
-        border-radius: 8px;
-        height: fit-content;
-        width: 85%;
-        max-width: 500px;
-        padding: 20px;
-        margin: auto;
-        z-index: 21;
-        position: absolute;
-            &__form {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            width: 100%;
-            height: fit-content;
-                span {
-                    cursor: pointer;
-                    position: relative;
-                    margin-left: 100%;
-                }
-                label {
-                    width: 100%;
-                    line-height: 30px;
-                    text-align: center;
-                    font-size: 18px;
-                }
-                input {
-                    width: 100%;
-                    max-width: 350px;
-                    margin-bottom: 20px;
-                    border-radius: 8px;
-                    border-color: dodgerblue;
-                    outline: none;
-                    padding: 10px;
-                }
-                textarea {
-                    width: 100%;
-                    max-width: 350px;
-                    border-radius: 8px;
-                    border-color: dodgerblue;
-                }
-                input[type="submit"] {
-                    margin-top: 20px;
-                    background-color: dodgerblue !important;
-                    color: color(pk-white);
+        padding: 10px;
+        width: fit-content;
+        border-right: 1px solid rgb(211, 211, 211);
+        li {
+            height: 50px;
+            width: 50px;
+            background-color: color(pk-white);
+            text-align: center;
+            a {
+                i {
+                    font-size: 36px;
+                    
                     &:hover {
-                        opacity: 0.5
+                        transform: scale(1.09);
                     }
                 }
+                .fa-whatsapp {
+                    color: #25D366;
+                }
+                .fa-github {
+                    color: black;
+                }
+                .fa-linkedin {
+                    color: #0e76a8;
+                }
             }
+        }
+    }
+    .list-contacts.is-desktop {
+        display: flex;
+        @include bkp(xs) {
+            display: none;
+        }
+    }
+    .list-contacts.is-mobile {
+        display: none;
+        flex-direction: row;
+        height: fit-content;
+        background-color: transparent;
+        border: none;
+        margin-top: 20px;
+        li {
+          background-color: transparent;
+          a {
+              .fa-github  {
+                  color: color(pk-white);
+              }
+          }
+        }
+        @include bkp(xs) {
+            display: flex;
+        }
+    }
+    .contact-container {
+        position: absolute;
+        top:0;
+        left: 0;
+        height: 100%;
+        background-color: rgb(255, 255, 255);
+        width: 0%;
+        transition: width 0.5s;
+        overflow: hidden;
+        @include bkp(md){
+            overflow: initial;
+        }
+        .close {
+            position: absolute;
+            right: 15px;
+            margin-top: 15px;
+            cursor: pointer;
+            color: color(pk-red);
+            font-size: 24px;
+            z-index: 1;
+        }
+        form {
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            max-width: 800px;
+            margin: auto;
+            @include flex-center;  
+            flex-direction: row; 
+            left: 50%;
+            margin-left: -380px;
+            @include bkp(xs) {
+                flex-direction: column;
+                left: initial;
+                margin-left: -60px;
+            }
+            div {
+                width: 45%;
+                margin: 0 10px;
+            }
+            label {
+                align-self: flex-start;
+                color: #0e76a8;
+                @include bkp(xs) {
+                    margin-left: 100px
+                }
+            }
+            input, textarea {
+                width: 90%;
+                padding: 5px 15px;
+                outline: none;
+                border-radius: 10px;
+                border: 1px solid blue;
+                margin: 0 15px;
+                @include bkp(xs) {
+                    width: 250px;
+                    margin: 10px 0;
+                }
+            }
+            input[type="submit"] {
+                width: 100%;
+                background-color: blue;
+                color: color(pk-white);
+                font-weight: 700;
+                @include bkp(xs) {
+                    width: 282px;
+                }
+            }
+        }
     }
 }
