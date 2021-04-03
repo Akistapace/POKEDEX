@@ -1,17 +1,16 @@
-const btnContact = document.getElementById("btn-contact");
-const closeContact = document.getElementById("close");
-const Modalcontact = document.querySelector(".fade");
+//   const sideNav = document.querySelector("#CoverRed")
+const btnOpenContact = document.querySelector("#openContact")
+const containerContact = document.querySelector(".contact .contact-container")
+const closeContact = document.querySelector(".close")
 
-closeContact.onclick =  ()=> {
-    Modalcontact.style.display   = 'none'
+btnOpenContact.onclick =  ()=> { 
+    if (containerContact.style.width == '100%') {
+        containerContact.style.width = '0%'
+    } else {
+        containerContact.style.width = '100%'
+    }
 }
 
-btnContact.onclick   =  ()=> {
-    Modalcontact.style.display   = 'flex'
-}
-
-window.onclick = function(event) {
-  if (event.target == Modalcontact) {
-    Modalcontact.style.display = 'none';
-  }
+closeContact.onclick = ()=> {
+    containerContact.style.width = '0%'
 }
