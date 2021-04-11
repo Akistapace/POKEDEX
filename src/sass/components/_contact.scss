@@ -1,8 +1,6 @@
 .contact {
     color: color(pk-white);
     height: 350px;
-    position: relative;
-    overflow: hidden;
     text-align: center;
     @include flex-center;
     flex-direction: column;
@@ -37,14 +35,11 @@
     }
     
     .list-contacts {
-        height: 100%;
-        @include flex-center;
-        flex-direction: column;
-        vertical-align: middle;
-        background-color: color(pk-white);
-        padding: 10px;
-        width: fit-content;
-        border-right: 1px solid rgb(211, 211, 211);
+        @include flex-evenly;
+        width: 100%;
+        max-width: 300px;
+        margin: auto;
+        margin-top: 15px;
         li {
             height: 50px;
             width: 50px;
@@ -53,7 +48,6 @@
             a {
                 i {
                     font-size: 36px;
-                    
                     &:hover {
                         transform: scale(1.09);
                     }
@@ -70,97 +64,96 @@
             }
         }
     }
-    .list-contacts.is-desktop {
-        display: flex;
-        @include bkp(xs) {
-            display: none;
-        }
-    }
-    .list-contacts.is-mobile {
-        display: none;
-        flex-direction: row;
-        height: fit-content;
-        background-color: transparent;
-        border: none;
-        margin-top: 20px;
-        li {
-          background-color: transparent;
-          a {
-              .fa-github  {
-                  color: color(pk-white);
-              }
-          }
-        }
-        @include bkp(xs) {
-            display: flex;
-        }
-    }
     .contact-container {
-        position: absolute;
-        top:0;
-        left: 0;
+        display: none;
+        position: fixed;
+        top: 0;
+        background-color: rgba(19, 37, 200, 0.5);
         height: 100%;
-        background-color: rgb(255, 255, 255);
-        width: 0%;
-        transition: width 0.5s;
-        overflow: hidden;
-        @include bkp(md){
-            overflow: initial;
-        }
-        .close {
-            position: absolute;
-            right: 15px;
-            margin-top: 15px;
-            cursor: pointer;
-            color: color(pk-red);
-            font-size: 24px;
-            z-index: 1;
-        }
-        form {
-            position: absolute;
-            top: 20px;
-            width: 100%;
-            max-width: 800px;
+        width:100%;
+        z-index: 1000;
+        padding: 15px;
+        overflow-Y: auto;
+        .contact-modal {
+            background-color: rgb(255, 255, 255);
+            transition: width 0.3s;
+            position: relative;
+            padding: 15px;
+            width: 0%;
             margin: auto;
-            @include flex-center;  
-            flex-direction: row; 
-            left: 50%;
-            margin-left: -380px;
+            max-width: 1000px;
+            border-radius: 10px;
+            margin-top: 12%;
             @include bkp(xs) {
-                flex-direction: column;
-                left: initial;
-                margin-left: -60px;
+                margin-top: 2%;
             }
-            div {
-                width: 45%;
-                margin: 0 10px;
+            .close {
+                position: absolute;
+                right: -15px;
+                margin-top: -30px;
+                cursor: pointer;
+                color: color(pk-red);
+                font-size: 34px;
+                text-align: center;
+                z-index: 1;
+                background-color: aliceblue;
+                border-radius: 100%;
             }
-            label {
-                align-self: flex-start;
-                color: #0e76a8;
-                @include bkp(xs) {
-                    margin-left: 100px
-                }
-            }
-            input, textarea {
-                width: 90%;
-                padding: 5px 15px;
-                outline: none;
-                border-radius: 10px;
-                border: 1px solid blue;
-                margin: 0 15px;
-                @include bkp(xs) {
-                    width: 250px;
-                    margin: 10px 0;
-                }
-            }
-            input[type="submit"] {
+            form {
                 width: 100%;
-                background-color: blue;
-                color: color(pk-white);
-                font-weight: 700;
+                margin: auto;
                 @include bkp(xs) {
-                    width: 282px;
+                    flex-direction: column;
+                }
+                .form-content {
+                    @include flex-evenly;
+                    @include bkp(xs) {
+                        flex-direction: column;
+                    }
+                    .box {
+                        width: 45%;
+                        @include bkp(xs) {
+                        width: calc(100% - 40px);
+                        padding: 20px 0;
+                        }
+                    }
+                    label {
+                        align-self: flex-start;
+                        color: #0e76a8;
+                        display: block;
+                        @include bkp(xs) {
+                            align-self: center;
+                        }
+                    }
+                    input, 
+                    textarea {
+                        padding: 5px 15px;
+                        outline: none;
+                        border-radius: 10px;
+                        border: 1px solid blue;
+                        margin-bottom: 10px;
+                        margin-top: 10px;
+                    }
+
+                    input,
+                    textarea {
+                        width: calc(100% - 30px);
+                    }
+                }
+                input[type="submit"] {
+                    width: 100%;
+                    padding: 5px 15px;
+                    outline: none;
+                    border-radius: 10px;
+                    border: 1px solid blue;
+                    margin: auto 15px;
+                    background-color: blue;
+                    color: color(pk-white);
+                    font-weight: 700;
+                    max-width: 350px;
+                    @include bkp(xs) {
+                        margin: 0px;
+                    }
                 }
             }
         }

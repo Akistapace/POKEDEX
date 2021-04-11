@@ -302,8 +302,6 @@ main, body {
 .contact {
   color: white;
   height: 350px;
-  position: relative;
-  overflow: hidden;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -336,16 +334,13 @@ main, body {
     font-weight: 700;
     border-radius: 4px; }
   .contact .list-contacts {
-    height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    flex-direction: column;
-    vertical-align: middle;
-    background-color: white;
-    padding: 10px;
-    width: fit-content;
-    border-right: 1px solid lightgray; }
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    margin-top: 15px; }
     .contact .list-contacts li {
       height: 50px;
       width: 50px;
@@ -361,93 +356,97 @@ main, body {
         color: black; }
       .contact .list-contacts li a .fa-linkedin {
         color: #0e76a8; }
-  .contact .list-contacts.is-desktop {
-    display: flex; }
-    @media (max-width: 499px) {
-      .contact .list-contacts.is-desktop {
-        display: none; } }
-  .contact .list-contacts.is-mobile {
-    display: none;
-    flex-direction: row;
-    height: fit-content;
-    background-color: transparent;
-    border: none;
-    margin-top: 20px; }
-    .contact .list-contacts.is-mobile li {
-      background-color: transparent; }
-      .contact .list-contacts.is-mobile li a .fa-github {
-        color: white; }
-    @media (max-width: 499px) {
-      .contact .list-contacts.is-mobile {
-        display: flex; } }
   .contact .contact-container {
-    position: absolute;
+    display: none;
+    position: fixed;
     top: 0;
-    left: 0;
+    background-color: rgba(19, 37, 200, 0.5);
     height: 100%;
-    background-color: white;
-    width: 0%;
-    transition: width 0.5s;
-    overflow: hidden; }
-    @media (min-width: 700px) {
-      .contact .contact-container {
-        overflow: initial; } }
-    .contact .contact-container .close {
-      position: absolute;
-      right: 15px;
-      margin-top: 15px;
-      cursor: pointer;
-      color: crimson;
-      font-size: 24px;
-      z-index: 1; }
-    .contact .contact-container form {
-      position: absolute;
-      top: 20px;
-      width: 100%;
-      max-width: 800px;
+    width: 100%;
+    z-index: 1000;
+    padding: 15px;
+    overflow-Y: auto; }
+    .contact .contact-container .contact-modal {
+      background-color: white;
+      transition: width 0.3s;
+      position: relative;
+      padding: 15px;
+      width: 0%;
       margin: auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: row;
-      left: 50%;
-      margin-left: -380px; }
+      max-width: 1000px;
+      border-radius: 10px;
+      margin-top: 12%; }
       @media (max-width: 499px) {
-        .contact .contact-container form {
-          flex-direction: column;
-          left: initial;
-          margin-left: -60px; } }
-      .contact .contact-container form div {
-        width: 45%;
-        margin: 0 10px; }
-      .contact .contact-container form label {
-        align-self: flex-start;
-        color: #0e76a8; }
-        @media (max-width: 499px) {
-          .contact .contact-container form label {
-            margin-left: 100px; } }
-      .contact .contact-container form input, .contact .contact-container form textarea {
-        width: 90%;
-        padding: 5px 15px;
-        outline: none;
-        border-radius: 10px;
-        border: 1px solid blue;
-        margin: 0 15px; }
-        @media (max-width: 499px) {
-          .contact .contact-container form input, .contact .contact-container form textarea {
-            width: 250px;
-            margin: 10px 0; } }
-      .contact .contact-container form input[type="submit"] {
+        .contact .contact-container .contact-modal {
+          margin-top: 2%; } }
+      .contact .contact-container .contact-modal .close {
+        position: absolute;
+        right: -15px;
+        margin-top: -30px;
+        cursor: pointer;
+        color: crimson;
+        font-size: 34px;
+        text-align: center;
+        z-index: 1;
+        background-color: aliceblue;
+        border-radius: 100%; }
+      .contact .contact-container .contact-modal form {
         width: 100%;
-        background-color: blue;
-        color: white;
-        font-weight: 700; }
+        margin: auto; }
         @media (max-width: 499px) {
-          .contact .contact-container form input[type="submit"] {
-            width: 282px; } }
+          .contact .contact-container .contact-modal form {
+            flex-direction: column; } }
+        .contact .contact-container .contact-modal form .form-content {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center; }
+          @media (max-width: 499px) {
+            .contact .contact-container .contact-modal form .form-content {
+              flex-direction: column; } }
+          .contact .contact-container .contact-modal form .form-content .box {
+            width: 45%; }
+            @media (max-width: 499px) {
+              .contact .contact-container .contact-modal form .form-content .box {
+                width: calc(100% - 40px);
+                padding: 20px 0; } }
+          .contact .contact-container .contact-modal form .form-content label {
+            align-self: flex-start;
+            color: #0e76a8;
+            display: block; }
+            @media (max-width: 499px) {
+              .contact .contact-container .contact-modal form .form-content label {
+                align-self: center; } }
+          .contact .contact-container .contact-modal form .form-content input,
+          .contact .contact-container .contact-modal form .form-content textarea {
+            padding: 5px 15px;
+            outline: none;
+            border-radius: 10px;
+            border: 1px solid blue;
+            margin-bottom: 10px;
+            margin-top: 10px; }
+          .contact .contact-container .contact-modal form .form-content input,
+          .contact .contact-container .contact-modal form .form-content textarea {
+            width: calc(100% - 30px); }
+        .contact .contact-container .contact-modal form input[type="submit"] {
+          width: 100%;
+          padding: 5px 15px;
+          outline: none;
+          border-radius: 10px;
+          border: 1px solid blue;
+          margin: auto 15px;
+          background-color: blue;
+          color: white;
+          font-weight: 700;
+          max-width: 350px; }
+          @media (max-width: 499px) {
+            .contact .contact-container .contact-modal form input[type="submit"] {
+              margin: 0px; } }
+
+body {
+  overflow: hidden; }
 
 .cover-red {
-  display: none;
+  overflow: hidden;
   height: 100%;
   width: 100%;
   position: fixed;
@@ -598,7 +597,6 @@ main, body {
         display: flex;
         justify-content: center;
         align-items: center; }
-
 
 .container-about-me {
   margin: auto;

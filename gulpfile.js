@@ -4,7 +4,6 @@ const { src, dest, series, watch, parallel } = require('gulp');
 const uglify = require('gulp-uglify');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
-// const imgmin = require('gulp-imagemin');
 const cleanCSS = require('gulp-clean-css'); 
 const rename = require('gulp-rename');
 const autoprefixer = require('gulp-autoprefixer');
@@ -12,19 +11,19 @@ const fileinclude = require('gulp-file-include');
 
 var paths = {
       html: {
-        src: './src/pages/*.html',
+        src: './src/html/pages/*.html',
         dest: './'
       },
       scripts: { 
-        js: ['./src/js/*.js'],
-        dir_js: ['./src/js/min/'],
+        js: './src/js/*.js',
+        dir_js: './src/js/min/',
       },
       styles: {
-        css: ['./src/css/'],
-        cssmain: ['./src/css/main.css'],
-        sass: ['./src/sass/main.scss'],
+        css: './src/css/',
+        cssmain: './src/css/main.css',
+        sass: './src/sass/main.scss',
 
-        dir_css: ['./src/css/min/'],
+        dir_css: './src/css/min/',
       },
       images: {
         src: [
@@ -36,7 +35,7 @@ var paths = {
           './src/assets/img/min/insignias/',
         ]
       },
-      watchs: ['./src/sass/**/*.scss', './src/js/*.js', './src/parcels/*.html', './src/pages/*.html'] 
+      watchs: ['./src/sass/**/*.scss', './src/js/*.js', './src/html/components/*.html', './src/html/pages/*.html'] 
 }
 
 // Concatena e Minimiza o javascript
@@ -97,23 +96,9 @@ function includeHTML(){
     .pipe(gulp.dest(paths.html.dest));
 }
 
-// function watchTask(){
-//   gulp.watch(paths.watchs, series(gsass, cssmin, uglifyjs));
-// }
-
-// function imgmini() {
-//   return src(paths.images.src)
-//          .pipe(imgmin())
-//          .pipe(gulp.dest(paths.images.dest))
-// }
-
 exports.uglifyjs = uglifyjs;
 exports.gsass = gsass;
 exports.cssmin = cssmin;
 exports.browsSync = browsSync;
-
 exports.includeHTML = includeHTML;
-// exports.imgmini = imgmini;
-// exports.watchTask = watchTask;
-
 exports.default = parallel(series(includeHTML,gsass,cssmin,browsSync),uglifyjs)
