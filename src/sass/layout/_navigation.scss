@@ -18,6 +18,15 @@
           border-radius: 100%;
           border: 1px solid white;
           background-image: radial-gradient(to bottom,rgb(255, 255, 255),rgba(255, 255, 255, 0.671));
+          span {
+            position: absolute;
+            margin-left: -21.2%;
+            margin-top: -7px;
+            font-size: 14px;
+            color: rgb(6, 6, 59);
+            font-weight: 700;
+            font-family:Verdana, Geneva, Tahoma, sans-serif
+          }
           &:before {
             content: '';
             width: 85%;

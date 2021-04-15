@@ -33,6 +33,7 @@
     align-items: center;
     margin: 5px;
     position: relative;
+    user-select: none;
     .gotcha-seal {
         width: 64px;
         position: absolute;
@@ -42,8 +43,12 @@
     }
     &:hover {
         box-shadow: 0 0 8px 5px rgb(228, 228, 228);
+        cursor: url(../../assets/img/pokebola.png), default;
         .gotcha-seal {
             display: block;
+        }
+        img {
+            cursor: url(../../assets/img/pokebola.png) 2 2, default;
         }
     }
     &-img {
