@@ -1,4 +1,4 @@
-<section class="home-container-cover" id="topo">
+<section class="home-container-cover">
     <div class="swiper-container slide-home">
         <div class="swiper-wrapper">
             <div class="swiper-slide Slide-first">
@@ -10,12 +10,7 @@
                 </figure>
             </div>
             <div class="swiper-slide Slide-first">
-                <figure>
-                    <!-- <img src="./src/assets/img/bg-home.png" alt=""> -->
-                    <figcaption>
-                        Bem-Vindo a minha Portdéx
-                    </figcaption>
-                </figure>
+		        @@include('../components/about-me.html')
             </div>
             <div class="swiper-slide Slide-first">
                 <figure>
@@ -24,17 +19,13 @@
                         Bem-Vindo a minha Portdéx
                     </figcaption>
                 </figure>
+                <i class="arrow-down fas fa-angle-double-down"></i>
             </div>
         </div>
     </div>
     <div class="controls-container">
-        <div class="controls-first"></div>
-        <div class="controls-second">
-            <div class="button-next"></div>
-            <div class="button-prev"></div> 
-        </div>
-        <div class="controls-third">
-            <div class="swiper-pagination"></div>
-        </div>
-    </div>
+        <i btns-panel class="button-prev fas fa-chevron-circle-left"></i>
+        <div class="swiper-pagination"></div>
+        <i btns-panel class="button-next fas fa-chevron-circle-right"></i>
+     </div>
 </section>

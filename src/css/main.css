@@ -47,6 +47,9 @@ img {
 a {
   text-decoration: none; }
 
+html {
+  scroll-behavior: smooth; }
+
 header {
   height: 60px;
   background-color: #333232; }
@@ -103,7 +106,7 @@ main, body {
     justify-content: space-around;
     margin: auto; }
     .cards-group:hover .card:not(:hover) {
-      filter: grayscale(1); }
+      opacity: 0.5; }
 
 .card {
   width: 100%;
@@ -219,19 +222,6 @@ main, body {
     background-color: white; }
   .types-card .swiper-container {
     height: 100%; }
-
-.list-filter-type {
-  display: flex;
-  position: absolute;
-  z-index: 3;
-  background-color: white; }
-
-.show {
-  display: flex; }
-
-.active {
-  background-color: #666;
-  color: white; }
 
 .container-audio {
   display: flex;
@@ -596,21 +586,24 @@ body {
   height: 100vh;
   overflow: hidden; }
   .home-container-cover .slide-home {
-    height: 75vh;
+    height: 70vh;
     border: 20px solid whitesmoke;
     border-bottom: none; }
-    .home-container-cover .slide-home .Slide-first figure {
+    @media (max-width: 499px) {
+      .home-container-cover .slide-home {
+        border: 10px solid whitesmoke; } }
+    .home-container-cover .slide-home figure {
       height: 100%;
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: center; }
-      .home-container-cover .slide-home .Slide-first figure img {
+      .home-container-cover .slide-home figure img {
         position: absolute;
         height: auto;
         width: 100%;
         margin: auto; }
-      .home-container-cover .slide-home .Slide-first figure figcaption {
+      .home-container-cover .slide-home figure figcaption {
         position: relative;
         z-index: 5;
         color: azure;
@@ -622,62 +615,71 @@ body {
         display: flex;
         justify-content: center;
         align-items: center; }
+        @media (max-width: 499px) {
+          .home-container-cover .slide-home figure figcaption {
+            font-size: 30px; } }
+    .home-container-cover .slide-home .arrow-down {
+      color: #f5f5f5;
+      font-size: 51px;
+      position: absolute;
+      right: 3%;
+      bottom: 10%;
+      display: none;
+      opacity: 0;
+      z-index: 5; }
+    .home-container-cover .slide-home .fadeIn {
+      animation: fadein 1s;
+      animation-delay: 1s;
+      display: block; }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+    .home-container-cover .slide-home .bounce {
+      display: block;
+      opacity: 1;
+      animation-name: bounce;
+      animation-duration: 1.5s;
+      animation-fill-mode: both;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite; }
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0); }
+  40% {
+    transform: translateY(-30px); }
+  60% {
+    transform: translateY(-15px); } }
   .home-container-cover .controls-container {
     height: 10vh;
+    background-color: whitesmoke;
+    background: linear-gradient(41deg, transparent 20px, #f5f5f5 0);
     display: flex;
     justify-content: center;
     align-items: center; }
-    .home-container-cover .controls-container .controls-first {
-      background-color: whitesmoke;
-      transform: skew(52deg);
-      height: 100%;
-      width: 20%; }
-      .home-container-cover .controls-container .controls-first:after {
-        content: '';
-        background-color: whitesmoke;
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        right: -5%;
-        height: 100%;
-        width: 60px;
-        transform: skew(-52deg); }
-      @media (max-width: 499px) {
-        .home-container-cover .controls-container .controls-first {
-          width: 25%; }
-          .home-container-cover .controls-container .controls-first:after {
-            right: -1%;
-            width: 41px; } }
-    .home-container-cover .controls-container .controls-second {
-      background-color: whitesmoke;
-      width: 50%;
-      height: 100%; }
-      @media (max-width: 499px) {
-        .home-container-cover .controls-container .controls-second {
-          width: 45%; } }
-      .home-container-cover .controls-container .controls-second .button-next,
-      .home-container-cover .controls-container .controls-second .button-prev {
-        left: 50%;
-        position: absolute;
-        z-index: 5;
-        width: 50px;
-        height: 30px;
-        margin-top: 18px;
-        z-index: 2; }
-      .home-container-cover .controls-container .controls-second .button-next {
-        margin-left: 68px;
-        background-color: red; }
-      .home-container-cover .controls-container .controls-second .button-prev {
-        margin-left: -100px;
-        background-color: blue; }
-    .home-container-cover .controls-container .controls-third {
-      background-color: whitesmoke;
-      width: 30%;
-      height: 100%; }
-      .home-container-cover .controls-container .controls-third .swiper-pagination {
-        margin-top: 20px;
-        margin-left: -20.3%;
-        z-index: 2; }
+    .home-container-cover .controls-container .button-next,
+    .home-container-cover .controls-container .button-prev {
+      font-size: 35px;
+      outline: none;
+      margin: 0 40px;
+      color: blue; }
+    .home-container-cover .controls-container .swiper-pagination {
+      position: relative;
+      z-index: 1; }
+      .home-container-cover .controls-container .swiper-pagination .swiper-pagination-bullet {
+        outline: none;
+        opacity: 1;
+        background-color: crimson;
+        height: 15px;
+        width: 15px;
+        margin: 0 5px;
+        border: 2px solid white;
+        box-shadow: 0 0 1px 2px #c5c1c1; }
+        .home-container-cover .controls-container .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+          background-color: green; }
 
 .container-about-me {
   margin: auto;
@@ -759,12 +761,19 @@ body {
     color: white;
     text-align: center; }
   .portfolio .title {
-    padding-top: 15px; }
-    @media (min-width: 700px) {
+    padding-top: 15px;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase; }
+    @media (min-width: 900px) {
       .portfolio .title {
-        font-size: 16px; } }
+        font-size: 18px; } }
   .portfolio .text {
-    padding-top: 20px; }
+    padding-top: 20px;
+    font-size: 14px; }
+    @media (min-width: 900px) {
+      .portfolio .text {
+        font-size: 16px; } }
 
 footer {
   padding-top: 30px; }
