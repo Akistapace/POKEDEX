@@ -1,4 +1,4 @@
-    var swiper = new Swiper('.home-container-cover .slide-home', {
+    var panel = new Swiper('.home-container-cover .slide-home', {
         speed: 400,
         grabCursor:true,
         keyboard: true,
@@ -13,6 +13,9 @@
         },
     });
 
+    panel.on('slideChangeTransitionEnd', function () {
+        scrollbody()
+    });
 
     const animations = ()=> {
         var animationArrow = document.querySelector('.arrow-down')
@@ -44,10 +47,18 @@
            }
         }
     }
-   
-    const botoesPainel = document.querySelectorAll("[btns-panel]")
-    for (var i = 0; i < botoesPainel.length; i++) {
-        botoesPainel[i].addEventListener('click', ()=> {
-            scrollbody()
-        });
+      
+
+    window.onload = ()=> {
+        var ancora =  document.querySelector('#topo')
+        if(ancora.getBoundingClientRect().top < 0 ) {
+            var ancora =  document.querySelector('#topo')
+            if(ancora.getBoundingClientRect().top < 0 ) {
+                window.scrollTo(0, 0);
+            } 
+        } 	
     }
+
+    
+        
+        
