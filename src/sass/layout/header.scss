@@ -11,6 +11,7 @@
       display: flex;
       padding: 10px;
       #btnOpen {
+          cursor: pointer;
           outline: none;
           width: 95px;
           height: 90px;
@@ -37,6 +38,21 @@
             top: 8%;
             left: 7%;
             border-radius: 100%;
+            opacity: 0.6;
+            animation: opacidade 2.5s infinite;
+            @keyframes opacidade {
+                0% {
+                  opacity: 0.6;
+                }
+                
+                70% {
+                  opacity: 1;
+                }
+                
+                100% {
+                  opacity: 0.6;
+                }
+            }
           }
           &:after {
             content: '';

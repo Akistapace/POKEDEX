@@ -38,7 +38,7 @@
            if (slides[nSlides-1].classList.contains('swiper-slide-active')) {
                console.log('Encontrado o ultimo slider')
                animations()
-               document.body.style.overflow = 'auto'
+               document.body.style.overflowY = 'auto'
            } else {
                console.log('Não encontrado o ultimo slider')
                document.body.style.overflow = 'hidden'

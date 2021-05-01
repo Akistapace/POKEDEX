@@ -101,31 +101,92 @@ main, body {
   .cards-group {
     width: 100%;
     height: 100%;
+    max-width: 900px;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin: auto; }
+    margin: auto;
+    background: #10107f;
+    background: linear-gradient(349deg, #292b85, #0b0b4e);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 0 10px 5px #676060;
+    position: relative;
+    border: 14px solid #12125c;
+    border-bottom-color: black;
+    border-left-color: black;
+    border-left: 40px solid;
+    border-right: 41px solid;
+    border-top: 40px solid;
+    border-image: linear-gradient(203deg, #112377, #140c3c);
+    border-image-slice: 1; }
+    @media (max-width: 499px) {
+      .cards-group {
+        border-width: 20px !important;
+        width: calc(100% - 40px);
+        padding: 0; } }
+    .cards-group li {
+      margin: 25px 15px;
+      width: 100%;
+      height: 100%;
+      max-width: 110px;
+      max-height: 100px;
+      text-align: center; }
+      .cards-group li h6 {
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 700;
+        line-height: 30px;
+        font-size: 12px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif; }
+    .cards-group:before {
+      content: '';
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background: #fff;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      border-radius: 8px;
+      transform: translateX(0%);
+      animation-fill-mode: forwards; }
+    .cards-group.up.left:before {
+      animation-name: left;
+      animation-duration: 0.4s;
+      animation-direction: reverse; }
+
+@keyframes left {
+  from {
+    transform: translateX(200%); } }
+    .cards-group.up:before {
+      animation-name: up;
+      animation-duration: 0.4s;
+      animation-direction: reverse; }
+
+@keyframes up {
+  from {
+    transform: scale(1.15); } }
     .cards-group:hover .card:not(:hover) {
       opacity: 0.5; }
 
 .card {
   width: 100%;
-  max-width: 120px;
-  height: 145px;
+  height: 100%;
+  min-width: 90px;
+  min-height: 100px;
   border-radius: 8px;
-  padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 5px;
   position: relative;
   user-select: none; }
   .card .gotcha-seal {
     width: 64px;
     position: absolute;
     top: -60px;
-    right: 10px;
+    right: -18px;
     display: none; }
   .card:hover {
     box-shadow: 0 0 8px 5px #e4e4e4;
@@ -135,53 +196,29 @@ main, body {
     .card:hover img {
       cursor: url(../../assets/img/pokebola.png) 2 2, default; }
   .card-img {
+    max-width: 100px;
     height: fit-content;
     border-radius: 8px;
     object-fit: cover; }
     .card-img img {
-      height: 70px;
-      width: 70px; }
-    @media (min-width: 820px) {
-      .card-img {
-        max-width: 100px; }
-        .card-img img {
-          height: auto;
-          width: 100%; } }
-  .card-body {
-    padding: 10px 0 10px 0;
-    flex-direction: column;
-    flex-wrap: wrap;
-    text-align: center;
-    color: white;
-    align-self: center; }
-    .card-body p {
-      text-transform: uppercase;
-      font-weight: 700;
-      line-height: 30px;
-      font-size: 16px;
-      font-family: Verdana, Geneva, Tahoma, sans-serif; }
-    .card-body small {
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      font-size: 12px; }
-    @media (min-width: 820px) {
-      .card-body p {
-        text-transform: uppercase;
-        font-weight: 700;
-        line-height: 30px;
-        font-size: 24px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif; }
-      .card-body small {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 18px; } }
-  @media (min-width: 820px) {
-    .card {
+      height: auto;
       width: 100%;
-      max-width: 330px;
-      height: fit-content;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-start; } }
+      max-height: 70px;
+      max-width: 70px; }
+  .card.empty {
+    background-color: #1b1b61;
+    background: linear-gradient(35deg, #181e3f -5px, #44209bf7 100%);
+    width: 100%;
+    height: 100%;
+    min-width: 90px;
+    min-height: 90px;
+    border-radius: 8px;
+    border: 8px solid #27276e;
+    border-image: linear-gradient(294deg, #273da6, #140c3c);
+    border-image-slice: 1; }
+    @media (max-width: 499px) {
+      .card.empty {
+        width: calc(100% - 10px); } }
 
 .card-red {
   background-image: linear-gradient(to bottom, #dc1a1a, #a93b3b); }
@@ -209,19 +246,6 @@ main, body {
 
 .card-black {
   background-image: linear-gradient(black, #1a1919); }
-
-.types-card {
-  height: 80px;
-  width: 100%;
-  max-width: 600px;
-  margin: auto; }
-  .types-card .card {
-    width: fit-content;
-    height: 20px;
-    padding: 5px;
-    background-color: white; }
-  .types-card .swiper-container {
-    height: 100%; }
 
 .container-audio {
   display: flex;
@@ -462,7 +486,7 @@ body {
   padding-top: 60px;
   transition: 1s; }
   .cover-red img {
-    cursor: default;
+    cursor: pointer;
     object-fit: cover;
     width: 100%;
     height: 100%; }
@@ -476,7 +500,17 @@ body {
     position: absolute;
     z-index: 10;
     top: 45vh;
-    left: 5%; }
+    left: 5%;
+    transform: scale(1);
+    animation: pulse 2s infinite; }
+
+@keyframes pulse {
+  0% {
+    transform: scale(1); }
+  70% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
 
 .nav {
   background-color: crimson;
@@ -491,6 +525,7 @@ body {
     display: flex;
     padding: 10px; }
     .nav-content #btnOpen {
+      cursor: pointer;
       outline: none;
       width: 95px;
       height: 90px;
@@ -515,7 +550,17 @@ body {
         position: absolute;
         top: 8%;
         left: 7%;
-        border-radius: 100%; }
+        border-radius: 100%;
+        opacity: 0.6;
+        animation: opacidade 2.5s infinite; }
+
+@keyframes opacidade {
+  0% {
+    opacity: 0.6; }
+  70% {
+    opacity: 1; }
+  100% {
+    opacity: 0.6; } }
       .nav-content #btnOpen:after {
         content: '';
         width: 40px;
