@@ -1,9 +1,12 @@
 body {
-    overflow: hidden;
+    // overflow: hidden;
+    main {
+        overflow-x: hidden;
+    }
 }
 .cover-red {
     overflow: hidden;
-    // display: none;
+    display: none;
     height: 100%; 
     width: 100%;
     position: fixed;

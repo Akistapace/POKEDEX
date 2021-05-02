@@ -470,11 +470,12 @@ main, body {
             .contact .contact-container .contact-modal form input[type="submit"] {
               margin: 0px; } }
 
-body {
-  overflow: hidden; }
+body main {
+  overflow-x: hidden; }
 
 .cover-red {
   overflow: hidden;
+  display: none;
   height: 100%;
   width: 100%;
   position: fixed;
