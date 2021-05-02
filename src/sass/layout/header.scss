@@ -38,11 +38,11 @@
             top: 8%;
             left: 7%;
             border-radius: 100%;
-            opacity: 0.6;
-            animation: opacidade 2.5s infinite;
+            opacity: 0.5;
+            animation: opacidade 1.5s infinite;
             @keyframes opacidade {
                 0% {
-                  opacity: 0.6;
+                  opacity: 0.5;
                 }
                 
                 70% {
@@ -50,7 +50,7 @@
                 }
                 
                 100% {
-                  opacity: 0.6;
+                  opacity: 0.5;
                 }
             }
           }
