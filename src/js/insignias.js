@@ -41,7 +41,7 @@ window.addEventListener('scroll', Scroll)
         } else {
           seeMoreBtn.innerHTML = 'Ver Mais'
           boxBlue.style.overflow = 'hidden'
-          boxBlue.style.maxHeight = '50vh'
+          boxBlue.style.maxHeight = '300px'
 
         // Ajusta compartamento de scroll após clique em ver Menos
         // Fazendo com que scrole até a seção de insignias novamente

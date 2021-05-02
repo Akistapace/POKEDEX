@@ -1,12 +1,12 @@
 body {
-    overflow: hidden;
+    // overflow: hidden;
     main {
         overflow-x: hidden;
     }
 }
 .cover-red {
     overflow: hidden;
-    // display: none;
+    display: none;
     height: 100%; 
     width: 100%;
     position: fixed;
@@ -17,6 +17,7 @@ body {
     overflow-x: hidden;
     padding-top: 60px; 
     transition: 1s; 
+    user-select: none;
     img {
         cursor: pointer;
         object-fit: cover;

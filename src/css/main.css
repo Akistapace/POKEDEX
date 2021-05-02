@@ -124,7 +124,7 @@ main, body {
         border-width: 20px !important;
         width: calc(100% - 40px);
         padding: 0;
-        max-height: 50vh;
+        max-height: 300px;
         overflow: hidden; } }
     .cards-group li {
       margin: 25px 15px;
@@ -465,7 +465,7 @@ main, body {
       background-color: white;
       transition: width 0.3s;
       position: relative;
-      padding: 15px;
+      overflow: hidden;
       width: 0%;
       margin: auto;
       max-width: 1000px;
@@ -537,13 +537,12 @@ main, body {
             .contact .contact-container .contact-modal form input[type="submit"] {
               margin: 0px; } }
 
-body {
-  overflow: hidden; }
-  body main {
-    overflow-x: hidden; }
+body main {
+  overflow-x: hidden; }
 
 .cover-red {
   overflow: hidden;
+  display: none;
   height: 100%;
   width: 100%;
   position: fixed;
@@ -553,7 +552,8 @@ body {
   background-color: crimson;
   overflow-x: hidden;
   padding-top: 60px;
-  transition: 1s; }
+  transition: 1s;
+  user-select: none; }
   .cover-red img {
     cursor: pointer;
     object-fit: cover;
@@ -601,7 +601,8 @@ body {
       position: absolute;
       border-radius: 100%;
       border: 1px solid white;
-      background-image: radial-gradient(to bottom, white, rgba(255, 255, 255, 0.671)); }
+      background-image: radial-gradient(to bottom, white, rgba(255, 255, 255, 0.671));
+      user-select: none; }
       .nav-content #btnOpen span {
         position: absolute;
         margin-left: -21.2%;

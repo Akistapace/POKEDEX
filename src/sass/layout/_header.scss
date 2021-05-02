@@ -19,6 +19,7 @@
           border-radius: 100%;
           border: 1px solid white;
           background-image: radial-gradient(to bottom,rgb(255, 255, 255),rgba(255, 255, 255, 0.671));
+          user-select: none;
           span {
             position: absolute;
             margin-left: -21.2%;

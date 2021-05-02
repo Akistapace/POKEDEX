@@ -12,12 +12,18 @@ const closeModal = ()=> {
     }, 400);
 }
 const midiaQuerie = ()=> {
-    if (window.matchMedia("(max-width: 499px)").matches) {    
-        modal.style.width = 'calc(90% - 30px)';
-        console.log("midia menor que 499px overflow auto")
+    if (window.matchMedia("(max-width: 499px)").matches) { 
+        setTimeout(() => {
+            modal.style.width = 'calc(90% - 30px)'
+            modal.style.padding = '15px'
+            modal.style.overflow = 'initial'
+        }, 300);
     } else {
-        modal.style.width = 'calc(100% - 30px)'
-        console.log("midia maior que 499px overflow auto")
+        setTimeout(() => {
+           modal.style.width = 'calc(100% - 30px)'
+           modal.style.padding = '15px'
+           modal.style.overflow = 'initial'
+        }, 300);
     }
 }
 
@@ -26,8 +32,6 @@ btnOpenContact.onclick =  ()=> {
         closeModal()
     } else {
         containerContact.style.display = 'block'
-        modal.style.padding = '15px'
-        modal.style.overflowX = 'initial';
         midiaQuerie()
     }
 }
