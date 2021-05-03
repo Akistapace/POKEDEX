@@ -451,91 +451,31 @@ main, body {
         color: black; }
       .contact .list-contacts li a .fa-linkedin {
         color: #0e76a8; }
-  .contact .contact-container {
-    display: none;
+  .contact .close {
     position: fixed;
-    top: 0;
-    background-color: rgba(19, 37, 200, 0.5);
-    height: 100%;
+    font-size: 36px;
+    color: red;
+    top: 0%;
+    right: 5%;
+    z-index: 6;
+    cursor: pointer;
+    outline: none;
+    display: none; }
+  .contact iframe.Sendmail {
+    display: none;
     width: 100%;
-    z-index: 1000;
-    padding: 15px;
-    overflow-Y: auto; }
-    .contact .contact-container .contact-modal {
-      background-color: white;
-      transition: width 0.3s;
-      position: relative;
-      overflow: hidden;
-      width: 0%;
-      margin: auto;
-      max-width: 1000px;
-      border-radius: 10px;
-      margin-top: 12%; }
-      @media (max-width: 499px) {
-        .contact .contact-container .contact-modal {
-          margin-top: 2%; } }
-      .contact .contact-container .contact-modal .close {
-        position: absolute;
-        right: -15px;
-        margin-top: -30px;
-        cursor: pointer;
-        color: crimson;
-        font-size: 34px;
-        text-align: center;
-        z-index: 1;
-        background-color: aliceblue;
-        border-radius: 100%; }
-      .contact .contact-container .contact-modal form {
-        width: 100%;
-        margin: auto; }
-        @media (max-width: 499px) {
-          .contact .contact-container .contact-modal form {
-            flex-direction: column; } }
-        .contact .contact-container .contact-modal form .form-content {
-          display: flex;
-          justify-content: space-evenly;
-          align-items: center; }
-          @media (max-width: 499px) {
-            .contact .contact-container .contact-modal form .form-content {
-              flex-direction: column; } }
-          .contact .contact-container .contact-modal form .form-content .box {
-            width: 45%; }
-            @media (max-width: 499px) {
-              .contact .contact-container .contact-modal form .form-content .box {
-                width: calc(100% - 40px);
-                padding: 20px 0; } }
-          .contact .contact-container .contact-modal form .form-content label {
-            align-self: flex-start;
-            color: #0e76a8;
-            display: block; }
-            @media (max-width: 499px) {
-              .contact .contact-container .contact-modal form .form-content label {
-                align-self: center; } }
-          .contact .contact-container .contact-modal form .form-content input,
-          .contact .contact-container .contact-modal form .form-content textarea {
-            padding: 5px 15px;
-            outline: none;
-            border-radius: 10px;
-            border: 1px solid blue;
-            margin-bottom: 10px;
-            margin-top: 10px; }
-          .contact .contact-container .contact-modal form .form-content input,
-          .contact .contact-container .contact-modal form .form-content textarea {
-            width: calc(100% - 30px); }
-        .contact .contact-container .contact-modal form input[type="submit"] {
-          width: 100%;
-          padding: 5px 15px;
-          outline: none;
-          border-radius: 10px;
-          border: 1px solid blue;
-          margin: auto 15px;
-          background-color: blue;
-          color: white;
-          font-weight: 700;
-          max-width: 350px; }
-          @media (max-width: 499px) {
-            .contact .contact-container .contact-modal form input[type="submit"] {
-              margin: 0px; } }
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 5; }
+    @media (max-width: 499px) {
+      .contact iframe.Sendmail {
+        height: 105%; } }
+    .contact iframe.Sendmail div[class*='rootContainer'] {
+      background-color: rgba(19, 37, 200, 0.5); }
+    .contact iframe.Sendmail div[class*='footerContainer'] {
+      display: none; }
 
 body main {
   overflow-x: hidden; }
