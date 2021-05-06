@@ -477,12 +477,13 @@ main, body {
     .contact iframe.Sendmail div[class*='footerContainer'] {
       display: none; }
 
-body main {
-  overflow-x: hidden; }
+body {
+  overflow: hidden; }
+  body main {
+    overflow-x: hidden; }
 
 .cover-red {
   overflow: hidden;
-  display: none;
   height: 100%;
   width: 100%;
   position: fixed;
