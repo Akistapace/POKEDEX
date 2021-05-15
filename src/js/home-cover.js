@@ -13,10 +13,9 @@
         },
     });
 
-    panel.on('slideChangeTransitionEnd', function () {
+    panel.on('reachEnd', function () {
         scrollbody()
     });
-
     const animations = ()=> {
         var animationArrow = document.querySelector('.arrow-down')
         animationArrow.classList.add('fadeIn')
@@ -29,23 +28,9 @@
     }
 
     const scrollbody = ()=> {
-        var slides = document.querySelectorAll(".slide-home .swiper-slide")
-        var nSlides = 0
-        for (var i = 0; i < slides.length; i++) {
-            nSlides = nSlides+1
-        }
-        for (var i = 0; i < slides.length; i++) {
-           if (slides[nSlides-1].classList.contains('swiper-slide-active')) {
-               console.log('Encontrado o ultimo slider')
-               animations()
-               document.body.style.overflowY = 'auto'
-           } else {
-               console.log('Não encontrado o ultimo slider')
-               document.body.style.overflow = 'hidden'
-               var animationArrow = document.querySelector('.arrow-down')
-               animationArrow.classList.remove('bounce')
-           }
-        }
+        console.log('Encontrado o ultimo slider')
+        animations()
+        document.body.style.overflowY = 'auto' 
     }
       
 

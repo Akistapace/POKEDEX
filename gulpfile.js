@@ -1,93 +1,79 @@
-const gulp = require('gulp');
-const browserSync  = require('browser-sync').create();
-const { src, dest, series, watch, parallel } = require('gulp');
-const uglify = require('gulp-uglify');
-const sass = require('gulp-sass');
-const concat = require('gulp-concat');
-const cleanCSS = require('gulp-clean-css'); 
-const rename = require('gulp-rename');
-const autoprefixer = require('gulp-autoprefixer');
-const fileinclude = require('gulp-file-include');
+const gulp = require('gulp'),
+      {src,dest,series,watch, parallel} = require('gulp'),
+      browserSync = require('browser-sync').create(),
+      uglify = require('gulp-uglify'),
+      babel = require('gulp-babel'),
+      jshint = require('gulp-jshint'),
+      notify = require('gulp-notify'),
+      sass = require('gulp-sass'),
+      concat = require('gulp-concat'),
+      cleanCSS = require('gulp-clean-css'),
+      rename = require('gulp-rename'),
+      autoprefixer = require('gulp-autoprefixer'),
+      fileinclude = require('gulp-file-include'),
+      paths = {
+          html: {
+            src: './src/html/pages/*.html',
+            dest: './'
+          },
+          scripts: {
+            js: './src/js/*.js',
+            dir_js: './src/js/min/',
+          },
+          styles: {
+            css: './src/css/',
+            cssmain: './src/css/main.css',
+            sass: './src/sass/main.scss',
 
-var paths = {
-      html: {
-        src: './src/html/pages/*.html',
-        dest: './'
-      },
-      scripts: { 
-        js: './src/js/*.js',
-        dir_js: './src/js/min/',
-      },
-      styles: {
-        css: './src/css/',
-        cssmain: './src/css/main.css',
-        sass: './src/sass/main.scss',
-
-        dir_css: './src/css/min/',
-      },
-      images: {
-        src: [
-          './src/assets/img/*',
-          './src/assets/img/insignias/*',
-        ],
-        dest: [
-          './src/assets/img/min/',
-          './src/assets/img/min/insignias/',
-        ]
-      },
-      watchs: ['./src/sass/**/*.scss', './src/js/*.js', './src/html/components/*.html', './src/html/pages/*.html'] 
-}
+            dir_css: './src/css/min/',
+          },
+          watch: {
+            sass: './src/sass/**/*.scss',
+            js: './src/js/*.js',
+            html: ['./src/html/components/*.html', './src/html/pages/*.html'],
+          }
+      }
 
 // Concatena e Minimiza o javascript
-function uglifyjs() {
+const Uglifyjs= ()=> {
   return src(paths.scripts.js)
-         .pipe(concat('index.js'))
-         .pipe(uglify())
-         .pipe(gulp.dest(paths.scripts.dir_js))
-         .pipe(browserSync.stream())
+    .pipe(concat('index.js')).pipe(notify("Concatenando arquivos Js"))
+    .pipe(babel() ).pipe(notify("Rodando Babel"))
+      .on("error", notify.onError("Error: <%= error.message %>"))
+    .pipe(uglify()).pipe(notify("Rodando Uglify"))
+      .on("error", notify.onError("Error: <%= error.message %>"))
+    .pipe(jshint()).pipe(notify("Rodando Jshint"))
+      .on("error", notify.onError("Error: <%= error.message %>"))
+    .pipe(dest(paths.scripts.dir_js)).pipe(notify("Javascript compilado"))
+    .pipe(browserSync.stream())
 }
 
-function gsass(){
+const Sass= ()=> {
   return src(paths.styles.sass)
-         .pipe(sass())
-         .pipe(gulp.dest(paths.styles.css))
-         .pipe(browserSync.stream());
+    .pipe(sass())
+    .on("error", notify.onError("Error: <%= error.message %>"))
+    .pipe(cleanCSS({
+      debug: true,
+      compatibility: 'ie8',
+      level: {
+        1: {
+          specialComments: 0,
+        },
+      },
+    }))
+    .pipe(autoprefixer({
+      overrideBrowserslist: ['last 2 versions'],
+      cascade: false,
+    }))
+    .pipe(rename({
+      basename: 'main',
+      suffix: '.min',
+    }))
+    .pipe(gulp.dest(paths.styles.css))
+    .pipe(browserSync.stream());
 }
 
-function cssmin(){
-  return gulp.src(paths.styles.cssmain)
-         .pipe(cleanCSS({
-            debug: true,
-            compatibility: 'ie8',
-            level: {
-                1: {
-                    specialComments: 0,
-                },
-            },
-         }))
-         .pipe(autoprefixer({
-            overrideBrowserslist: ['last 2 versions'],
-            cascade: false,
-         }))
-         .pipe(rename({
-            basename: 'main',
-            suffix: '.min',
-         }))
-         .pipe(dest(paths.styles.dir_css))
-}
-
-// Static Server + watching scss/html/js files
-function browsSync() {
-  browserSync.init({
-    server: {
-      baseDir: paths.html.dest
-    }
-  });
-
-  watch(paths.watchs, series(gsass, cssmin, uglifyjs,includeHTML)).on('change', browserSync.reload);
-}
-
-function includeHTML(){
+const includeHTML = ()=> {
   return gulp.src(paths.html.src)
     .pipe(fileinclude({
       prefix: '@@',
@@ -96,9 +82,20 @@ function includeHTML(){
     .pipe(gulp.dest(paths.html.dest));
 }
 
-exports.uglifyjs = uglifyjs;
-exports.gsass = gsass;
-exports.cssmin = cssmin;
+// Static Server + watching scss/html/js files
+const browsSync = ()=> {
+  browserSync.init({
+    server: {
+      baseDir: paths.html.dest
+    }
+  })
+  watch(paths.watch.sass, Sass ).on('change', browserSync.reload)
+  watch(paths.watch.js, Uglifyjs ).on('change', browserSync.reload)
+  watch(paths.watch.html, includeHTML ).on('change', browserSync.reload)
+}
+
+exports.Uglifyjs = Uglifyjs;
+exports.Sass = Sass;
 exports.browsSync = browsSync;
 exports.includeHTML = includeHTML;
-exports.default = parallel(series(includeHTML,gsass,cssmin,browsSync),uglifyjs)
+exports.default = browsSync
