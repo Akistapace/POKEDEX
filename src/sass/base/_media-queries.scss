@@ -1,14 +1,45 @@
-@mixin bkp($bkp){
-    @if $bkp == xs {
-        @media (max-width: 499px){@content;}
+@mixin bkp($bkp) {
+    @if $bkp==xs {
+        @media (max-width: 499px) {
+            @content;
+        }
     }
-    @else if $bkp == sm {
-        @media (min-width: 500px) {@content;}
-    } 
-    @else if $bkp == md {
-        @media (min-width: 700px) {@content;}
-    } 
-    @else if $bkp == lg {
-        @media (min-width: 900px) {@content;}
+    @else if $bkp==sm {
+        @media (min-width: 500px) {
+            @content;
+        }
+    }
+    @else if $bkp==md {
+        @media (min-width: 700px) {
+            @content;
+        }
+    }
+    @else if $bkp==lg {
+        @media (min-width: 900px) {
+            @content;
+        }
+    }
+}
+
+@mixin bkp-min($bkp) {
+    @if $bkp==xs {
+        @media (max-width: 499px) {
+            @content;
+        }
+    }
+    @else if $bkp==sm {
+        @media (min-width: 500px) {
+            @content;
+        }
+    }
+    @else if $bkp==md {
+        @media (min-width: 700px) {
+            @content;
+        }
+    }
+    @else if $bkp==lg {
+        @media (min-width: 900px) {
+            @content;
+        }
     }
 }

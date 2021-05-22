@@ -13,7 +13,7 @@
         font-size: 24px;
         padding: 15px 0;
     }
-    @include bkp(xs){
+    @include bkp(xs) {
         height: 450px;
         h2 {
             font-size: 28px;
@@ -34,7 +34,6 @@
         font-weight: 700;
         border-radius: 4px;
     }
-    
     .list-contacts {
         @include flex-evenly;
         width: 100%;
@@ -65,34 +64,34 @@
             }
         }
     }
-        .close {
-            position: fixed;
-            font-size: 36px;
-            color: red;
-            top: 0%;
-            right: 5%;
-            z-index: 6;
-            cursor: pointer;
-            outline: none;
+    .close {
+        position: fixed;
+        font-size: 36px;
+        color: red;
+        top: 0%;
+        right: 5%;
+        z-index: 6;
+        cursor: pointer;
+        outline: none;
+        display: none;
+    }
+    iframe.Sendmail {
+        display: none;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 5;
+        @include bkp(xs) {
+            height: 105%;
+        }
+        div[class*='rootContainer'] {
+            background-color: rgba(19, 37, 200, 0.5);
+        }
+        div[class*='footerContainer'] {
             display: none;
         }
-        iframe.Sendmail {
-            display: none;
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            left: 0;
-            top: 0;
-            z-index: 5;
-            @include bkp(xs) {
-                height: 105%;
-            }
-            div[class*='rootContainer'] {
-                background-color: rgba(19, 37, 200, 0.5);
-            }
-            div[class*='footerContainer'] {
-                display: none;
-            }
-        }
+    }
     // }
 }

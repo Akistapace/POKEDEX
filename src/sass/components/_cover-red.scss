@@ -4,19 +4,20 @@ body {
         overflow-x: hidden;
     }
 }
+
 .cover-red {
     overflow: hidden;
     // display: none;
-    height: 100%; 
+    height: 100%;
     width: 100%;
     position: fixed;
-    z-index: 3; 
+    z-index: 3;
     top: 0;
-    right:  0;
+    right: 0;
     background-color: color(pk-red);
     overflow-x: hidden;
-    padding-top: 60px; 
-    transition: 1s; 
+    padding-top: 60px;
+    transition: 1s;
     user-select: none;
     img {
         cursor: pointer;
@@ -24,11 +25,10 @@ body {
         width: 100%;
         height: 100%;
     }
-    
     .triangulo-yellow {
-        cursor: pointer;
-        width: 0; 
-        height: 0; 
+        opacity: 0;
+        transition: opacity 2s;
+        height: 0;
         border-top: 85px solid transparent;
         border-bottom: 85px solid transparent;
         border-left: 85px solid #fafa06;
@@ -42,14 +42,51 @@ body {
             0% {
                 transform: scale(1);
             }
-            
             70% {
                 transform: scale(1.10);
             }
-            
             100% {
                 transform: scale(1);
             }
         }
     }
+}
+
+#myProgress {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    @include bkp (xs) {
+        max-width: 250px;
+    }
+    @include bkp (sm) {
+        max-width: 350px;
+    }
+    @include bkp (md) {
+        max-width: 550px;
+    }
+    @include bkp (lg) {
+        max-width: 750px;
+    }
+}
+
+#myBar {
+    position: absolute;
+    border-radius: 8px;
+    width: 1%;
+    height: 100%;
+    background-color: rgb(244, 248, 11);
+}
+
+#label {
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    font-weight: 700;
 }
