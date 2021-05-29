@@ -1,6 +1,6 @@
 const btnOpen = document.querySelector("#btnOpen")
 const sideNav = document.querySelector("#CoverRed")
-const triangulo = document.querySelector(".triangulo-yellow")
+const triangulo = docueent.querySelector(".triangulo-yellow")
 const nav = document.querySelector(".nav")
 const spanText = document.querySelector(".nav-content #btnOpen span")
 

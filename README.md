@@ -7,7 +7,7 @@
 
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/Akistapace/POKEDEX">
   
-  <a href="https://github.com/Akistapace/frontend-html/commits/master">
+  <a href="https://github.com/Akistapace/POKEDEX/commits/master">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Akistapace/POKEDEX">
   </a>
     
